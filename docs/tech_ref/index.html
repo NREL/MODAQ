@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://github.nrel.gov/pages/rraye/MODAQ-Docs/tech_ref/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Technical Reference - MODAQ Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Technical Reference";
+    var mkdocs_page_input_path = "tech_ref.md";
+    var mkdocs_page_url = "/pages/rraye/MODAQ-Docs/tech_ref/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> MODAQ Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../h_architecture/">Hardware Overview</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../s_architecture/">Software Overview</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ref_design/">Reference Design Manual</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../dev_modules/">Optional Modules</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Technical Reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#software-architecture">Software Architecture</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#initialization">Initialization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#input-reads">Input Reads</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-filters">Data Filters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-destinations">Data Destinations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#timing-and-synchronization">Timing and Synchronization</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#tdms">TDMS</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#summary-files">Summary Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#system-log">System Log</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#email-notifications">Email Notifications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#metadata">Metadata</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sftpftp">SFTP/FTP</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ssh">SSH</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#watch-circle">Watch Circle</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../FAQ/">FAQ</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../links/">Useful Links</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">MODAQ Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Technical Reference</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="modaq-technical-reference">MODAQ Technical Reference</h1>
+<p>This section will discuss specific MODAQ technologies in greater detail and is provided for the curious end user to better understand how MODAQ works and why certain design decisions were made. Over the course of MODAQ development many options and challenges had presented and there was often often more than one way to achieve similar results. As always, options have trade-offs and a different design team may have made different decisions. </p>
+<p>In some cases, options, shortcomings, and/or suggestions will be presented and since the MODAQ reference design and software are offered in the public domain as "open source", experienced LabVIEW developers are encouraged to modify or improve this code base and perhaps implement features in a more efficient and performant manner. It would be appreciated if such improvements are made, that the developers contribute back to this project.</p>
+<h3 id="software-architecture">Software Architecture</h3>
+<h4 id="initialization">Initialization</h4>
+<h4 id="input-reads">Input Reads</h4>
+<h4 id="data-filters">Data Filters</h4>
+<h4 id="data-destinations">Data Destinations</h4>
+<h3 id="timing-and-synchronization">Timing and Synchronization</h3>
+<h4 id="tdms">TDMS</h4>
+<p>Due to the modular nature of MODAQ, each process saves to its own TDMS file. </p>
+<h4 id="summary-files">Summary Files</h4>
+<p>Summary overwrites</p>
+<h4 id="system-log">System Log</h4>
+<h4 id="email-notifications">Email Notifications</h4>
+<p>configuring, snoozing, rules based</p>
+<h4 id="metadata">Metadata</h4>
+<h3 id="sftpftp">SFTP/FTP</h3>
+<p>MODAQ does not currently support SFTP at this time due to limitations in LabVIEW 2019. However, the underlying RT Linux operating system does. Users familiar with SFTP and the Linux command line could develop solutions for automated file transfers. For manual transfers, client software such as WinSCP, Bitvise, FileZilla could be used. </p>
+<p>Due to the inherent lack of security, FTP in not included by default in MODAQ. NREL, like most other organizations with managed IT departments, prohibits the use of FTP. Users willing to accept the risk, can request the MODAQ FTP module- or write their own. </p>
+<h3 id="ssh">SSH</h3>
+<h3 id="watch-circle">Watch Circle</h3>
+<p>Haversign formula, radii</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../FAQ/" class="btn btn-neutral float-right" title="FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../dev_modules/" class="btn btn-neutral" title="Optional Modules"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../dev_modules/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../FAQ/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
