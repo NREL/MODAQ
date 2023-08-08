@@ -83,6 +83,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#timing-and-synchronization">Timing and Synchronization</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ptp">PTP</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#tdms">TDMS</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#summary-files">Summary Files</a>
@@ -158,6 +160,11 @@
 <h4 id="data-filters">Data Filters</h4>
 <h4 id="data-destinations">Data Destinations</h4>
 <h3 id="timing-and-synchronization">Timing and Synchronization</h3>
+<h4 id="ptp">PTP</h4>
+<p>The DAQmx version of the MODAQ:RD supports <a href="https://en.wikipedia.org/wiki/Precision_Time_Protocol" target="_blank">PTP</a>, or more precisely<a href="https://www.ieee802.org/1/files/public/docs2008/as-garner-1588v2-summary-0908.pdf" target="_blank"> IEEE 1588-2008 v2</a>. PTP works off a client-server architecture where a master clock serves as the time reference for all capable clients on a network subnet. While there's numerous networking topologies that can be considered, different ways to propagate the time reference, and alternative (non-compatible) implementations such as IEEE 802.1AS, it can get complicated real fast. This discussion will be high-level and basic- please google for a deep-dive. </p>
+<p>The promise of PTP is that all connected PTP-aware devices will be synchronized and reference-time accurate to 100's, if not 10's of nanoseconds- without drift. By comparison, <a href="https://en.wikipedia.org/wiki/Network_Time_Protocol" target="_blank">Network Time Protocol</a> (NTP), which is what most consumer computers and laptops use as a time reference, can at best achieve 10's of milliseconds accuracy. While NTP accuracy might be perfectly acceptable to some and often better than a real time clock (which can drift <a href="https://www.best-microcontroller-projects.com/ppm.html" target="-blank">several seconds a day<a/>), it's a ~6 order of magnitude difference in accuracy. Samples taken from input modules on the same DAQ controller will be disciplined by the same clock (<a href="https://www.ni.com/docs/en-US/bundle/ni-daqmx/page/mxcncpts/syncmethods.html" target="_blank">usually</a>) and will likely be <i>precisely</i> timestamped relative each other, but may not <i>accurate</i> to actual time (i.e. UTC). </p>
+<p>Where the real power of PTP is realized is in synchronizing samples taken by disparate systems. These can be DAQs on the same subnet, sharing the same master clock or systems completely disconnected from each other and separated miles apart. As long as each system is disciplined to a healthy PTP reference clock, the samples will be synchronized to the aforementioned nanosecond time precision. This is a boon for distributed architectures and system design flexibility, allowing multi-controller synchronization without physical interconnections. </p>
+<p>In our experience, PTP implementation either works magically or is a real bear. It does help to have some knowledge of networking and configuring managed switches. However, a simple, one controller implementation can be achieved by connecting the time server directly to the cRIO's secondary network port. </p>
 <h4 id="tdms">TDMS</h4>
 <p>Due to the modular nature of MODAQ, each process saves to its own TDMS file. </p>
 <h4 id="summary-files">Summary Files</h4>
@@ -167,7 +174,7 @@
 <p>configuring, snoozing, rules based</p>
 <h4 id="metadata">Metadata</h4>
 <h3 id="sftpftp">SFTP/FTP</h3>
-<p>MODAQ does not currently support SFTP at this time due to limitations in LabVIEW 2019. However, the underlying RT Linux operating system does. Users familiar with SFTP and the Linux command line could develop solutions for automated file transfers. For manual transfers, client software such as WinSCP, Bitvise, FileZilla could be used. </p>
+<p>MODAQ does not support SFTP at this time due to limitations in LabVIEW 2019. However, the underlying RT Linux operating system does. Users familiar with SFTP and the Linux command line could develop solutions for automated file transfers. For manual transfers, client software such as WinSCP, Bitvise, FileZilla could be used. </p>
 <p>Due to the inherent lack of security, FTP in not included by default in MODAQ. NREL, like most other organizations with managed IT departments, prohibits the use of FTP. Users willing to accept the risk, can request the MODAQ FTP module- or write their own. </p>
 <h3 id="ssh">SSH</h3>
 <h3 id="watch-circle">Watch Circle</h3>
