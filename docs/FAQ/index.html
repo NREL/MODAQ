@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://nrel.github.io/MODAQ/FAQ/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>FAQ - MODAQ Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "FAQ";
+    var mkdocs_page_input_path = "FAQ.md";
+    var mkdocs_page_url = "/MODAQ/FAQ/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPY2SENW4Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GPY2SENW4Q');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> MODAQ Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../h_architecture/">Hardware Overview</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../s_architecture/">Software Overview</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ref_design/">Reference Design Manual</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../dev_modules/">Optional Modules</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tech_ref/">Technical Reference</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">FAQ</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#why-national-instrumentslabview">Why National Instruments/LabVIEW?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-not-just-use-generic-daq-controllers">Why not just use generic DAQ controllers?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-is-my-sensorinstrument-not-supported">Why is my sensor/instrument not supported?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-not-use-something-like-a-raspberrypi-or-arduino">Why not use something like a RaspberryPi or Arduino?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#can-nrel-help-configure-or-customize-modaq">Can NREL help configure or customize MODAQ?</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../links/">Useful Links</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">MODAQ Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>FAQ</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="faq">FAQ</h1>
+<h2 id="why-national-instrumentslabview">Why National Instruments/LabVIEW?</h2>
+<p>The quick answer is ease of use and speed of system development. </p>
+<p>The longer answer is that NI/LabVIEW has a long history in the testing community and a lot of trust and confidence has been established over the years. This is important in testing, since the integrity of the test results must withstand scrutiny and be trustworthy. National Instruments takes the necessary effort to qualify its hardware and produce specifications that are reliable. They design to standards' compliance and note the applicable standards in the product documentation. Since most of the NI hardware used in MODAQ have been in production for many years, any issues have been long resolved. It's just one less thing to worry about.</p>
+<p>NI hardware can be used with many common programming languages, such as C and python, however LabVIEW excels at integration with NI hardware and rapid software development. LabVIEW differs from most other common programming languages in that instead of lines of text, it uses a graphical approach that emphasizes dataflow. The graphical simplicity betrays its inherent power. LabVIEW greatly simplifies tasks such as multitasking, I/O operations, GUIs or HMIs, and binary file saves, to name a few. Programming in LabVIEW can actually be fun. </p>
+<p>All that said, becoming skilled at LabVIEW can take years of dedicated study and practice. Many advanced concepts, like many of those used in MODAQ, require (or at very least, benefit from) competence in several disciplines including data acquisition, mathematics, control theory, sensors and instrumentation, electrical and computer engineering, and electrical circuits/components.  </p>
+<h2 id="why-not-just-use-generic-daq-controllers">Why not just use generic DAQ controllers?</h2>
+<p>There are a lot of options out there, but it does not take long to realize that:</p>
+<ol>
+<li>You're just trading one ecosystem for another.</li>
+<li>Specification to price ratio might be (much) worse.</li>
+<li>Documentation and libraries may be lacking.</li>
+<li>Device compatibility may become a bit of an issue.</li>
+<li>Your preferred programming language or operating system might not be supported.</li>
+<li>Software still needs to be developed (or in some cases configured) to achieve expected results. </li>
+<li>It could end up being a lot of work!</li>
+</ol>
+<p>Of course it depends on individual needs and expectations, but whether going with National Instruments or an alternative, there's no getting away from the tasks of programming the system and assuring it will perform to expectations and deliver quality results. </p>
+<p>Some vendors sell controllers and I/O modules and offer software packages that require some configuration to achieve basic and limited data acquisition that can be considered on the easy end of the spectrum. However, doing anything beyond simple acquisitions often requires accessing a vendor supplied API and writing code in a traditional language like C/C++ or python - or worse - writing code in a vendor developed scripting language. </p>
+<p>There's a class of controllers that include an array of built-in I/O that are nice, well thought out, easy to configure, and performant, however under closer inspection, they lack some key features that make them unsuitable in an embedded application deployed in the field. For example, these options generally have limited data logging capability, supporting only small (usually 64 GB or less) and slow microSD cards. There's also limitations when it comes to more technical matters, such as sampling speed,  multiplexing (or scanning) vs simultaneous sampling, data synchronization, bit depth, multitasking, determinism, and noise. They also lack flexibility of local filtering or signal processing of data, local QC, and communications/remote supervision. Of course, use case and measurement objectives matter, so these can be perfectly fine for some applications. </p>
+<h2 id="why-is-my-sensorinstrument-not-supported">Why is my sensor/instrument not supported?</h2>
+<p>There are a lot of sensors and instruments available at various price-points with different interfacing requirements. With the exception of devices with simple, voltage or current varying outputs, devices tend to have a protocol, API, or unique data stream that requires custom code (drivers) to acquire the measurement data. Even different models of a similar device from the same manufacturer could have significant differences in the way the device 'talks'. Writing a new driver can range from trivial to complex, dependent on how the data are acquired from the device and/or the data formatting employed by the manufacturer. </p>
+<p>NREL will share drivers for hardware previously written for MODAQ.  For NREL to develop custom MODAQ drivers, please see the FAQ question below about <a href="#can-nrel-help-configure-or-customize-modaq">working with NREL</a>. </p>
+<h2 id="why-not-use-something-like-a-raspberrypi-or-arduino">Why not use something like a RaspberryPi or Arduino?</h2>
+<p>While RaspberryPis, Arduinos, and other similar devices are best known in the hobbyist realm, they have become quite prevalent in research and commercial applications. In fact, these devices are finding their way into PLCs and other industrial equipment and have demonstrated reliability. However, there's always considerations and trade-offs to be made. For instance:</p>
+<ol>
+<li>Mass produced, general purpose boards designed to meet hobbyist price-points might not be built to exacting standards and there could be considerable differences in component quality and design tolerances. This could include boards that use generic, knock-off, counterfeit, binned, or grey-market variants of key components. They might use cheap alternatives that compromise performance in demanding applications- such as poor-quality oscillators or low-efficiency regulators. Circuit boards may have cold solder joints or sloppy solder bridges. </li>
+<li>They may be unable to cope with or survive over-voltage, polarity reversals, and/or electrostatic discharge like purpose-built hardware.</li>
+<li>Insufficient attention may be paid to proper grounding and/or isolation to crosstalk and external interference. </li>
+<li>The board may not be survivable in punishing applications where it might be subject to temperature extremes, humidity, vibrations, and/or high shock. </li>
+<li>There is probably very little or questionable validation of published specifications. </li>
+<li>They might not be designed for 24/7 uptime and applications that push them to their limits and could suffer from overheating and/or intermittency. </li>
+<li>Many devices, particularly the microcontrollers, have limited storage options, with most only supporting microSD cards with small capacity and slow read/write speeds. </li>
+</ol>
+<p>And, code still needs to be written so that the hardware can acquire data and perform related tasks. The developer assumes the risk of assuring the code is performant, stable, and can provide some level of determinism. It should not be unexpected for the software development costs to vastly eclipse the cost of the hardware. Therefore, it might be economically more advantageous to go with a trusted, packaged solution rather than DIY it.  </p>
+<p>That said, NREL has developed DAQ solutions based on the Espressif ESP32 platform for less demanding use-cases that require a small, light weight form-factor and/or operable on battery power. Details of this system are expected to be published to the <a href="https://github.com/nrel/MODAQ/" target="_blank">NREL Github</a> in 2023.</p>
+<h2 id="can-nrel-help-configure-or-customize-modaq">Can NREL help configure or customize MODAQ?</h2>
+<p><a href="https://www.nrel.gov/news/video/discovering-the-ocean-through-data-modaq-text.html" target = "_blank">MODAQ</a> is funded by the Department of Energy's <a href="https://www.energy.gov/eere/water/water-power-technologies-office" target="_blank">Water Power Technology Office</a> for the purpose of advancing the development and testing of Marine Renewable Energy devices.  There are <a href="https://www.nrel.gov/water/work-with-us.html" target="_blank">mechanisms in place</a> for large and small organizations to engage NREL.  </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../links/" class="btn btn-neutral float-right" title="Useful Links">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tech_ref/" class="btn btn-neutral" title="Technical Reference"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tech_ref/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../links/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
