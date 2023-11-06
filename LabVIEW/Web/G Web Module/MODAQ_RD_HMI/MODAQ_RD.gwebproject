@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="975622BE0C964E4B41C1D8677A1F0B166526DD2F57AF6683A43038C141134A14DF3437935A7826FEA515C790FE4128C46EBE6B44098A033E0E98027D162C2B9C" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="Builders/SystemDesigner" Name="http://www.ni.com/Builders/SystemDesigner/SystemModel" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="9.0.0.0" Version="9.0.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="Package Management" Name="http://www.ni.com/PackageManagement" OldestCompatibleVersion="6.0.0.0" Version="6.1.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/EnvoyManagement" OldestCompatibleVersion="5.0.0.0" Version="5.0.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/SystemDiagram" OldestCompatibleVersion="8.0.0.49152" Version="8.0.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/SystemModel" OldestCompatibleVersion="7.1.0.49152" Version="7.1.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/SystemModelCore" OldestCompatibleVersion="5.1.0.5" Version="5.2.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="Web Module: Web Server Compiler" Name="http://www.ni.com/SystemDesigner/VireoBrowser/SystemModel" OldestCompatibleVersion="6.0.0.0" Version="6.0.0.49152" />
+    <ApplicationVersionInfo Build="8.4.0.49575" Name="LabVIEW NXG" Version="5.1.0" />
+  </SourceModelFeatureSet>
+  <Project>
+    <EnvoyManagerRootEnvoy Id="1" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+    <EmbeddedDefinitionReference Id="2" ModelDefinitionType="NationalInstruments.ProjectExplorer.Modeling.ProjectDataManager" Name="ProjectExplorer">
+      <ProjectExplorer />
+    </EmbeddedDefinitionReference>
+    <EmbeddedDefinitionReference Id="3" ModelDefinitionType="NationalInstruments.SystemDesigner.SystemDiagram.SystemDiagramDefinition" Name="SystemDiagram">
+      <SystemDiagram Id="4" SystemDiagramVersion="75" xmlns="http://www.ni.com/SystemDesigner/SystemDiagram">
+        <EnvoySuperimpositionContainer Id="5" xmlns="http://www.ni.com/SystemDesigner/EnvoyManagement">
+          <MappingManager Id="6" xmlns="http://www.ni.com/SystemDesigner/SystemModelCore">
+            <Instance Id="24" Source="{http://www.ni.com/SystemDesigner/VireoBrowser/SystemModel}VireoDevSystem">
+              <Symbols p8:Path="[{http://www.ni.com/SystemDesigner/VireoBrowser/SystemModel}VireoDevSystem]VireoDevSystem" p9:Process.AssociatedIdentifier="28" xmlns:p9="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p8="http://www.ni.com/Core/Proxy" />
+            </Instance>
+            <Superimposition Id="7" Name="Root Superimposition">
+              <Superimpose Source="24" />
+            </Superimposition>
+          </MappingManager>
+        </EnvoySuperimpositionContainer>
+        <SystemDiagramRootDiagram Id="9" />
+      </SystemDiagram>
+      <NameScopingEnvoy Bindings="ContentKind_{http://www.ni.com/SystemDesigner/VireoBrowser/SystemModel}Process.VireoDevSystem,VireoBrowserTarget,VIAEnvironment,HtmlPanel,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,AnyTarget,Process.VireoDevSystem" Id="28" ModelDefinitionType="{http://www.ni.com/SystemDesigner/VireoBrowser/SystemModel}VireoDevSystem" Name="VireoDevSystem">
+        <VireoDevSystem xmlns="http://www.ni.com/SystemDesigner/VireoBrowser/SystemModel" />
+        <NameScopingEnvoy Id="29" ModelDefinitionType="BuildSpecification" Name="Interactive">
+          <BuildSpecificationDefinition Id="30" TopLevelComponentRefId="36" xmlns="http://www.ni.com/GComponent.xsd">
+            <CompilerSymbolTable Id="31" xmlns="http://www.ni.com/PlatformFramework" />
+            <ComponentConfigurationReference AssociatedEnvoyId="11" ConfigName="Default" Id="36" />
+            <WeakDefaultComponentConfigurationReference Id="605c4e48f9964ecca0db1f3c332660a4" PackageName="ni-analysis-controlbasic-src-1.0.8.5.niaddon" Target="Control_Controller.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="4db5c490e90845e98883b26421d38dd3" PackageName="ni-analysis-controlbasic-src-1.0.8.5.niaddon" Target="Control_Conversion_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="2952ef004f454c2bba13d521856fc8db" PackageName="ni-analysis-controlbasic-src-1.0.8.5.niaddon" Target="Control_PIDGain_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="4a4d3cf2f2d74d1c98fa54c2e3d95503" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_SignalGeneration.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="7a29e28291c94d2ab541ceb54ef8ffae" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_PIDGain.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="3136d933cd8e4a3c8895e1dc91d8b9d8" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_Nonlinear.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="74d12a737a094b2e9f0cf904550d3f34" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_Linear.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="35d082c7118841c3b93c330da7826054" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_DesignPID.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="13705a27825f45698e0df49d7ca46840" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_Conversion.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="fb0733cb0f4146af861739a65682ad36" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Transforms_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="be3e4d7c3d304715ba97bec4871d1588" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Support_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="ed86d5bcc974ac6aa245ccf5c92b378" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Windows_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="c7669fb41b494567b0a3093abf55d364" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Statistics_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="a210e786a8fc4c4ca19a86165e5f0660" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Resampling_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="b5a537d397c147f5819f47d3730fb017" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Operations_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="c565b9681d2548d0a45140a2f992c194" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Measurement_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="96ea0642778475dbf5c11bde6db9a95" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Linear_Algebra_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="b0e190c94069470fa1476ff69b99940b" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Interpolation_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="168c802310f04460b04b3895df99de1c" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Generation_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="f501492d1e554352b71b4cbd726d826d" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Fitting_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="5aae2a0a5fa435e9cee2cb866bcc08d" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Filtering_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="4fc3318a6bf34f72bb0fffb5828e35dc" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Conditioning_Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="a0734f5650174bb98c4e96cb59d11dae" PackageName="ni-analysis-standard-src-1.0.8.4.niaddon" Target="AAL_Measurement_Standard.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="d577718f5e7c4c6397294f942fe06aa9" PackageName="ni-g-databaseconnectivity-src-1.0.0.0.niaddon" Target="DatabaseConnectivity.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="dcf4dd8d6a1f440b888b36e651ebf1a0" PackageName="ni-g-databaseconnectivity-src-1.0.0.0.niaddon" Target="Dependencies.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="734011bab96a40629732af683093846a" PackageName="ni-g-http-src-1.0.0.16.niaddon" Target="NI.HTTP.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="23b3dc704abb400b99f69391650b1952" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.Template.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="b5d73650efb541459a543f0f3b6ac9f7" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.Base.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="8e7160709cf43c6b16d30241c6c7419" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.Conversion.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="3358d4db4a3446f4af36164f79a0b12f" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.HTMath.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="714041488f514a4398195c1f520e7f5f" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.LinearAlgebra.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="8173656232f84d718d9ec0cd22d45f61" PackageName="ni-g-websockets-src-1.0.2.2.niaddon" Target="NI.WebSockets.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="ab0b33834d944559c4bf953d6466bc8" PackageName="ni-nativetarget-nativetargetlib-src-4.0.0.0.niaddon" Target="NI.NativeTarget.Template.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="d9da3a39df534fa4891c80680f376ca6" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Conditioning.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="ffa602995bd0458b81f97b8446c5e566" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Fitting.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="5624226040f94df2a669716b951fa41b" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Formula.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="119c82a031842718b5b17082fa8daf8" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Generation.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="6f4d41f767414d1ea720cf317bea0cd7" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Geometry.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="1ee7f4df9e4bdda2a47bf62dd0bd26" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Integral_Differentiation.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="24f44adc485245cb8b52982cba388a05" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Interpolation.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="c83c0c2ea5fa4b308b02d159af8539a2" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Linear_Algebra.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="3dc328a06e5b4a158e61a922b4e67b54" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Matrix.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="9203a25a37374dd09e261f3b60fa41f4" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Measurement.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="bdb25e4c304b4f639fe05237aa5fe93a" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Operations.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="e11f2f28c8b04bc38c1cb89341ffc0f6" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Polynomial.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="bea72957d304987a73583b4d1c9d7e9" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Probability.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="2ebddf8dad544b0c94a980b698058004" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Resampling.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="c26e89351eeb47f3bec097b7d446e32b" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_SML.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="9e352633fe454961aa45e9c11b6a52eb" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Statistics.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="e1296b327826417fb51bd84d67c7998e" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Support.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="60ee62d575f945ad90773a941568683b" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Transforms.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="c50d18b92ace402fa5a5559a03677181" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Windows.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="831b332eddd84ca3ab1ffe95ddbe2363" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Filtering.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="3131b311425c4017801699a4b0d44a45" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_BLAS.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="b5c19b3a287d4a2ab849e17b0d49c745" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Special_Func.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="5f30ef0f24b34268933f2a51b86570ea" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Differential_Equations.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="15f9c67fbb59484cb85a0a47aec693d2" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Optimization.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="bbcb4d8c0ac243b1a48b116e169d5688" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Zeros.gcomp" />
+            <ComponentConfigurationReferenceDependencySource Id="fd8ee90e8c424a2e9bffb1bccb1a7b76" Target="MODAQ_HMI.gcomp::Configuration1" />
+            <WeakDefaultComponentConfigurationReference Id="ea6866d04ceb4ac3be664c769f7eab3b" PackageName="ni-actorframework-aflib-src-1.0.1.0.niaddon" Target="Actor Framework.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="bf2f8d9d8b9f4b889c0fc02108d575e5" PackageName="ni-g-reporting-src-1.0.0.13.niaddon" Target="NI.Reporting.Excel.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="21c96d64f46b41ea83515d0f5029aac3" PackageName="ni-g-reporting-src-1.0.0.13.niaddon" Target="NI.Reporting.Word.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="1af93d93a6374d1884c8b2ae0173b0f7" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Configuration File (INI).gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="e96eae15b54a4f718f7736d733ca19c7" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Data Type.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="3f7fd46059b648399b0d334b6a19baab" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.File IO (General).gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="173e642c566c4b87bd44d0cae6e29c03" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Input Devices.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="76254279f1cc4c4f8d9590080d242cb6" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Numeric.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="3838776b08dc4f34b789f10ec6593641" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Operating System.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="f820cbd5300140e69d02eb9d841185bf" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Registry.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="ba9ac9bd9cdd495a801e59b4c12dfc79" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Rendezvous.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="21064303b03b4584949caf50798f4077" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Semaphore.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="e9a0f0132b704a2a9ec8c6929902c098" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.SMTP Email.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="46d7ac250cc3458a826744f5eaece016" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Sound.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="3342a00b1d9444e1b45c909e6ca7c5fb" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Strings.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="8f44490eb591456ca90c3240a1172520" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.TCP.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="4abab8292aff4f8795aedf58e6af8fc0" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.TDMS.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="1c38ae349d174ec589094d8846892425" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Timed Loop.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="af259e8d8f6f4f98aeb83824f4151220" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Timing.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="9d395984cd26464a844d696bfec3c156" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.URL.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="b07d1d326dba44709278e2141bc2c6e6" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Waveform.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="84090ac80dcd4b9ab10a58ee4047c964" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Zip.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="b5d7640d504d43e19ecf808426696132" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.User Interface.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="111fdaa3288c4081b44461b662c62d5f" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Data Communications.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="91df0b50796a401fbbb8caac893d323a" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Execution Control.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="2f48ec823d5d4fe48f08df5dd4453fdb" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="80232517ae0d49618814eabe9ee04434" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Color Picker.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="21285413f1b34e6e9fbf5c94ae6073d5" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Libraries and Executables.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="9307d202d92e47e9ab27747cb4c56342" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Shared Variable.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="f1b82febf4814f62b6fb63b136cc332f" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Network Streams.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="773b7c56a33d4ee0867def93619b1598" PackageName="ni-idl-basicelementsv1fpga-src-20.0.0.niaddon" Target="BasicElementsV1FPGA.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="4ed6363bbd0c414eb7f43a3170ae63ea" PackageName="ni-idl-datatriggerv1fpga-src-20.0.0.niaddon" Target="DataTriggerV1FPGA.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="5f7045ad81704b99869437b1040b1c51" PackageName="ni-idl-datatriggerv1fpga-src-20.0.0.niaddon" Target="DataTriggerV1Shared.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="7cce9ed71a694f0baa628527fe585d50" PackageName="ni-idl-streamingv1fpga-src-20.0.0.niaddon" Target="StreamingV1FPGA.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="149d7be58e054510810b7375962b4593" PackageName="ni-idl-streamingv1fpga-src-20.0.0.niaddon" Target="StreamingV1Common.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="cd46058c0cd84324bdf215977451d53e" PackageName="ni-idl-streamingv1host-src-20.0.0.niaddon" Target="StreamingV1Host.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="86ad74df737f4b6fb1a818c48dce16f0" PackageName="ni-instrumentdriver-keysight344xx-src-20.0.0.niaddon" Target="Keysight344XX.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="dd81d2a239304467a0a7bc1ff53bec66" PackageName="ni-p2p-base-src-20.0.0.niaddon" Target="P2PComponent.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="5d7e50e34c104593ad11122242af1d61" PackageName="ni-rt-rtlib-src-1.0.0.23.niaddon" Target="NI.RT.Shared.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="4a61b1f40bc04b958cf9a1119a99145f" PackageName="ni-rt-rtlib-src-1.0.0.23.niaddon" Target="NI.RT.SMP CPU.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="dd17edfb99b741feac714dfc8e7fbe17" PackageName="ni-rt-rtlib-src-1.0.0.23.niaddon" Target="NI.RT.Trace Tool.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="fcd88ea0bb1343f48917e6d449f35775" PackageName="ni-rt-rtlib-src-1.0.0.23.niaddon" Target="NI.RT.Utility.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="bbd6fdbbb5a0424abe26291e3fc42a93" PackageName="ni-rt-rtlib-src-1.0.0.23.niaddon" Target="NI.RT.Watchdog Timer.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="3bf6ccc2c2214718a29c21e5e37f57dc" PackageName="ni-skyline-file-src-20.5.0.niaddon" Target="NI.SL.File.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="9b29e742930e4f14bc409b87baa8dfa0" PackageName="ni-skyline-configuration-src-20.5.0.niaddon" Target="NI.SL.Configuration.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="79168db8ab544f6fad67676bfe4bed71" PackageName="ni-skyline-json-src-20.5.0.niaddon" Target="NI.SL.JSON.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="be887abd6e72487d9723cb19c6da07fd" PackageName="ni-skyline-messagehttp-src-20.5.0.niaddon" Target="NI.SL.Message.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="a072b7ea68cb48b1bb2effde8cc3d24d" PackageName="ni-skyline-taghttp-src-20.5.0.niaddon" Target="NI.SL.Tag.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="910b10519b72465eb06da9f7efa9f2e9" PackageName="ni-skyline-tdmreader-src-20.5.0.niaddon" Target="NI.SL.TDMReader.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="9387fac681e74551a52970080d6d52b7" PackageName="ni-skyline-utilities-src-20.5.0.niaddon" Target="NI.SL.Utilities.gcomp" />
+            <WeakDefaultComponentConfigurationReference Id="fd855f0528de41b797bcd0d9e454bb0b" PackageName="ni-visa-base-src-20.0.0.niaddon" Target="VISA.gcomp" />
+          </BuildSpecificationDefinition>
+          <EmbeddedDefinitionReference Id="32" ModelDefinitionType="PackageReferencesDefinition" Name="ProjectReferences">
+            <PackageReferencesDefinition />
+            <SourceFileReference Bindings="EnvoyManager" Id="b08c291c73954f18a8bb3fa3d86361ab" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-advanced-src-1.0.8.5.niaddon" StoragePath="ref://ni/analysis/advanced-src/1.0.8.5" />
+            <SourceFileReference Bindings="EnvoyManager" Id="9f4ca56334a24366a0a970ec4c2b2d16" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-basic-src-1.0.8.6.niaddon" StoragePath="ref://ni/analysis/basic-src/1.0.8.6" />
+            <SourceFileReference Bindings="EnvoyManager" Id="35b7e2465b494f02aba43e7883f7dcd6" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-control-src-1.0.8.5.niaddon" StoragePath="ref://ni/analysis/control-src/1.0.8.5" />
+            <SourceFileReference Bindings="EnvoyManager" Id="921ba91c48464f02ad6ae98db49de5d0" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-controlbasic-src-1.0.8.5.niaddon" StoragePath="ref://ni/analysis/controlbasic-src/1.0.8.5" />
+            <SourceFileReference Bindings="EnvoyManager" Id="60ea1cf1dfc047b5877bc7697a74072b" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-standard-src-1.0.8.4.niaddon" StoragePath="ref://ni/analysis/standard-src/1.0.8.4" />
+            <SourceFileReference Bindings="EnvoyManager" Id="c958e5eaa00443a8a93f040ce2a93e30" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-fpga-fpgalib-src-4.0.0.6.niaddon" StoragePath="ref://ni/fpga/fpgalib-src/4.0.0.6" />
+            <SourceFileReference Bindings="EnvoyManager" Id="104a47ff67324a73baac3c21fee76077" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-databaseconnectivity-src-1.0.0.0.niaddon" StoragePath="ref://ni/G/databaseconnectivity-src/1.0.0.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="d2b7d3e080f647a7a23b5887689b19e5" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-http-src-1.0.0.16.niaddon" StoragePath="ref://ni/G/http-src/1.0.0.16" />
+            <SourceFileReference Bindings="EnvoyManager" Id="c9fd88894fa14d5eae56134e512369f0" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-websockets-src-1.0.2.2.niaddon" StoragePath="ref://ni/G/websockets-src/1.0.2.2" />
+            <SourceFileReference Bindings="EnvoyManager" Id="bea29952dba4562aa9f24618051c25f" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-nativetarget-nativetargetlib-src-4.0.0.0.niaddon" StoragePath="ref://ni/nativetarget/nativetargetlib-src/4.0.0.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="d0d8103b01474e199aaaa0e3cb7da0ca" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-actorframework-aflib-src-1.0.1.0.niaddon" StoragePath="ref://ni/ActorFramework/aflib-src/1.0.1.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="4b789462408546f0a70719e9a52c92b9" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-reporting-src-1.0.0.13.niaddon" StoragePath="ref://ni/G/reporting-src/1.0.0.13" />
+            <SourceFileReference Bindings="EnvoyManager" Id="7af870594c45412d831dffc6d0005a3d" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-stdlib-src-1.0.6.45.niaddon" StoragePath="ref://ni/G/stdlib-src/1.0.6.45" />
+            <SourceFileReference Bindings="EnvoyManager" Id="55b35570a3e46f0a3f148bde0369797" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-idl-basicelementsv1fpga-src-20.0.0.niaddon" StoragePath="ref://NI/idl/BasicElementsV1FPGA-src/20.0.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="12ae3d52b6a44564bb832e6c078fe93f" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-idl-datatriggerv1fpga-src-20.0.0.niaddon" StoragePath="ref://NI/idl/DataTriggerV1FPGA-src/20.0.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="1da509de1bec4cdd80c862e611064a1d" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-idl-streamingv1fpga-src-20.0.0.niaddon" StoragePath="ref://NI/idl/StreamingV1FPGA-src/20.0.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="50829e44f7124c38864be4d6b5c39580" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-idl-streamingv1host-src-20.0.0.niaddon" StoragePath="ref://NI/idl/StreamingV1Host-src/20.0.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="90b6bd3d0ccb4742a2487076d73c2bc6" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-instrumentdriver-keysight344xx-src-20.0.0.niaddon" StoragePath="ref://NI/InstrumentDriver/Keysight344XX-src/20.0.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="1c8c50a3b3614162a7f5d874e39e20b2" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-p2p-base-src-20.0.0.niaddon" StoragePath="ref://NI/P2P/Base-src/20.0.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="88b3388c4a504bfcaed5a90aa852225b" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-rt-rtlib-src-1.0.0.23.niaddon" StoragePath="ref://NI/RT/rtlib-src/1.0.0.23" />
+            <SourceFileReference Bindings="EnvoyManager" Id="b33cb38c883840d9afe2df6c2dcf7be3" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-configuration-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/configuration-src/20.5.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="2971dd4be25480599ade254b1a32833" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-file-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/file-src/20.5.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="779ec602a3034a809f867f7108ef342a" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-json-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/json-src/20.5.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="c2e75d58d76f46f9a4b319a724093fc1" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-messagehttp-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/messageHTTP-src/20.5.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="380c78eed9a24cc2a956f7fcc4060441" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-taghttp-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/taghttp-src/20.5.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="771e2e79cecb48fe9b7feda00144e69f" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-tdmreader-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/tdmreader-src/20.5.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="3c110ae7b0584c8f8569c3a8ae4a32c8" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-utilities-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/utilities-src/20.5.0" />
+            <SourceFileReference Bindings="EnvoyManager" Id="40f28a1ddd754f11a5c85aa6140b832a" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-visa-base-src-20.0.0.niaddon" StoragePath="ref://NI/VISA/Base-src/20.0.0" />
+          </EmbeddedDefinitionReference>
+          <EmbeddedDefinitionReference Bindings="{http://www.ni.com/GComponent.xsd}ComponentBaseType_Library,ComponentMoC" Id="11" ModelDefinitionType="ComponentDefinition" Name="Default Component">
+            <ComponentDefinition DefaultConfigurationName="Default" Id="12" RootNamespaceId="11" xmlns="http://www.ni.com/GComponent.xsd">
+              <Icon Id="13" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+                <IconPanel Height="[float]40" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+                  <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="15" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="16" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="17" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+                    <FileNameText Attached="[bool]True" Id="18" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Default Component" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+                      <FontSetting FontFamily="Verdana" FontSize="6" Id="19" />
+                    </FileNameText>
+                  </IconTemplate>
+                </IconPanel>
+              </Icon>
+              <CompilerSymbolTable Id="20" xmlns="http://www.ni.com/PlatformFramework" />
+              <ComponentConfiguration Id="21" Name="Default" ComponentSubtypeIdentifier="G Library">
+                <CompilerSymbolTable Id="22" xmlns="http://www.ni.com/PlatformFramework" />
+                <GLibraryProperties Id="7c9794fd203049bcb1260967856df2c2" />
+              </ComponentConfiguration>
+            </ComponentDefinition>
+          </EmbeddedDefinitionReference>
+          <SourceFileReference Bindings="EnvoyManager,ComponentMoC,{http://www.ni.com/GComponent.xsd}ComponentBaseType_Application,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory,ContentKind_{http://www.ni.com/Builders/SystemDesigner/SystemModel}Process.ApplicationComponent" Id="41df0bf88fbe432eaeaba121560a5bc5" ModelDefinitionType="ComponentDefinition" Name="MODAQ_HMI.gcomp" StoragePath="MODAQ_HMI.gcomp\MODAQ_HMI.gcomp" />
+        </NameScopingEnvoy>
+      </NameScopingEnvoy>
+    </EmbeddedDefinitionReference>
+    <NameScopingEnvoy Id="10" ModelDefinitionType="NullTarget" Name="NullTarget">
+      <NullTarget />
+      <EmbeddedDefinitionReference Id="23" ModelDefinitionType="PackageReferencesDefinition" Name="ProjectReferences">
+        <PackageReferencesDefinition>
+          <PackageInterfaceDefinitionContents Contents="Control_Controller.gcomp,Control_Conversion_Base.gcomp,Control_PIDGain_Base.gcomp" Id="cccdb49d57f24efa86adef82db7ae79b" PackageInterfaceDefinitionEnvoyId="9adab088eabf4e27ba89a0001977c935" />
+          <PackageInterfaceDefinitionContents Contents="Control_SignalGeneration.gcomp,Control_PIDGain.gcomp,Control_Nonlinear.gcomp,Control_Linear.gcomp,Control_DesignPID.gcomp,Control_Conversion.gcomp" Id="74c8c86d2394f04bb16620e7ca8fa9b" PackageInterfaceDefinitionEnvoyId="8c578d432c5348deac398df7833c1417" />
+          <PackageInterfaceDefinitionContents Contents="AAL_Transforms_Base.gcomp,AAL_Support_Base.gcomp,AAL_Windows_Base.gcomp,AAL_Statistics_Base.gcomp,AAL_Resampling_Base.gcomp,AAL_Operations_Base.gcomp,AAL_Measurement_Base.gcomp,AAL_Linear_Algebra_Base.gcomp,AAL_Interpolation_Base.gcomp,AAL_Generation_Base.gcomp,AAL_Fitting_Base.gcomp,AAL_Filtering_Base.gcomp,AAL_Conditioning_Base.gcomp" Id="b326db1227f84d87917b38d2526d73c1" PackageInterfaceDefinitionEnvoyId="d65fe74c4ab64fc69ceba8713e868a1c" />
+          <PackageInterfaceDefinitionContents Contents="AAL_Measurement_Standard.gcomp" Id="76718ea9888a4d7aabc83ba793ebebbd" PackageInterfaceDefinitionEnvoyId="f0390304249248f1990e007faa7e3708" />
+          <PackageInterfaceDefinitionContents Contents="DatabaseConnectivity.gcomp,Dependencies.gcomp" Id="30cf19c809114c5bbbcb6fe9389ca31a" PackageInterfaceDefinitionEnvoyId="3fe489594daf4c9cbd798e2930a4b0fc" />
+          <PackageInterfaceDefinitionContents Contents="NI.HTTP.gcomp" Id="5c935838e7d94ae48f50925cf017a278" PackageInterfaceDefinitionEnvoyId="9d4f3f772a2b4908b65fb78e7d88511b" />
+          <PackageInterfaceDefinitionContents Contents="NI.FPGA.Template.gcomp,NI.FPGA.Base.gcomp,NI.FPGA.Conversion.gcomp,NI.FPGA.HTMath.gcomp,NI.FPGA.LinearAlgebra.gcomp" Id="2300ddbbb97b455f8c3075e5308aa00f" PackageInterfaceDefinitionEnvoyId="d5d4e44915ea4a86a5f24f63658d589d" />
+          <PackageInterfaceDefinitionContents Contents="NI.WebSockets.gcomp" Id="a5a50f43cc6a4569856aa2d800241c22" PackageInterfaceDefinitionEnvoyId="5a4e4a55e0a54d0899d79107051c4cc0" />
+          <PackageInterfaceDefinitionContents Contents="NI.NativeTarget.Template.gcomp" Id="9fea4e132b34935ab73f920bafa1c6b" PackageInterfaceDefinitionEnvoyId="d663aca1e1264ce68afc32e125a3fd57" />
+          <PackageInterfaceDefinitionContents Contents="AAL_Conditioning.gcomp,AAL_Fitting.gcomp,AAL_Formula.gcomp,AAL_Generation.gcomp,AAL_Geometry.gcomp,AAL_Integral_Differentiation.gcomp,AAL_Interpolation.gcomp,AAL_Linear_Algebra.gcomp,AAL_Matrix.gcomp,AAL_Measurement.gcomp,AAL_Operations.gcomp,AAL_Polynomial.gcomp,AAL_Probability.gcomp,AAL_Resampling.gcomp,AAL_SML.gcomp,AAL_Statistics.gcomp,AAL_Support.gcomp,AAL_Transforms.gcomp,AAL_Windows.gcomp,AAL_Filtering.gcomp,AAL_BLAS.gcomp,AAL_Special_Func.gcomp,AAL_Differential_Equations.gcomp,AAL_Optimization.gcomp,AAL_Zeros.gcomp" Id="65aa7dce3b0c422db53d9a3caed6bfa7" PackageInterfaceDefinitionEnvoyId="deab5a341f744d40873c3104263df456" />
+          <PackageInterfaceDefinitionContents Contents="Actor Framework.gcomp" Id="a4eb4e2656c14f67ae997ba1c99942c8" PackageInterfaceDefinitionEnvoyId="b268417195f4404a9c6e20b17697df75" />
+          <PackageInterfaceDefinitionContents Contents="NI.Reporting.Excel.gcomp,NI.Reporting.Word.gcomp" Id="544c40f6eaf2453f99f832fe2da3ce0b" PackageInterfaceDefinitionEnvoyId="c41d41c19e82483b91adff8f315c1047" />
+          <PackageInterfaceDefinitionContents Contents="NI.G Core.Configuration File (INI).gcomp,NI.G Core.Data Type.gcomp,NI.G Core.File IO (General).gcomp,NI.G Core.Input Devices.gcomp,NI.G Core.Numeric.gcomp,NI.G Core.Operating System.gcomp,NI.G Core.Registry.gcomp,NI.G Core.Rendezvous.gcomp,NI.G Core.Semaphore.gcomp,NI.G Core.SMTP Email.gcomp,NI.G Core.Sound.gcomp,NI.G Core.Strings.gcomp,NI.G Core.TCP.gcomp,NI.G Core.TDMS.gcomp,NI.G Core.Timed Loop.gcomp,NI.G Core.Timing.gcomp,NI.G Core.URL.gcomp,NI.G Core.Waveform.gcomp,NI.G Core.Zip.gcomp,NI.G Core.User Interface.gcomp,NI.G Core.Data Communications.gcomp,NI.G Core.Execution Control.gcomp,NI.G Core.gcomp,NI.G Core.Color Picker.gcomp,NI.G Core.Libraries and Executables.gcomp,NI.G Core.Shared Variable.gcomp,NI.G Core.Network Streams.gcomp" Id="a8330ef020b24546a46d6e0c17842b61" PackageInterfaceDefinitionEnvoyId="ccaa6847921d4df79b1c9fefe27bf20e" />
+          <PackageInterfaceDefinitionContents Contents="BasicElementsV1FPGA.gcomp" Id="dde33d4ebe9d46b89570db3e8ebbd63e" PackageInterfaceDefinitionEnvoyId="def2ab00983041a6bbc2fc5c31a8c6a2" />
+          <PackageInterfaceDefinitionContents Contents="DataTriggerV1FPGA.gcomp,DataTriggerV1Shared.gcomp" Id="19efa586672445b08da4a04d87a5dcf2" PackageInterfaceDefinitionEnvoyId="388f37d2e9fa48828d49219f4c11f319" />
+          <PackageInterfaceDefinitionContents Contents="StreamingV1FPGA.gcomp,StreamingV1Common.gcomp" Id="7d366dbcae2e4906bb78bcbc10fd0329" PackageInterfaceDefinitionEnvoyId="22c198e04d043f1aef0defb126fcd16" />
+          <PackageInterfaceDefinitionContents Contents="StreamingV1Host.gcomp" Id="2f55b2ea1242477d8a7dcf74997c17d1" PackageInterfaceDefinitionEnvoyId="dc368cfd399546269da8e82bd27de64f" />
+          <PackageInterfaceDefinitionContents Contents="Keysight344XX.gcomp" Id="5d1d1fd6e86641b1905ffa37c456e1a1" PackageInterfaceDefinitionEnvoyId="6b7b3cd5f91d4eb49504ecee2739ea22" />
+          <PackageInterfaceDefinitionContents Contents="P2PComponent.gcomp" Id="2d11b54ddb89454f8741936169ff8ad8" PackageInterfaceDefinitionEnvoyId="eafeb0e579b04cae83b747e3154f88e0" />
+          <PackageInterfaceDefinitionContents Contents="NI.RT.Shared.gcomp,NI.RT.SMP CPU.gcomp,NI.RT.Trace Tool.gcomp,NI.RT.Utility.gcomp,NI.RT.Watchdog Timer.gcomp" Id="9313b1e029b0442dbaf9616aa09d3d22" PackageInterfaceDefinitionEnvoyId="2108cb2e60ba4d1396c7613a28fa0cca" />
+          <PackageInterfaceDefinitionContents Contents="NI.SL.File.gcomp" Id="98cd09725d674308a9659c0fd4c117a1" PackageInterfaceDefinitionEnvoyId="b0beb39b62da4bdd904ea7f8d87659da" />
+          <PackageInterfaceDefinitionContents Contents="NI.SL.Configuration.gcomp" Id="3010aef09fc44cf090678efcadd060fd" PackageInterfaceDefinitionEnvoyId="dc1b22af620a407e882b80bfc5f8306f" />
+          <PackageInterfaceDefinitionContents Contents="NI.SL.JSON.gcomp" Id="3bda726cf108447da7c95eac10f1f3d3" PackageInterfaceDefinitionEnvoyId="14784420bd4347d8bde35410ed8770c1" />
+          <PackageInterfaceDefinitionContents Contents="NI.SL.Message.gcomp" Id="cd41a30499724f4094db363f20bfc178" PackageInterfaceDefinitionEnvoyId="6f0a2092fbaa4c8dbc8a2c6e40b96e5d" />
+          <PackageInterfaceDefinitionContents Contents="NI.SL.Tag.gcomp" Id="74460f2814ed46789cb077048e55943d" PackageInterfaceDefinitionEnvoyId="f1b813c157f14bbe915353921cd9a991" />
+          <PackageInterfaceDefinitionContents Contents="NI.SL.TDMReader.gcomp" Id="6b2b863b148245ffb052ed8159b775fb" PackageInterfaceDefinitionEnvoyId="58f0e6f96d1f4ec18c7be3acc63714a5" />
+          <PackageInterfaceDefinitionContents Contents="NI.SL.Utilities.gcomp" Id="35c5c71e81d24df9b894ff20a8b214d5" PackageInterfaceDefinitionEnvoyId="5aa6f55d3f844326b1261671daec04b5" />
+          <PackageInterfaceDefinitionContents Contents="VISA.gcomp" Id="920a3e3729b44373b9112f2204ee1c71" PackageInterfaceDefinitionEnvoyId="dfb2af8b1e7468b986ae8182d1d301a" />
+        </PackageReferencesDefinition>
+        <SourceFileReference Bindings="EnvoyManager" Id="deab5a341f744d40873c3104263df456" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-advanced-src-1.0.8.5.niaddon" StoragePath="ref://ni/analysis/advanced-src/1.0.8.5" />
+        <SourceFileReference Bindings="EnvoyManager" Id="d65fe74c4ab64fc69ceba8713e868a1c" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-basic-src-1.0.8.6.niaddon" StoragePath="ref://ni/analysis/basic-src/1.0.8.6" />
+        <SourceFileReference Bindings="EnvoyManager" Id="8c578d432c5348deac398df7833c1417" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-control-src-1.0.8.5.niaddon" StoragePath="ref://ni/analysis/control-src/1.0.8.5" />
+        <SourceFileReference Bindings="EnvoyManager" Id="9adab088eabf4e27ba89a0001977c935" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-controlbasic-src-1.0.8.5.niaddon" StoragePath="ref://ni/analysis/controlbasic-src/1.0.8.5" />
+        <SourceFileReference Bindings="EnvoyManager" Id="f0390304249248f1990e007faa7e3708" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-standard-src-1.0.8.4.niaddon" StoragePath="ref://ni/analysis/standard-src/1.0.8.4" />
+        <SourceFileReference Bindings="EnvoyManager" Id="d5d4e44915ea4a86a5f24f63658d589d" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-fpga-fpgalib-src-4.0.0.6.niaddon" StoragePath="ref://ni/fpga/fpgalib-src/4.0.0.6" />
+        <SourceFileReference Bindings="EnvoyManager" Id="3fe489594daf4c9cbd798e2930a4b0fc" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-databaseconnectivity-src-1.0.0.0.niaddon" StoragePath="ref://ni/G/databaseconnectivity-src/1.0.0.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="9d4f3f772a2b4908b65fb78e7d88511b" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-http-src-1.0.0.16.niaddon" StoragePath="ref://ni/G/http-src/1.0.0.16" />
+        <SourceFileReference Bindings="EnvoyManager" Id="5a4e4a55e0a54d0899d79107051c4cc0" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-websockets-src-1.0.2.2.niaddon" StoragePath="ref://ni/G/websockets-src/1.0.2.2" />
+        <SourceFileReference Bindings="EnvoyManager" Id="d663aca1e1264ce68afc32e125a3fd57" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-nativetarget-nativetargetlib-src-4.0.0.0.niaddon" StoragePath="ref://ni/nativetarget/nativetargetlib-src/4.0.0.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="b268417195f4404a9c6e20b17697df75" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-actorframework-aflib-src-1.0.1.0.niaddon" StoragePath="ref://ni/ActorFramework/aflib-src/1.0.1.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="c41d41c19e82483b91adff8f315c1047" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-reporting-src-1.0.0.13.niaddon" StoragePath="ref://ni/G/reporting-src/1.0.0.13" />
+        <SourceFileReference Bindings="EnvoyManager" Id="ccaa6847921d4df79b1c9fefe27bf20e" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-stdlib-src-1.0.6.45.niaddon" StoragePath="ref://ni/G/stdlib-src/1.0.6.45" />
+        <SourceFileReference Bindings="EnvoyManager" Id="def2ab00983041a6bbc2fc5c31a8c6a2" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-idl-basicelementsv1fpga-src-20.0.0.niaddon" StoragePath="ref://NI/idl/BasicElementsV1FPGA-src/20.0.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="388f37d2e9fa48828d49219f4c11f319" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-idl-datatriggerv1fpga-src-20.0.0.niaddon" StoragePath="ref://NI/idl/DataTriggerV1FPGA-src/20.0.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="22c198e04d043f1aef0defb126fcd16" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-idl-streamingv1fpga-src-20.0.0.niaddon" StoragePath="ref://NI/idl/StreamingV1FPGA-src/20.0.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="dc368cfd399546269da8e82bd27de64f" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-idl-streamingv1host-src-20.0.0.niaddon" StoragePath="ref://NI/idl/StreamingV1Host-src/20.0.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="6b7b3cd5f91d4eb49504ecee2739ea22" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-instrumentdriver-keysight344xx-src-20.0.0.niaddon" StoragePath="ref://NI/InstrumentDriver/Keysight344XX-src/20.0.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="eafeb0e579b04cae83b747e3154f88e0" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-p2p-base-src-20.0.0.niaddon" StoragePath="ref://NI/P2P/Base-src/20.0.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="2108cb2e60ba4d1396c7613a28fa0cca" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-rt-rtlib-src-1.0.0.23.niaddon" StoragePath="ref://NI/RT/rtlib-src/1.0.0.23" />
+        <SourceFileReference Bindings="EnvoyManager" Id="dc1b22af620a407e882b80bfc5f8306f" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-configuration-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/configuration-src/20.5.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="b0beb39b62da4bdd904ea7f8d87659da" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-file-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/file-src/20.5.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="14784420bd4347d8bde35410ed8770c1" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-json-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/json-src/20.5.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="6f0a2092fbaa4c8dbc8a2c6e40b96e5d" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-messagehttp-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/messageHTTP-src/20.5.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="f1b813c157f14bbe915353921cd9a991" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-taghttp-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/taghttp-src/20.5.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="58f0e6f96d1f4ec18c7be3acc63714a5" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-tdmreader-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/tdmreader-src/20.5.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="5aa6f55d3f844326b1261671daec04b5" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-skyline-utilities-src-20.5.0.niaddon" StoragePath="ref://NI/Skyline/utilities-src/20.5.0" />
+        <SourceFileReference Bindings="EnvoyManager" Id="dfb2af8b1e7468b986ae8182d1d301a" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-visa-base-src-20.0.0.niaddon" StoragePath="ref://NI/VISA/Base-src/20.0.0" />
+      </EmbeddedDefinitionReference>
+      <NameScopingEnvoy Id="74c772cd410d4297a07aba420960d94a" ModelDefinitionType="BuildSpecification" Name="Interactive">
+        <BuildSpecificationDefinition Id="b2409024d65c43429c9940f318da5c83" xmlns="http://www.ni.com/GComponent.xsd">
+          <CompilerSymbolTable Id="b53c4e744f95419eb7186aa7e2ec7861" xmlns="http://www.ni.com/PlatformFramework" />
+          <WeakDefaultComponentConfigurationReference Id="a9a31023c93b418ab5468280084fce4e" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Conditioning.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="8499e3ec949b42ec9ef6443abb4c6597" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Fitting.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="9a33a340d73f476cab4f462cba778e12" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Formula.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="59a1b874e31c4ec7921578b8edc7a417" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Generation.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="db925a60a5044e02ae70079de4aa9c41" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Geometry.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="7963cbb51e494f548592d52c53c876c6" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Integral_Differentiation.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d6a34abbde884bf39e8cae4b2168bcfc" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Interpolation.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="1497b8ff221c4e118fc0b02fe31f7ed2" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Linear_Algebra.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="b23d8a73b8094ad69b6e30dd8a73bc0e" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Matrix.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="345c7e566cff4793b84734eab387981a" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Measurement.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="5deb3d88c77c45878798799398a92ba3" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Operations.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="83d2882fc184426880fc8edab553464a" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Polynomial.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="540f54e4fb454998acc17530367f4add" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Probability.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="f93d1a6567e147749592614b81db7a09" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Resampling.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="879dc247ef174567a25e9d306cdb5384" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_SML.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="b3a55bbd983d488cadc26391f39c524d" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Statistics.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="31a0baa3d63f42baad5cd83e32515b48" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Support.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="c8ed674876b14a5eb8d23be11bbc1f8a" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Transforms.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="f7d10ae5cf714596a2588ae08a6791e9" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Windows.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="4670000cb0ff4893bdbd86769769071c" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Filtering.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="3bf4b34ded284ab3a4b42c0862a7c55a" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_BLAS.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="f884b4c259c4dba826a4c35abf3aafb" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Special_Func.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="e6ea33c4f34e4c1a8878eb9585f6c6ab" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Differential_Equations.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="a3bb25b9f016434882ad9966b2101385" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Optimization.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="ea39f07f35d74d03bd085904408c4b4b" PackageName="ni-analysis-advanced-src-1.0.8.5.niaddon" Target="AAL_Zeros.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="3b205f3cb4a94956929b91a96ede2897" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Transforms_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="cda492240bdb4e69b9afe00315676965" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Support_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="f807583b278b4ae7b87d9fd08de1b629" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Windows_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="79126f5121554325a5c7e9712118f5d1" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Statistics_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="1b3ac7474e91476880e5638cf51c7818" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Resampling_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="6217dabb517a4b25833825fac60fdeef" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Operations_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="e1063e84102041fe823a68457695c183" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Measurement_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="587c75a584d54fbdabc7d86279a46860" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Linear_Algebra_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="8a9729623c3349028b2e96039a5827fa" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Interpolation_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d5411cc0726446c4b18d3fb4cbd099bd" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Generation_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d8231d05272744ddb052d336c38046b1" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Fitting_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="615f479d967e41cbb54bf66fb9b25af2" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Filtering_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d70d41d92c204851896c231434680fae" PackageName="ni-analysis-basic-src-1.0.8.6.niaddon" Target="AAL_Conditioning_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="ad14efa0fa2846329d2411fbe6c64a5c" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_SignalGeneration.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="fae9e44450d6455b9ae4d0d4f853486c" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_PIDGain.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="7b7518afd12a4531aa79d0c5cf9d4f92" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_Nonlinear.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="8c003113e2fe424aa40c81ebf5bd1513" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_Linear.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="2d9ec08887b849af82b2a2c5ee1dc770" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_DesignPID.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="35492a30afb499fb938505a92f2f885" PackageName="ni-analysis-control-src-1.0.8.5.niaddon" Target="Control_Conversion.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="a33a40f2b9d6441bb55a8370902cf8bc" PackageName="ni-analysis-controlbasic-src-1.0.8.5.niaddon" Target="Control_Controller.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="c37f8f3f495c48458f1a86ae52892d3a" PackageName="ni-analysis-controlbasic-src-1.0.8.5.niaddon" Target="Control_Conversion_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="8c72bf83f3244499b582113339998c47" PackageName="ni-analysis-controlbasic-src-1.0.8.5.niaddon" Target="Control_PIDGain_Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="f0585e482b544ecf8ad29ea51f26af67" PackageName="ni-analysis-standard-src-1.0.8.4.niaddon" Target="AAL_Measurement_Standard.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="40e22270e4504ca8bed06e940d157ade" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.Template.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="b4dab87bcf874b34b37e9777b4093c6e" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.Base.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="c2e4fdce4e344471b109a88ddba71075" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.Conversion.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="6d025ef447fd4fa1b9c86c39e295f1bc" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.HTMath.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="f7cafd1703b54553a9ada3fe0ce5a255" PackageName="ni-fpga-fpgalib-src-4.0.0.6.niaddon" Target="NI.FPGA.LinearAlgebra.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="a97f4448f6db4c6e99160a9fd2c852a7" PackageName="ni-g-databaseconnectivity-src-1.0.0.0.niaddon" Target="DatabaseConnectivity.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="9daa189541e7457d98627a30b7793c7d" PackageName="ni-g-databaseconnectivity-src-1.0.0.0.niaddon" Target="Dependencies.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="ecc508ba3afd4dc2addca6715eb9b622" PackageName="ni-g-http-src-1.0.0.16.niaddon" Target="NI.HTTP.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d00e231a99b34e148fdda151765d600a" PackageName="ni-g-websockets-src-1.0.2.2.niaddon" Target="NI.WebSockets.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="e9429ba58514457fac1f9b3cc0257006" PackageName="ni-nativetarget-nativetargetlib-src-4.0.0.0.niaddon" Target="NI.NativeTarget.Template.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="b97e4275e5494ac597cee7a096818624" PackageName="ni-actorframework-aflib-src-1.0.1.0.niaddon" Target="Actor Framework.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="1f91e91d5b0e42db98ac9c0186b82a0e" PackageName="ni-g-reporting-src-1.0.0.13.niaddon" Target="NI.Reporting.Excel.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="5bd14ea42eb54a1bb4073531230e6f44" PackageName="ni-g-reporting-src-1.0.0.13.niaddon" Target="NI.Reporting.Word.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="39f94568ff2c498fa0b1d3783356f9e7" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Configuration File (INI).gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="8b43ec3aa290429c8e265b95713186b9" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Data Type.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d0d8cf6a7f3e42608333894f407488c0" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.File IO (General).gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="91dd86109ef84c3b91e5244138bc5290" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Input Devices.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="9712d19cb0154c7e988cef3fa9396319" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Numeric.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="47ad322bf7724288a0e490d2f9c33664" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Operating System.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="fbfa12b70ede4e83b606b81e2f561d7a" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Registry.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="1946d07cfcb6470fbff2e26422515dc6" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Rendezvous.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="402b7804766242c2b1d3e9c8f3f3e9c1" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Semaphore.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="ab8aeb5330e4c34bbad708dc611d1a7" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.SMTP Email.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="ea4b025e9b8049dd9860808f8c75a22c" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Sound.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="99837be69ac14f0b9d7d5288bac6da0d" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Strings.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="db51b392dd084f52a959c8a73b1febc9" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.TCP.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="47f9d6506fe34721be346bd20efd5458" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.TDMS.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="6fba1cb6ade04817b7470b6f7b061912" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Timed Loop.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="54c46e14aef437c9ac079edda11bb99" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Timing.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="df37d75c634f4ce0becad2961cb8321a" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.URL.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="f5d32cac17484c66b89472f52816d64b" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Waveform.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="957c1c678c96473f839a03813743de09" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Zip.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="2b50316bdfed4a71856f1c1dfc61f034" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.User Interface.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="f2570e6e3a274893a00f367c0d11ff7b" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Data Communications.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="e9ddc52e6a5469db6795230f931a0ec" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Execution Control.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="b47732ef131b41f089c45fa476000b3e" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="20b51b2c25b14392968c48459fba5cb5" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Color Picker.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d97cc52085134481bb04c76d7ec43a10" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Libraries and Executables.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="7a4107836ec44f208d77bcad6073eb1c" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Shared Variable.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="811cb269df6744f68a2405df380bdaa5" PackageName="ni-g-stdlib-src-1.0.6.45.niaddon" Target="NI.G Core.Network Streams.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="3215f984bb5c4ead889d973aacb0a2d5" PackageName="ni-daqmx-api-src-20.0.0.niaddon" Target="DAQmx.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="8acb857d1d7459a9a05f41e2618457b" PackageName="ni-mxlc-base-src-20.0.0.niaddon" Target="MXLC.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="cd853b7a8b6948e09a9cc80c8e835ea6" PackageName="ni-skyline-alarm-src-20.6.0.niaddon" Target="NI.SL.Alarm.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d108689896594f8e8d0528986fe72300" PackageName="ni-skyline-configuration-src-20.6.0.niaddon" Target="NI.SL.Configuration.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="59f14e4e873949109ef64187f15d82b6" PackageName="ni-skyline-file-src-20.6.0.niaddon" Target="NI.SL.File.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="3cd01ff186d346d787f100e4663d34d9" PackageName="ni-skyline-json-src-20.6.0.niaddon" Target="NI.SL.JSON.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d8c113477c0a49bfa093496d06168a36" PackageName="ni-skyline-messagehttp-src-20.6.0.niaddon" Target="NI.SL.Message.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="3844d0ce3d6f43cf98399b05e03820cd" PackageName="ni-skyline-notification-src-20.6.0.niaddon" Target="NI.SL.Notification.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="db2334526d6447d586daedcd98115659" PackageName="ni-skyline-taghttp-src-20.6.0.niaddon" Target="NI.SL.Tag.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="d3655b6fbb104656b634708142338082" PackageName="ni-skyline-tdmreader-src-20.6.0.niaddon" Target="NI.SL.TDMReader.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="b3435d932f32494d86bb6d312517a410" PackageName="ni-skyline-utilities-src-20.6.0.niaddon" Target="NI.SL.Utilities.gcomp" />
+          <WeakDefaultComponentConfigurationReference Id="371149ce6ca84435aa6b1b6772b0be00" PackageName="ni-systemlink-assetmanagement-src-20.6.0.niaddon" Target="NI.SL.AssetManagement.gcomp" />
+        </BuildSpecificationDefinition>
+        <EmbeddedDefinitionReference Id="5dad9fa050641e7b2598680fc49c4ee" ModelDefinitionType="PackageReferencesDefinition" Name="ProjectReferences">
+          <PackageReferencesDefinition />
+          <SourceFileReference Bindings="EnvoyManager" Id="c59c7e5a83f94f098ae3c3f8f1c63dbd" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-advanced-src-1.0.8.5.niaddon" StoragePath="ref://ni/analysis/advanced-src/1.0.8.5" />
+          <SourceFileReference Bindings="EnvoyManager" Id="3ddd6502349d4691ad08c450f72ade3e" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-basic-src-1.0.8.6.niaddon" StoragePath="ref://ni/analysis/basic-src/1.0.8.6" />
+          <SourceFileReference Bindings="EnvoyManager" Id="4e66a4dfaa5a4810a804649509eff620" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-control-src-1.0.8.5.niaddon" StoragePath="ref://ni/analysis/control-src/1.0.8.5" />
+          <SourceFileReference Bindings="EnvoyManager" Id="153e536fc71f4a9c9fb268bf669dc2cb" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-controlbasic-src-1.0.8.5.niaddon" StoragePath="ref://ni/analysis/controlbasic-src/1.0.8.5" />
+          <SourceFileReference Bindings="EnvoyManager" Id="ef95e681a0b749618cff73dc865bb6fc" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-analysis-standard-src-1.0.8.4.niaddon" StoragePath="ref://ni/analysis/standard-src/1.0.8.4" />
+          <SourceFileReference Bindings="EnvoyManager" Id="c7ae9c17fc54175a6faa23451b4ce92" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-fpga-fpgalib-src-4.0.0.6.niaddon" StoragePath="ref://ni/fpga/fpgalib-src/4.0.0.6" />
+          <SourceFileReference Bindings="EnvoyManager" Id="21b5beb7299b49cd94712c43ce5ec969" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-databaseconnectivity-src-1.0.0.0.niaddon" StoragePath="ref://ni/G/databaseconnectivity-src/1.0.0.0" />
+          <SourceFileReference Bindings="EnvoyManager" Id="d8792923dad4fc69366a4518cc92d33" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-http-src-1.0.0.16.niaddon" StoragePath="ref://ni/G/http-src/1.0.0.16" />
+          <SourceFileReference Bindings="EnvoyManager" Id="24e97e84a66845d4b85b403bf6d7eef8" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-websockets-src-1.0.2.2.niaddon" StoragePath="ref://ni/G/websockets-src/1.0.2.2" />
+          <SourceFileReference Bindings="EnvoyManager" Id="f9c27290715845ff87027b191148fd33" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-nativetarget-nativetargetlib-src-4.0.0.0.niaddon" StoragePath="ref://ni/nativetarget/nativetargetlib-src/4.0.0.0" />
+          <SourceFileReference Bindings="EnvoyManager" Id="2b63170f59e847bb8b25a37dac647600" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-actorframework-aflib-src-1.0.1.0.niaddon" StoragePath="ref://ni/ActorFramework/aflib-src/1.0.1.0" />
+          <SourceFileReference Bindings="EnvoyManager" Id="b87b5c88d3bc4f91b743696a39247e04" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-reporting-src-1.0.0.13.niaddon" StoragePath="ref://ni/G/reporting-src/1.0.0.13" />
+          <SourceFileReference Bindings="EnvoyManager" Id="659499fd24814356894f48a00da8a95d" ModelDefinitionType="PackageInterfaceDefinition" Name="ni-g-stdlib-src-1.0.6.45.niaddon" StoragePath="ref://ni/G/stdlib-src/1.0.6.45" />
+        </EmbeddedDefinitionReference>
+      </NameScopingEnvoy>
+    </NameScopingEnvoy>
+    <NameScopingEnvoy Id="463ec4b5081049f1b2948c99222db5e7" ModelDefinitionType="PackageDependenciesScope" Name="PackageDependenciesScope">
+      <FileReference Id="e5563978ebf94f5b9877d77a8abf76f2" ModelDefinitionType="{http://www.ni.com/PackageManagement}PackageDependenciesDefinition" Name="Package Dependencies.sls" StoragePath="Package Dependencies.sls" p4:IsDefault="True" xmlns:p4="http://www.ni.com/PackageManagement" />
+    </NameScopingEnvoy>
+  </Project>
+  <ProjectInformation />
+</SourceFile>

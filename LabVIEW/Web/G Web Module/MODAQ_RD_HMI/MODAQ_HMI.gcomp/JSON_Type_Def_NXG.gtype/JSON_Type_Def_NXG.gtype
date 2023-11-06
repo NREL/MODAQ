@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="67805E89B2C142E338D18A29AEB570903191F3F9DFBB6CEB3266240A42AD27498FB86BC95D210357AF635C7B2EC1EAFD0844EF7184B93A3F0C290FBD9201483A" Timestamp="1D6EEAE68A8EFA6" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@a871128ddee942dbb2620ca53dad6aaf" Id="71248c76ec343a08fafe47908c9765c" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="2c5f49d4de3d421caaba4b367e6768f3" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="84392140181741e38c48b82067c0a53e" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="8a0837b827df4df8b0858a7bfa58c607" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@a871128ddee942dbb2620ca53dad6aaf" Id="a6c1eba611904763bb97cf3c3f40b5e9" Name="Cluster">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>0x0</Field1>
+					<Field2>0x0</Field2>
+					<Field3>0x0</Field3>
+					<Field4>0x0</Field4>
+					<Field5>0x0</Field5>
+					<Field6>0x0</Field6>
+					<Field7>""</Field7>
+					<Field8>""</Field8>
+					<Field9>null</Field9>
+				</Cluster>
+			</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="1f4407e515684c6b869549ab4cda43ea" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="f06191e454eb49bcb6485d2212227a41" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="fd29ff9be3494cea951f0f28f74f14a1" Name="Type.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="9b07d34b5e0642e38ae9326c73aa5e1c" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="5f3a8c968244b5f87895ab748a8a297" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@a871128ddee942dbb2620ca53dad6aaf" Height="[float]366" Id="947a422bb4e14000a70320c96f53bfdc" Label="[UIModel]264a7caf878f4593bafaa0092040b820" Left="[float]146" TabIndex="[int]0" Top="[float]196" Value="{DataItemBinding Id=a6c1eba611904763bb97cf3c3f40b5e9}" Width="[float]548" xmlns="http://www.ni.com/PanelCommon">
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="8997b7d92166485d8f0dfdcbe2f112d7" Label="[UIModel]1c74210668604b3cb8c635ab8030f8cb" Left="[float]27" TabIndex="[int]0" Top="[float]69" Value="{ClusterBinding FieldName=Chassis\ Temperature}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="1c74210668604b3cb8c635ab8030f8cb" LabelOwner="[UIModel]8997b7d92166485d8f0dfdcbe2f112d7" Left="[float]27" Text="[string]Chassis Temperature" Top="[float]49" Width="[float]109" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="8606f7a2c57d48719933c327e96e8286" Label="[UIModel]f3024ecda12d428ba8c063eac7aca1f3" Left="[float]24" TabIndex="[int]1" Top="[float]119" Value="{ClusterBinding FieldName=Current\ Lattitude}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="f3024ecda12d428ba8c063eac7aca1f3" LabelOwner="[UIModel]8606f7a2c57d48719933c327e96e8286" Left="[float]24" Text="[string]Current Lattitude" Top="[float]99" Width="[float]90" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="2d68f80a47c84e43bc8146d62353262f" Label="[UIModel]6468e6ba960e46f2b440aefddab3dc92" Left="[float]25" TabIndex="[int]2" Top="[float]171" Value="{ClusterBinding FieldName=Current\ Longitude}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="6468e6ba960e46f2b440aefddab3dc92" LabelOwner="[UIModel]2d68f80a47c84e43bc8146d62353262f" Left="[float]25" Text="[string]Current Longitude" Top="[float]151" Width="[float]97" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="576dce4efffa4020975b79623c0981a7" Label="[UIModel]ca2d86ab255a462da0184af1e7937dcf" Left="[float]25" TabIndex="[int]3" Top="[float]222" Value="{ClusterBinding FieldName=Current\ Heading(true)}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="ca2d86ab255a462da0184af1e7937dcf" LabelOwner="[UIModel]576dce4efffa4020975b79623c0981a7" Left="[float]25" Text="[string]Current Heading(true)" Top="[float]202" Width="[float]117" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="22fbaad4956947249dd4a39055723236" Label="[UIModel]957419054edf4f0b81e2888795bbe4a6" Left="[float]22" TabIndex="[int]4" Top="[float]274" Value="{ClusterBinding FieldName=Separation\ Distance}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="957419054edf4f0b81e2888795bbe4a6" LabelOwner="[UIModel]22fbaad4956947249dd4a39055723236" Left="[float]22" Text="[string]Separation Distance" Top="[float]254" Width="[float]106" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="97e6e2a9b50848ceb53cf92f760915f7" Label="[UIModel]8ea539e357f44d668dc08293ca259c46" Left="[float]18" TabIndex="[int]5" Top="[float]321" Value="{ClusterBinding FieldName=USB\ SSD\ free\ (GB)}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="8ea539e357f44d668dc08293ca259c46" LabelOwner="[UIModel]97e6e2a9b50848ceb53cf92f760915f7" Left="[float]18" Text="[string]USB SSD free (GB)" Top="[float]301" Width="[float]96" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="e82ac2578bb4720aede9f69b5a7af7c" Label="[UIModel]cb5faca75f3e424ebf39b5f2c2fbb5e8" Left="[float]276" TabIndex="[int]6" Text="{ClusterBinding FieldName=Altitude}" Top="[float]75" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="cb5faca75f3e424ebf39b5f2c2fbb5e8" LabelOwner="[UIModel]e82ac2578bb4720aede9f69b5a7af7c" Left="[float]276" Text="[string]Altitude" Top="[float]55" Width="[float]42" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]36" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="31bc6974c2b84f89a8124fbbb38e8a01" Label="[UIModel]2c6a1ccc07a7485aa27c98cbbceafbc9" Left="[float]272" TabIndex="[int]7" Text="{ClusterBinding FieldName=GPS\ Data\ String}" Top="[float]140" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]143" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="2c6a1ccc07a7485aa27c98cbbceafbc9" LabelOwner="[UIModel]31bc6974c2b84f89a8124fbbb38e8a01" Left="[float]272" Text="[string]GPS Data String" Top="[float]120" Width="[float]84" />
+						<ArrayViewer ArrayElement="[UIModel]e617d20d08a458fa97a0c9e7957f8b7" BaseName="[string]Array" Columns="[int]2" Dimensions="[int]2" Height="[float]64" Id="249c323ec05d421e9827ad21e0cc0f2c" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]False" Label="[UIModel]a6cc4363e5d94dedb1fdcc9b364d1aea" Left="[float]265" Orientation="[SMOrientation]Horizontal" Rows="[int]2" TabIndex="[int]8" Top="[float]232" Value="{ClusterBinding FieldName=Xsens\ INS\ Data\ Out}" Width="[float]215">
+							<p.DefaultElementValue>""</p.DefaultElementValue>
+							<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="e617d20d08a458fa97a0c9e7957f8b7" IsReadOnly="[bool]False" Label="[UIModel]5d624a610e1b4cbeb99206984e26a9ca" TabIndex="[int]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+								<Label Height="[float]16" Id="5d624a610e1b4cbeb99206984e26a9ca" IsVisualChild="[bool]False" LabelOwner="[UIModel]e617d20d08a458fa97a0c9e7957f8b7" Left="[float]61" Text="[string]String" Top="[float]14" Width="[float]31" xmlns="http://www.ni.com/PanelCommon" />
+							</StringControl>
+						</ArrayViewer>
+						<Label Height="[float]16" Id="a6cc4363e5d94dedb1fdcc9b364d1aea" LabelOwner="[UIModel]249c323ec05d421e9827ad21e0cc0f2c" Left="[float]265" Text="[string]Xsens INS Data Out" Top="[float]212" Width="[float]104" />
+					</Cluster>
+					<Label Height="[float]16" Id="264a7caf878f4593bafaa0092040b820" LabelOwner="[UIModel]947a422bb4e14000a70320c96f53bfdc" Left="[float]146" Text="[string]Cluster" Top="[float]176" Width="[float]37" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="a871128ddee942dbb2620ca53dad6aaf">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Chassis Temperature" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Current Lattitude" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Current Longitude" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Current Heading(true)" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Separation Distance" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="USB SSD free (GB)" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Altitude" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="GPS Data String" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Xsens INS Data Out" DataType="String[,]" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

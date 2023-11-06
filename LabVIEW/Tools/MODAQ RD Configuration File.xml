@@ -1,0 +1,435 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>19.0.1f3</Version>
+<Cluster>
+<Name>All Controls</Name>
+<NumElts>11</NumElts>
+<Cluster>
+<Name>Watch Circle</Name>
+<NumElts>8</NumElts>
+<DBL>
+<Name>Set Point Lat (dd)</Name>
+<Val>39.91320000000000</Val>
+</DBL>
+<DBL>
+<Name>Set Point Lon (dd)</Name>
+<Val>-105.22834600000000</Val>
+</DBL>
+<DBL>
+<Name>Yellow Alert Radius (m)</Name>
+<Val>2.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Red Alert Radius (m)</Name>
+<Val>2.50000000000000</Val>
+</DBL>
+<DBL>
+<Name>AWOL Radius (m)</Name>
+<Val>5.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Yellow Alert Snooze (min)</Name>
+<Val>1.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Red Alert Snooze (min)</Name>
+<Val>1.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>AWOL Radius Snooze (min)</Name>
+<Val>0.25000000000000</Val>
+</DBL>
+</Cluster>
+<Cluster>
+<Name>FTP and AWS</Name>
+<NumElts>16</NumElts>
+<String>
+<Name>AWS Access Key</Name>
+<Val>AWS Access Key</Val>
+</String>
+<String>
+<Name>AWS Secret Key</Name>
+<Val>AWS Secret Key</Val>
+</String>
+<String>
+<Name>AWS Bucket</Name>
+<Val>AWS Bucket</Val>
+</String>
+<Boolean>
+<Name>Enable AWS Upload (Summary)</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Enable FTP Upload</Name>
+<Val>0</Val>
+</Boolean>
+<String>
+<Name>FTP Host</Name>
+<Val>modaq.your_Server.com</Val>
+</String>
+<String>
+<Name>FTP User</Name>
+<Val>modaq1@your_Server.com</Val>
+</String>
+<String>
+<Name>FTP Password</Name>
+<Val>fakepassword</Val>
+</String>
+<String>
+<Name>Destination write path (pos)</Name>
+<Val>/now.txt</Val>
+</String>
+<String>
+<Name>Local file path (pos)</Name>
+<Val>/media/sdb1/data/UPLOAD/</Val>
+</String>
+<I32>
+<Name>Summary  Upload Interval pos (min)</Name>
+<Val>10</Val>
+</I32>
+<Boolean>
+<Name>Delete Local File After Upload</Name>
+<Val>0</Val>
+</Boolean>
+<String>
+<Name>Destination write path (pow)</Name>
+<Val>/PowNow.txt</Val>
+</String>
+<String>
+<Name>Local file path (pow)</Name>
+<Val>/media/sdb1/data/UPLOAD/</Val>
+</String>
+<I32>
+<Name>Summary Upload Interval pow (min)</Name>
+<Val>10</Val>
+</I32>
+<Boolean>
+<Name>Enable AWS Upload (TDMS)</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Email Settings</Name>
+<NumElts>7</NumElts>
+<Boolean>
+<Name>Enable Alerts</Name>
+<Val>0</Val>
+</Boolean>
+<String>
+<Name>Distribution List (comma separated) 1</Name>
+<Val>robert.raye@nrel.gov</Val>
+</String>
+<String>
+<Name>Distribution List (comma separated) 2</Name>
+<Val>robert.raye@nrel.gov,
+user1@your_email.com</Val>
+</String>
+<String>
+<Name>Sender Email</Name>
+<Val>MODAQ@your_email.com</Val>
+</String>
+<String>
+<Name>SMTP</Name>
+<Val>smtp.your_email.com</Val>
+</String>
+<String>
+<Name>Username</Name>
+<Val>modaq@your_email.com</Val>
+</String>
+<String>
+<Name>Password</Name>
+<Val>SMTP Password</Val>
+</String>
+</Cluster>
+<Cluster>
+<Name>Summary File</Name>
+<NumElts>3</NumElts>
+<Boolean>
+<Name>Enable CSV</Name>
+<Val>1</Val>
+</Boolean>
+<I32>
+<Name>CSV Averaging Time (Sec)</Name>
+<Val>600</Val>
+</I32>
+<I32>
+<Name>CSV Loop Delay (ms)</Name>
+<Val>500</Val>
+</I32>
+</Cluster>
+<Cluster>
+<Name>File Settings</Name>
+<NumElts>8</NumElts>
+<String>
+<Name>Config File Path</Name>
+<Val>/media/sdb1</Val>
+</String>
+<String>
+<Name>Data Folder Path</Name>
+<Val>/media/sdb1/data</Val>
+</String>
+<String>
+<Name>Raw Mode</Name>
+<Val>Interval</Val>
+</String>
+<I32>
+<Name>Raw Interval (min)</Name>
+<Val>10</Val>
+</I32>
+<I32>
+<Name>Raw Sampling Time (min)</Name>
+<Val>2</Val>
+</I32>
+<EW>
+<Name>TDMS File Write Interval</Name>
+<Choice>10 Min</Choice>
+<Choice>Hourly</Choice>
+<Choice>Daily</Choice>
+<Choice>Weekly</Choice>
+<Choice>Monthly</Choice>
+<Val>0</Val>
+</EW>
+<Path>
+<Name>Default Filename</Name>
+<Val>MODAQ Configuration File.xml</Val>
+</Path>
+<Boolean>
+<Name>Enable TDMS Save (3ph only)</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>Watchdog</Name>
+<NumElts>3</NumElts>
+<U32>
+<Name>Watchdog Period (ms)</Name>
+<Val>2000</Val>
+</U32>
+<Boolean>
+<Name>Reset System on WD timeout</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Enable RT Watchdog</Name>
+<Val>0</Val>
+</Boolean>
+</Cluster>
+<Cluster>
+<Name>PowGrp0</Name>
+<NumElts>4</NumElts>
+<Array>
+<Name>Channel Names</Name>
+<Dimsize>12</Dimsize>
+<String>
+<Name>String</Name>
+<Val>PT-EN0-1001</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>PT-EN0-1002</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>PT-EN0-1003</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>CT-EN0-1001
+CT-EN0-1001</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>CT-EN0-1002</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>CT-EN0-1003</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+</Array>
+<Array>
+<Name>Channel Units</Name>
+<Dimsize>12</Dimsize>
+<String>
+<Name>String</Name>
+<Val>V</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>V</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>V</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>A</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>A</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>A</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+</Array>
+<String>
+<Name>TDMS File Suffix</Name>
+<Val>3ph_Power</Val>
+</String>
+<Array>
+<Name>Channel Datatype</Name>
+<Dimsize>12</Dimsize>
+<String>
+<Name>String</Name>
+<Val>float</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>float</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>float</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>float</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>float</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val>float</Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+<String>
+<Name>String</Name>
+<Val></Val>
+</String>
+</Array>
+</Cluster>
+<Array>
+<Name>Scaling Factors Grp0</Name>
+<Dimsize>0</Dimsize>
+<DBL>
+<Name>Numeric</Name>
+<Val></Val>
+</DBL>
+</Array>
+<Cluster>
+<Name>PowGrp0 Sampling</Name>
+<NumElts>2</NumElts>
+<DBL>
+<Name>PowGrp0 sample rate [Hz]</Name>
+<Val>4999.99999999999999</Val>
+</DBL>
+<I32>
+<Name>PowGrp0 samples per channel</Name>
+<Val>500</Val>
+</I32>
+</Cluster>
+<Array>
+<Name>Stbd 3 Phase Voltage Scaling</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>Numeric</Name>
+<Val>50.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Numeric</Name>
+<Val>50.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Numeric</Name>
+<Val>50.00000000000000</Val>
+</DBL>
+</Array>
+<Array>
+<Name>Stbd 3 Phase Current Scaling</Name>
+<Dimsize>3</Dimsize>
+<DBL>
+<Name>Numeric</Name>
+<Val>-12.72400000000000</Val>
+</DBL>
+<DBL>
+<Name>Numeric</Name>
+<Val>-12.73900000000000</Val>
+</DBL>
+<DBL>
+<Name>Numeric</Name>
+<Val>-12.73000000000000</Val>
+</DBL>
+</Array>
+</Cluster>
+</LVData>

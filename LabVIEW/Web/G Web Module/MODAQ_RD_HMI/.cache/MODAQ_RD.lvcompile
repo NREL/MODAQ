@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JobList>
+  <Job OutputType="WebApplication">
+    <CurrentBuildId>
+      <ComponentSubtypeIdentifier>WebApplication</ComponentSubtypeIdentifier>
+      <BuildId>c798ad8c-9383-466d-9abf-93c9ed5d3e52</BuildId>
+    </CurrentBuildId>
+    <RootBuildId>
+      <ComponentSubtypeIdentifier>WebApplication</ComponentSubtypeIdentifier>
+      <BuildId>c798ad8c-9383-466d-9abf-93c9ed5d3e52</BuildId>
+    </RootBuildId>
+    <OutputPath>Builds\MODAQ_HMI_Default Web Server</OutputPath>
+    <BuildName>MODAQ_HMI</BuildName>
+    <State>Success</State>
+    <LastTotalTime>00:00:00</LastTotalTime>
+    <StartTime>2023-11-06T18:55:56.0560051Z</StartTime>
+    <HasChild>False</HasChild>
+    <IsStale>False</IsStale>
+    <QualifiedName>::VireoDevSystem::Interactive::MODAQ_HMI.gcomp</QualifiedName>
+    <HintEnvoy>::VireoDevSystem::Interactive::MODAQ_HMI.gcomp</HintEnvoy>
+  </Job>
+</JobList>
