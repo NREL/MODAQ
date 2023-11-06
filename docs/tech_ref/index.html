@@ -99,19 +99,19 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#electrical-power-toolkit">Electrical Power Toolkit</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#ni-sync">NI-Sync</a>
-    </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#initialization">Initialization</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#data-filters">Data Filters</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#io">I/O</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#input-reads">Input Reads</a>
+    <li class="toctree-l3"><a class="reference internal" href="#voltage-input-reads">Voltage Input Reads</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#filtering-source">Filtering  [Source]:</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#serial-port-configuration">Serial Port Configuration</a>
     </li>
@@ -173,15 +173,13 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#watch-circle">Watch Circle</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#misc">Misc</a>
-        <ul>
     <li class="toctree-l3"><a class="reference internal" href="#remote-access">Remote Access</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#ssh">SSH</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#watchdog-timer">Watchdog Timer</a>
     </li>
         </ul>
     </li>
@@ -234,22 +232,22 @@
             <div class="section">
               
                 <h1 id="modaq-technical-reference">MODAQ Technical Reference</h1>
-<p>This section will discuss specific MODAQ technologies in greater detail and is provided for the curious end user to better understand how MODAQ works and why certain design decisions were made. Over the course of MODAQ development many options and challenges had presented and there was often often more than one way to achieve similar results. As always, options have trade-offs and a different design team may have made different decisions. </p>
-<p>In some cases, options, shortcomings, and/or suggestions will be presented and since the MODAQ reference design and software are offered in the public domain as "open source", experienced LabVIEW developers are encouraged to modify or improve this code base and perhaps implement features in a more efficient and performant manner. It would be appreciated if such improvements are made, that the developers contribute back to this project.</p>
+<p>This section will discuss specific MODAQ:Field technologies in greater detail and is provided for the curious end user to better understand how MODAQ:Field works and why certain design decisions were made. Over the course of MODAQ:Field development many options and challenges had presented and there was often often more than one way to achieve similar results. As always, options have trade-offs and a different design team may have made different decisions. </p>
+<p>In some cases, options, shortcomings, and/or suggestions will be presented and since MODAQ:RD is offered in the public domain as "open source", experienced LabVIEW developers are encouraged to modify or improve this code base and perhaps implement features in a more efficient and performant manner. It would be appreciated if such improvements are made, that the developers contribute back to this project.</p>
 <h2 id="hardware">Hardware</h2>
-<p>The MODAQ Reference Design utilizes DAQmx which allows for a more user friendly experience when setting up. Running DAQmx on a compactRIO requires that a certain subprocessor is installed. Currently only the 904X and 905X series compactRIOs include this subprocessor. In order to run this MODAQ reference design, you must have a compactRIO from one of these series <a href="https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019PUNSA2&l=en-US" target="_blank" > [LINK] </a>.</p>
-<p>If you already have an older model compactRIO, you will have to leverage the FPGA in order to make the measurements this DAQmx based reference design is making. If this is essential for you please reach out to learn more about the FPGA based reference design.</p>
+<p>The MODAQ:RD utilizes DAQmx which allows for a more user friendly experience when setting up. Running DAQmx on a cRIO requires that a certain subprocessor is installed. Currently only the 904X and 905X series cRIOs include this subprocessor. In order to run this MODAQ:RD, you must have a cRIO from one of these <a href="https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019PUNSA2&l=en-US" target="_blank" > series </a>.</p>
+<p>If you already have an older model cRIO, you will have to leverage the FPGA in order to make the measurements this DAQmx based reference design is making. If this is essential for you please reach out to learn more about the FPGA based reference design.</p>
 <h3 id="rad-configuration-utility">RAD Configuration Utility</h3>
-<p>The Replication and Deployment (RAD) Utility allows for users to directly image a compactRIO with all the necessary software (drivers and MODAQ executables) to run the system. However, this utility is unable to be flexible to any departure from the current release of the MODAQ:RD. We would only recommend users looking to directly deploy the MODAQ:RD on a cRIO to use this tool. Additonally, it may benefit users who want to skip the following steps in target configuration as it does also include all the drivers necessary to run a modified MODAQ:RD. A image titled similarly to "MODAQ_RD_9049_Image1_0_0.lvappimg" is included in the repo. This may be deployed to a compactRIO using instructions described <a href="https://github.com/ni/rad" target="_blank" >  here</a>.</p>
+<p>The Replication and Deployment (RAD) Utility allows for users to directly image a cRIO with all the necessary software (drivers and MODAQ:Field executables) to run the system. However, this utility is unable to be flexible to any departure from the current release of the MODAQ:RD. We would only recommend users looking to directly deploy the MODAQ:RD on a cRIO to use this tool. Additonally, it may benefit users who want to skip the following steps in target configuration as it does also include all the drivers necessary to run a modified MODAQ:RD. A image titled similarly to "MODAQ_RD_9049_Image1_0_0.lvappimg" is included in the repo. This may be deployed to a cRIO using instructions described <a href="https://github.com/ni/rad" target="_blank" >  here</a>.</p>
 <h3 id="target-configuration">Target Configuration</h3>
-<p>CompactRIO's are typically configured using the utility from NI called Measurement and Automation Explorer or MAX. To program a compactRIO to use the MODAQ reference design, you must configure the network settings properly and install the necessary software. A brand new cRIO will have no software on it besides the base NI-Linux operating system. 
+<p>cRIO's are typically configured using the utility from NI called Measurement and Automation Explorer or MAX. To program a cRIO to use the MODAQ:RD, you must configure the network settings properly and install the necessary software. A brand new cRIO will have no software on it besides the base NI-Linux operating system. 
 The steps to setting up the cRIO to program are as follows:
 1. Connect the cRIO to your host machine's ethernet port
-2. Configure your host machine to use DHCP and not a static IP in order to see the compactRIO
+2. Configure your host machine to use DHCP and not a static IP in order to see the cRIO
 3. Open NI MAX and expand the "Remote Systems" tree. You should see your cRIO in the list that appears
 4. Select the cRIO in the tree and select the "Network Settings" tab
 5. If you are using an older version of NI MAX, you may need install Microsoft Silverlight to be able to view the Network Settings
-6. We recommend setting the compactRIO to a static IPv4 address such as 192.168.0.10 with a subnet mask of 255.255.255.0 and a blank gateway. Once you save this setting you will no longer be able to connect to the cRIO until you change your host PC's IP address to something in the same subnet such as 192.168.0.9 with a subnet mask of 255.255.255.0.</p>
+6. We recommend setting the cRIO to a static IPv4 address such as 192.168.0.10 with a subnet mask of 255.255.255.0 and a blank gateway. Once you save this setting you will no longer be able to connect to the cRIO until you change your host PC's IP address to something in the same subnet such as 192.168.0.9 with a subnet mask of 255.255.255.0.</p>
 <p><img alt="ip-settings" src="../img/ipsettings.png" /></p>
 <ol>
 <li>With your cRIO and Host PC on the same subnet, you can install the necessary software by right clicking "Software"</li>
@@ -260,35 +258,41 @@ The steps to setting up the cRIO to program are as follows:
 <li>You may also wish to change the hostname of the cRIO to something more useful and add a password by clicking "Set Permissions." This is highly recommended if you are going to enable SSH.</li>
 </ol>
 <h4 id="software-stack">Software Stack</h4>
-<p>MODAQ Reference Design CompactRIO software stack:</p>
+<p>MODAQ:RD cRIO software stack:</p>
 <p><img alt="NI-MAX cRIO Software" src="../img/MaxcRIOSoftware.png" /></p>
-<p>All of these packages are needed or a dependency of a package needed by the the MODAQ Reference Design. You may wish to add more packages if you plan on adding more functionality to the reference design.</p>
+<p>All of these packages are needed or a dependency of a package needed by the the MODAQ:RD. You may wish to add more packages if you plan on adding more functionality to the reference design.</p>
 <blockquote>
 <p><font color = blue><b>Tech Note: </b>
 The procedure described above for installing software packages and dependencies should not be confused with addons and dependencies for LabVIEW on the Host computer (for instance, your Windows development laptop). These are necessary to enable the needed functionality on the cRIO target. In the interest of keeping the target as lean as possible and not bloat the system with unused services, users should install only the necessary packages. If a needed package is not installed on the cRIO, there may be runtime errors reported or unexpected behavior. 
 <font color = #404040></p>
 </blockquote>
 <h3 id="network-layout">Network Layout</h3>
-<p>The MODAQ Reference Design does not include any network connected instruments but there may be a need to include a Cradlepoint Router to enable 4G connectivity to the MODAQ during field deployments. If a Cradlepoint is used, the network must be configured properly so the cRIO is on the Cradlepoint's LAN and uses the Cradlepoints IP address as the default gateway.</p>
+<p>The MODAQ:RD does not include any network connected instruments but there may be a need to include a Cradlepoint Router to enable 4G connectivity to the cRIO and other components of MODAQ:Field during field deployments. If a Cradlepoint is used, the network must be configured properly so the cRIO is on the Cradlepoint's LAN and uses the Cradlepoints IP address as the default gateway.</p>
 <h2 id="software-architecture">Software Architecture</h2>
-<p>The MODAQ software was developed using National Instruments' LabVIEW 2019 32 bit. We recommend starting with the 2019 Release of <a href="https://www.ni.com/en-us/shop/product/embedded-control-and-monitoring-software-suite.html" target="_blank"> Embedded Control and Monitoring Suite</a> which includes all the necessary packages (minus the Electric Power Toolkit) plus several that are unnecessary. </p>
+<p>The MODAQ:Field software was developed using National Instruments' LabVIEW 2019 32 bit. We recommend starting with the 2019 Release of <a href="https://www.ni.com/en-us/shop/product/embedded-control-and-monitoring-software-suite.html" target="_blank"> Embedded Control and Monitoring Suite</a> which includes all the necessary packages (minus the Electric Power Toolkit) plus several that are unnecessary. </p>
 <h3 id="labview-addons">LabVIEW Addons</h3>
 <h4 id="jki">JKI</h4>
-<p>JKI's VI Package Manager (VIPM) is a utility installed automatically with LabVIEW for downloading and installing free packages developed by NI and Third-parties that can be used within LabVIEW. The MODAQ reference design includes the following packages which are free to download:</p>
+<p>JKI's VI Package Manager (VIPM) is a utility installed automatically with LabVIEW for downloading and installing free packages developed by NI and Third-parties that can be used within LabVIEW. The MODAQ:RD includes the following packages which are free to download:</p>
 <ol>
 <li>OpenG Toolkit</li>
 <li>LabVIEW Interface for Amazon S3</li>
 </ol>
 <h4 id="electrical-power-toolkit">Electrical Power Toolkit</h4>
-<p>The<a href="https://www.ni.com/en/support/downloads/software-products/download.labview-electrical-power-toolkit.html#318820" target="_blank"> Electric Power Toolkit </a> is a software add-on for LabVIEW developed by NI for completing analysis on power measurements. This toolkit is useful for taking measured voltage and current data and determining useful parameters of power such as RMS Voltage/Current, Active Power, Apparent Power, Reactive Power, Harmonics and Flicker. Currently, this software add-on is  listed at $687.00. This package is necessary if you would like to do on-board real-time power measurements and it can be removed from the code if not necessary and to avoid the license cost.</p>
+<p>The<a href="https://www.ni.com/en/support/downloads/software-products/download.labview-electrical-power-toolkit.html#318820" target="_blank"> Electric Power Toolkit </a> is a software add-on for LabVIEW developed by NI for completing analysis on power measurements. This toolkit is useful for taking measured voltage and current data and determining useful parameters of power such as RMS Voltage/Current, Active Power, Apparent Power, Reactive Power, Harmonics and Flicker. Currently, this software add-on is  listed at $687.00 as of 2023. This package is necessary if you would like to do on-board real-time power measurements and it can be removed from the code if not necessary and to avoid the license cost.</p>
 <p>NREL has also developed <a href="https://github.com/MHKiT-Software" target="_blank"> MHKiT </a> which includes similar functions for completing power quality assessments but not in real-time. Usually this would be done on the cloud after the raw data has been uploaded.</p>
-<h4 id="ni-sync">NI-Sync</h4>
 <h3 id="initialization">Initialization</h3>
-<h3 id="data-filters">Data Filters</h3>
-<p>I forgot what this was supposed to be about</p>
+<p>When MODAQ:RD is started, it performs the following initialization steps:
+1. Sets some important flags
+2. Starts the System Messenger queue
+3. Checks for a PTP time server on the subnet
+4. Loads the configuration file and sets configuration globals
+5. Checks for previous clean shutdown
+6. Checks and repairs data folder structure
+7. Starts watchdog timer</p>
+<p>Assuming no critical errors occurred up to this point, the rest of the system is allowed to start up. </p>
 <h2 id="io">I/O</h2>
-<h3 id="input-reads">Input Reads</h3>
-<p>The MODAQ:RD employs the NI-9239 analog input card extensively. This card exceeds most requirements for ADC quality but has historically been very reliable and accurate therefore justifying its cost. The card specifications are as follows <a href="https://www.ni.com/docs/en-US/bundle/ni-9239-specs/page/specs.html" target="_blank"> [Source]</a>:</p>
+<h3 id="voltage-input-reads">Voltage Input Reads</h3>
+<p>MODAQ:RD uses the NI-9239 analog input card for high-performance analog to digital conversion. This card exceeds most requirements for ADC quality but has historically been very reliable and accurate therefore justifying its cost. The card specifications are as follows <a href="https://www.ni.com/docs/en-US/bundle/ni-9239-specs/page/specs.html" target="_blank"> [Source]</a>:</p>
 <table>
 <thead>
 <tr>
@@ -327,27 +331,19 @@ The procedure described above for installing software packages and dependencies 
 </tr>
 </tbody>
 </table>
-<pre><code>
-##### Filtering:
-The NI-9239 uses a combination of analog and digital filtering to provide an accurate representation of in-band signals and reject out-of-band signals. The filters discriminate between signals based on the frequency range, or bandwidth, of the signal. The three important bandwidths to consider are the passband, the stopband, and the anti-imaging bandwidth.
-
-The NI-9239 represents signals within the passband, as quantified primarily by passband ripple and phase nonlinearity. All signals that appear in the alias-free bandwidth are either unaliased signals or signals that have been filtered by at least the amount of the stopband rejection.
-
-##### Passband
-The signals within the passband have frequency-dependent gain or attenuation. The small amount of variation in gain with respect to frequency is called the passband flatness. The digital filters of the NI-9239 adjust the frequency range of the passband to match the data rate. Therefore, the amount of gain or attenuation at a given frequency depends on the data rate.
-
-##### Stopband
-The filter significantly attenuates all signals above the stopband frequency. The primary goal of the filter is to prevent aliasing. Therefore, the stopband frequency scales precisely with the data rate. The stopband rejection is the minimum amount of attenuation applied by the filter to all signals with frequencies within the stopband.
-Alias-Free Bandwidth
-
-Any signals that appear in the alias-free bandwidth are not aliased artifacts of signals at a higher frequency. The alias-free bandwidth is defined by the ability of the filter to reject frequencies above the stopband frequency. The alias-free bandwidth is equal to the data rate minus the stopband frequency.
-Data Rates
-
-The frequency of a master timebase (fM) controls the data rate (fs) of the NI-9239. The NI-9239 includes an internal master timebase with a frequency of 12.8 MHz, but the module also can accept an external master timebase or export its own master timebase. To synchronize the data rate of an NI-9239 with other modules that use master timebases to control sampling, all of the modules must share a single master timebase source.
-
-However, the data rate must remain within the appropriate data rate range. When using the internal master timebase of 12.8 MHz, the result is data rates of 50 kS/s, 25 kS/s, 16.667 kS/s, and so on down to 1.613 kS/s, depending on the value of n. When using an external timebase with a frequency other than 12.8 MHz, the NI-9239 has a different set of data rates.e
-</code></pre>
-
+<h4 id="filtering-source">Filtering <a href="https://www.ni.com/docs/en-US/bundle/ni-9239-specs/page/specs.html" target="_blank"> [Source]</a>:</h4>
+<p>The NI-9239 uses a combination of analog and digital filtering to provide an accurate representation of in-band signals and reject out-of-band signals. The filters discriminate between signals based on the frequency range, or bandwidth, of the signal. The three important bandwidths to consider are the passband, the stopband, and the anti-imaging bandwidth.</p>
+<p>The NI-9239 represents signals within the passband, as quantified primarily by passband ripple and phase nonlinearity. All signals that appear in the alias-free bandwidth are either unaliased signals or signals that have been filtered by at least the amount of the stopband rejection.</p>
+<h5 id="passband">Passband</h5>
+<p>The signals within the passband have frequency-dependent gain or attenuation. The small amount of variation in gain with respect to frequency is called the passband flatness. The digital filters of the NI-9239 adjust the frequency range of the passband to match the data rate. Therefore, the amount of gain or attenuation at a given frequency depends on the data rate.</p>
+<h5 id="stopband">Stopband</h5>
+<p>The filter significantly attenuates all signals above the stopband frequency. The primary goal of the filter is to prevent aliasing. Therefore, the stopband frequency scales precisely with the data rate. The stopband rejection is the minimum amount of attenuation applied by the filter to all signals with frequencies within the stopband.</p>
+<h5 id="alias-free-bandwidth">Alias-Free Bandwidth</h5>
+<p>Any signals that appear in the alias-free bandwidth are not aliased artifacts of signals at a higher frequency. The alias-free bandwidth is defined by the ability of the filter to reject frequencies above the stopband frequency. The alias-free bandwidth is equal to the data rate minus the stopband frequency.
+Data Rates</p>
+<p>The frequency of a master timebase (fM) controls the data rate (fs) of the NI-9239. The NI-9239 includes an internal master timebase with a frequency of 12.8 MHz, but the module also can accept an external master timebase or export its own master timebase. To synchronize the data rate of an NI-9239 with other modules that use master timebases to control sampling, all of the modules must share a single master timebase source.</p>
+<p>However, the data rate must remain within the appropriate data rate range. When using the internal master timebase of 12.8 MHz, the result is data rates of 50 kS/s, 25 kS/s, 16.667 kS/s, and so on down to 1.613 kS/s, depending on the value of n. When using an external timebase with a frequency other than 12.8 MHz, the NI-9239 has a different set of data rates.e
+</code></pre></p>
 <h3 id="serial-port-configuration">Serial Port Configuration</h3>
 <p><img align="right" src="../img/serial_config.png"></p>
 <p>Serial devices are connected to the cRIO through the RJ50 (10p10c) ports on the main controller or through an optional 9870 card. In LabVIEW, the different serial ports are available through the NI-VISA driver and can be configured using that driver's library. The serial port is selected through the constant and specified as an ASRL#. </p>
@@ -367,13 +363,13 @@ Six degrees of freedom (6-DOF) are surge, sway, and heave for accelerations and 
 <font color = #404040></p>
 </blockquote>
 <h4 id="xsens-mti">Xsens MTI</h4>
-<p><img align="right" src="../img/mtmanager_settings.png" width="400">
-<img align="right" src="../img/mtmanager_settings_2.png" width="400">
-<img align="right" src="../img/mtmanager_settings_3.png" width="400"></p>
-<p>The Xsens used in the MODAQ:RD is an MTi-G-710 which can be configured using the MT Manager software available from Xsens. We also provide a working example configuration called "MODAQ_Xsens_Config.xsa" which contains the setting seen below and is compatible with the curent version of MODAQ:RD. You can upload that configuration to the device by selecting the "Load Settings" button in MT Manager. If you need other outputs from the Xsens, some modification of the code may be necessary.</p>
+<p>The Xsens used in the MODAQ:RD is an MTi-G-710 which can be configured using the MT Manager software available from Xsens. We also provide a working example configuration called "MODAQ_Xsens_Config.xsa" which contains the setting seen below and is compatible with the curent version of MODAQ:RD. You can upload that configuration to the device by selecting the "Load Settings" button in MT Manager. If you need other outputs from the Xsens, some modification of the code may be necessary. The MODAQ:RD configuration of the Xsens is shown in the following images:</p>
+<p><img alt="xsens_config_1" src="../img/mtmanager_settings.png" />
+<img alt="xsens_config_1" src="../img/mtmanager_settings_2.png" />
+<img alt="xsens_config_1" src="../img/mtmanager_settings_3.png" /></p>
 <h4 id="hemisphere-v104">Hemisphere V104</h4>
-<p>The V104 is a marine grade GPS system that outputs NMEA messages through a serial connection to MODAQ. It is a dual GPS device with a pair of antennas in a single enclosure and because of the dual design, it can estimate heading.</p>
-<p>CONFIGURATION SETTINGS COMING SOON</p>
+<p>The V104 is a marine grade GPS system that outputs NMEA messages through a serial connection to the cRIO. It is a dual GPS device with a pair of antennas in a single enclosure and because of the dual design, it can estimate heading.</p>
+<p><em>CONFIGURATION SETTINGS COMING SOON</em></p>
 <h2 id="timing-and-synchronization">Timing and Synchronization</h2>
 <h3 id="ptp">PTP</h3>
 <p>The DAQmx version of the MODAQ:RD supports <a href="https://en.wikipedia.org/wiki/Precision_Time_Protocol" target="_blank">PTP</a>, or more precisely<a href="https://www.ieee802.org/1/files/public/docs2008/as-garner-1588v2-summary-0908.pdf" target="_blank"> IEEE 1588-2008 v2</a>. PTP works off a client-server architecture where a master clock serves as the time reference for all capable clients on a network subnet. While there's numerous networking topologies that can be considered, different ways to propagate the time reference, and alternative (non-compatible) implementations such as IEEE 802.1AS, it can get complicated real fast. This discussion will be high-level and basic- please google for a deep-dive. </p>
@@ -382,7 +378,7 @@ Six degrees of freedom (6-DOF) are surge, sway, and heave for accelerations and 
 <p>In our experience, PTP implementation either works magically or is a real bear. It does help to have some knowledge of networking and configuring managed switches. However, a simple, one controller implementation can be achieved by connecting the time server directly to the cRIO's secondary network port. </p>
 <h4 id="configuration">Configuration</h4>
 <p><img align="right" src="../img/tm2000b_config.png" width="500"></p>
-<p>This MODAQ Reference Design code has been tested on a cRIO-9049 with a <a href="https://timemachinescorp.com/product/gps-ntpptp-network-time-server-tm2000/" target="_blank">Time Machines TM2000B</a> time server on a common subnet. To get the best performance out of PTP, any switches or routers that sit between the PTP server and the clients should explicitly support PTP (at least IEEE-1588v2) and will probably require configuration by someone with more than casual networking experience. Because of this, and the fact that switches from different manufacturers (even among different models from the same manufacturer) can have different procedures for PTP configuration, this topic will not be covered in this documentation. </p>
+<p>This MODAQ:RD code has been tested on a cRIO-9049 with a <a href="https://timemachinescorp.com/product/gps-ntpptp-network-time-server-tm2000/" target="_blank">Time Machines TM2000B</a> time server on a common subnet. To get the best performance out of PTP, any switches or routers that sit between the PTP server and the clients should explicitly support PTP (at least IEEE-1588v2) and will probably require configuration by someone with more than casual networking experience. Because of this, and the fact that switches from different manufacturers (even among different models from the same manufacturer) can have different procedures for PTP configuration, this topic will not be covered in this documentation. </p>
 <p>However, assuming a properly configured network, we will provide some guidance to configuring the TM2000B and getting the cRIO disciplined to the time server. The image to the right is a screencap of how we have configured the PTP parameters in the Time Machine. This is obviously not the only way the device can be configured and it might not even be the optimal configuration, but it works with the cRIO-9049 and other Linux devices on the subnet with PTP support. </p>
 <blockquote>
 <p><font color = blue><b>Tech Note:</b>
@@ -409,21 +405,23 @@ The primary difference between a cRIO and cDAQ other than cost is that a cRIO is
 <font color = #404040></p>
 </blockquote>
 <h3 id="global-variables">Global Variables</h3>
-<p>MODAQ makes extensive use of LabVIEW's implementation of global variables. In general, there is much hate for globals, since their misuse can result in race conditions, unexpected behavior, and poor understanding of data flow control. These are indeed sound reasons, but not enough to outright ban globals as a programming tool.</p>
-<p>In MODAQ, globals are generally used for propagating configuration items, status flags/signaling, constants, and snapshot data. We avoid using globals to transport measurement data and instead use queues, FIFOs, channel wires, and direct wiring. We also centralize our globals into special subvis (one for configuration and one for runtime globals), which allows for easy management of those globals. </p>
+<p>MODAQ:Field makes extensive use of LabVIEW's implementation of global variables. In general, there is much hate for globals, since their misuse can result in race conditions, unexpected behavior, and poor understanding of data flow control. These are indeed sound reasons, but not enough to outright ban globals as a programming tool.</p>
+<p>In MODAQ:Field, globals are generally used for propagating configuration items, status flags/signaling, constants, and snapshot data. We avoid using globals to transport measurement data and instead use queues, FIFOs, channel wires, and direct wiring. We also centralize our globals into special subVIs (one for configuration and one for runtime globals), which allows for easy management of those globals. </p>
 <h2 id="data-destinations">Data Destinations</h2>
-<p>Data Destinations is a catchall term for where data are shuffled off to once acquired. For instance, will the data be stored locally and in what format? Does data need to be sent to a remote location in near-real-time? MODAQ provides several options that can be used alone or together.  </p>
+<p>Data Destinations is a catchall term for where data are shuffled off to once acquired. For instance, will the data be stored locally and in what format? Does data need to be sent to a remote location in near-real-time? MODAQ:Field provides several options that can be used alone or together.  </p>
 <h3 id="tdms">TDMS</h3>
-<p>While there are lots of binary data storage formats, including NetCDF and HDF5, MODAQ uses TDMS (Technical Data Management Streaming) for the simple reason that it is baked into LabVIEW and relatively easy to use. Even though it is not as widely adopted as those other formats, it does have readers for <a href="https://www.ni.com/en/support/downloads/tools-network/download.tdm-excel-add-in-for-microsoft-excel.html#378046" target="_blank">Excel</a>, <a href="https://www.mathworks.com/help/daq/tdmsread.html" target="_blank">MatLab</a>, and <a href="https://nptdms.readthedocs.io/en/stable/" target="_blank">python</a>. </p>
-<p>Due to the modular nature of MODAQ, each process saves to its own TDMS file. While this might seem inefficient, since TDMS can be organized into tables for separate datatypes, channel groups, or sampling rates, we prefer to parallelize the process and encapsulate the TDMS saving function within a particular I/O code module.  </p>
+<p>While there are lots of binary data storage formats, including NetCDF and HDF5, MODAQ:Field uses TDMS (Technical Data Management Streaming) for the simple reason that it is baked into LabVIEW and relatively easy to use. Even though it is not as widely adopted as those other formats, it does have readers for <a href="https://www.ni.com/en/support/downloads/tools-network/download.tdm-excel-add-in-for-microsoft-excel.html#378046" target="_blank">Excel</a>, <a href="https://www.mathworks.com/help/daq/tdmsread.html" target="_blank">MatLab</a>, and <a href="https://nptdms.readthedocs.io/en/stable/" target="_blank">python</a>. </p>
+<p>Due to the modular nature of MODAQ:Field, each process saves to its own TDMS file. While this might seem inefficient, since TDMS can be organized into tables for separate datatypes, channel groups, or sampling rates, we prefer to parallelize the process and encapsulate the TDMS saving function within a particular I/O code module.  </p>
 <h4 id="tdms-metadata">TDMS Metadata</h4>
 <p>Metadata can be written to the TDMS file so that it never gets separated from the measurement data. In MODAQ:RD, the metadata includes the channel group name, channel names, channel units, and data types. These are written whenever a new TDMS file is created. </p>
-<p>In MODAQ:RD, the TDMS save subvis can accept three string arrays for the channel names, units, and data types. The order of each must reflect the physical channel order.</p>
+<p>In MODAQ:RD, the TDMS save subVIs can accept three string arrays for the channel names, units, and data types. The order of each must reflect the physical channel order.</p>
 <h4 id="tdms-file-management">TDMS File Management</h4>
-<p>While TDMS files can be allowed to grow quite large, we provide the option to close files and start new ones at user-selectable intervals. This was done for two reasons:
-1. To reduce data loss in the event of a file corruption (rare)
-2. To reduce file sizes for uploading or network transfers</p>
-<p>After MODAQ closes a TDMS file, it renames the file extension to .done. We do this so that uploading scripts do not attempt to grab actively written files. </p>
+<p>While TDMS files can be allowed to grow quite large, we provide the option to close files and start new ones at user-selectable intervals. This was done for two reasons:</p>
+<ol>
+<li>To reduce data loss in the event of a file corruption (rare)</li>
+<li>To reduce file sizes for uploading or network transfers</li>
+</ol>
+<p>After MODAQ:Field closes a TDMS file, it renames the file extension to .done. We do this so that uploading scripts do not attempt to grab actively written files. </p>
 <p>MODAQ:RD TDMS file naming convention is as follows:</p>
 <pre><code>YYYY_MM_DD_hh_mm_[group name].tdms
 </code></pre>
@@ -432,33 +430,35 @@ The primary difference between a cRIO and cDAQ other than cost is that a cRIO is
 <p>Summary files is a term we use to describe files that contain sub-sampled, statistical, or otherwise summarized data. These data serve as proxies for the original raw data and are concise enough to transmit over limited bandwidth communications paths, while providing sufficient information to be operationally useful. Summary files may also contain diagnostic, health, or snapshot data to keep tabs on things like system memory, available storage space, CPU utilization, and system states. </p>
 <p>Currently, the summary files are plain text in a comma separated value format. These files have a static filename, such as pow_now.txt and since the contents are derived from data stored elsewhere, no effort is made to serialize the filenames or archive the contents. If summary file creation is enabled in the configurator, AWS S3 or FTP uploads should also be enabled. We usually set the summary files to be locally deleted after they have been successfully uploaded. The processes that write to summary files will start a new file if the previous one has been deleted. </p>
 <h3 id="awss3">AWS/S3</h3>
-<p>MODAQ:RD includes functionality to upload both the summary and TDMS files to an S3 bucket. Users can configure whether to upload the summary or TDMS or both in the Configurator. This requires an <a href="https://aws.amazon.com/s3/" target="_blank">AWS account</a> and a set of Access and Secret keys created for the desired upload bucket. These keys are to be copied to the MODAQ Configurator and automatically loaded when MODAQ starts.  </p>
+<p>MODAQ:RD includes functionality to upload both the summary and TDMS files to an S3 bucket. Users can configure whether to upload the summary or TDMS or both in the Configurator. This requires an <a href="https://aws.amazon.com/s3/" target="_blank">AWS account</a> and a set of Access and Secret keys created for the desired upload bucket. These keys are to be copied to the MODAQ Configurator and automatically loaded when MODAQ:Field starts.  </p>
 <blockquote>
 <p><font color = blue><b>Tech Note: </b>
 Currently, both the summary and TDMS S3 upload processes delete the local files after successful upload. While this is an intentional decision for summary files, it's not  necessarily the right choice for TDMS files. Since TDMS files can be large, depending on sample rate and number of channels, they require fast internet or network access to transfer them faster than they are made. Since we rarely upload TDMS files in real time ourselves, this code has not been revised to preserve the TDMS files after upload. We plan to issue an update to disable the auto-delete. At this time, we advise to modify the code yourself or refrain from using the TDMS S3 uploader. 
 <font color = #404040></p>
 </blockquote>
 <h4 id="s3-key-updater">S3 Key Updater</h4>
-<p>Some organizations with managed AWS services, such as here at NREL, rules are enforced that expire S3 Access and Secret keys after so many weeks or months. Since MODAQ loads the keys from the configuration file on startup and since we don't necessarily want to interrupt a deployment with a maintenance restart, we developed a method to 'hot update' the AWS keys. </p>
-<p>The AWS key updater runs continuously in the background during MODAQ operation and watches the /AWS/incoming/ folder. If a file appears, the updater state machine will fail the file if it is not named 'aws.txt' and move it to the /AWS/error/ folder. Otherwise, the parser state expects the file contents formatted:</p>
+<p>Some organizations with managed AWS services, such as here at NREL, rules are enforced that expire S3 Access and Secret keys after so many weeks or months. Since MODAQ:Field loads the keys from the configuration file on startup and since we don't necessarily want to interrupt a deployment with a maintenance restart, we developed a method to 'hot update' the AWS keys. </p>
+<p>The AWS key updater runs continuously in the background during MODAQ:Field operation and watches the /AWS/incoming/ folder. If a file appears, the updater state machine will fail the file if it is not named 'aws.txt' and move it to the /AWS/error/ folder. Otherwise, the parser state expects the file contents formatted:</p>
 <pre><code>Access_Key:youraccesskeyhere
 Secret_Key:yoursecretkeyhere
 Bucket:yourbucketnamehere
 </code></pre>
-<p>There currently is no validation for the file contents, so if the fields are out of order or incomplete it will not successfully update the keys. Since updating the keys using this method only persists until a MODAQ restart, it is recommended to change the keys in the configuration file on MODAQ as well. Also, hot changes for S3 Bucket names have not been enabled in this version of MODAQ:RD.</p>
+<p>There currently is no validation for the file contents, so if the fields are out of order or incomplete it will not successfully update the keys. Since updating the keys using this method only persists until a MODAQ:Field restart, it is recommended to change the keys in the configuration file on MODAQ:Field as well. Also, hot changes for S3 Bucket names have not been enabled in this version of MODAQ:RD.</p>
 <h3 id="sftpftp">SFTP/FTP</h3>
-<p>MODAQ does not support SFTP at this time due to limitations in LabVIEW 2019. However, the underlying RT Linux operating system does. Users familiar with SFTP and the Linux command line could develop solutions for automated file transfers. For manual transfers, client software such as WinSCP, Bitvise, FileZilla could be used. </p>
-<p>Due to the inherent lack of security, FTP in not included by default in MODAQ. NREL, like most other organizations with managed IT departments, prohibits the use of FTP. Users willing to accept the risk, can request the MODAQ FTP module- or write their own. </p>
+<p>MODAQ:RD does not support SFTP at this time due to limitations in LabVIEW 2019. However, the underlying RT Linux operating system does. Users familiar with SFTP and the Linux command line could develop solutions for automated file transfers. For manual transfers, client software such as WinSCP, Bitvise, FileZilla could be used. </p>
+<p>Due to the inherent lack of security, FTP in not included by default in MODAQ:RD. NREL, like most other organizations with managed IT departments, prohibits the use of FTP. Users willing to accept the risk, can request the MODAQ:Field FTP module- or write their own. </p>
 <h2 id="logs-and-alerts">Logs and Alerts</h2>
 <p><img align="right" src="../img/message_q.png" width="500"></p>
-<p>MODAQ provides a system-wide service that can write specific events to a log file and/or send alerts to an email list. The System Message Destinations service runs upon MODAQ startup and is the sole reader for a message queue FIFO. At various points within the MODAQ code, messages can be generated that are intercepted by this service. </p>
-<p>To write a message to the system messenger, enqueue the properly formatted cluster containing:
-1. The sending process name (e.g. Bearing Temperature)
-2. Details about the message (e.g. Over threshold, currently 135°C)
-3. T/F whether to write this to the system log (NOTE: default is TRUE, so this is only necessary to set if it's not desired to write to the log)
-4. Whether to send an email alert or not (NOTE: Default is 0 (no mail), so this only needs to be set if it is desirable to issue an email for this alert)</p>
+<p>MODAQ:Field provides a system-wide service that can write specific events to a log file and/or send alerts to an email list. The System Message Destinations service runs upon MODAQ:Field startup and is the sole reader for a message queue FIFO. At various points within the MODAQ:Field code, messages can be generated that are intercepted by this service. </p>
+<p>To write a message to the system messenger, enqueue the properly formatted cluster containing:</p>
+<ol>
+<li>The sending process name (e.g. Bearing Temperature)</li>
+<li>Details about the message (e.g. Over threshold, currently 135°C)</li>
+<li>T/F whether to write this to the system log (NOTE: default is TRUE, so this is only necessary to set if it's not desired to write to the log)</li>
+<li>Whether to send an email alert or not (NOTE: Default is 0 (no mail), so this only needs to be set if it is desirable to issue an email for this alert)</li>
+</ol>
 <h3 id="system-log">System Log</h3>
-<p>The system log is a comma-separated-value text file that contains all messages generated by MODAQ processes. Example:</p>
+<p>The system log is a comma-separated-value text file that contains all messages generated by MODAQ:Field processes. Example:</p>
 <pre><code>2023-10-26 19:21:57.504 UTC,PTP Time Acquired,IEEE 1588-2008_1
 2023-10-26 19:21:57.511 UTC,PTP offset (ns),29
 2023-10-26 19:21:57.514 UTC,System Time Update,System Clock Synced to PTP Reference
@@ -475,7 +475,7 @@ Bucket:yourbucketnamehere
 </code></pre>
 <p>Once the file reaches 100Mb in size, it will be closed and a new file created. A new file is always created on system start. </p>
 <h3 id="email-notifications">Email Notifications</h3>
-<p>The MODAQ System Messenger can issue emails for events or alerts placed on the message queue as discussed above. This Reference design allows for two distribution lists that are set in the Configurator. The Send Email flag (illustration above) that is set at the point of event/alert generation has four possible settings:</p>
+<p>The MODAQ:Field System Messenger can issue emails for events or alerts placed on the message queue as discussed above. This Reference design allows for two distribution lists that are set in the Configurator. The Send Email flag (illustration above) that is set at the point of event/alert generation has four possible settings:</p>
 <ol>
 <li>No email</li>
 <li>Send to distro 1</li>
@@ -491,12 +491,14 @@ While it may seem desirable to issue an email for every event and alert, our exp
 <h3 id="snoozer">Snoozer</h3>
 <p>Often, when a condition triggers an alert, such as if a temperature exceeds a defined threshold, the trigger condition will often persist for some period of time. This presents an issue for logging and email alerts, since it may not be desirable to repeatably log or issue emails at the process loop rate. With most processes looping many times a second, the system log and user's inboxes can get flooded quickly. </p>
 <p><img align="right" src="../img/snoozer.png"></p>
-<p>To address this, MODAQ includes the ability to 'snooze' alerts for a configurable amount of time. If the snoozer is enabled, any repeating alerts from the same Message Tag will get ignored until the Snooze Time has elapsed. If the condition is still occurring, or reoccurs after the snooze time has reset, the message will be actioned as configured (meaning, it will get logged and/or issue an email). </p>
-<p>Message snoozing is not global, rather based on the Message Tag at the point of origin. There are two ways to enable message snoozing for an event:
-1. Set the Snooze Alert? and Snooze Time (s) property when the message is enqueued.
-2. Use MODAQ's "Snooze Check Map (SubVI).vi" utility at the point of origin to either (okay) disable the monitoring loop for the snooze duration or (better option) prevent writing to the message queue during the snooze duration.</p>
+<p>To address this, MODAQ:RD includes the ability to 'snooze' alerts for a configurable amount of time. If the snoozer is enabled, any repeating alerts from the same Message Tag will get ignored until the Snooze Time has elapsed. If the condition is still occurring, or reoccurs after the snooze time has reset, the message will be actioned as configured (meaning, it will get logged and/or issue an email). </p>
+<p>Message snoozing is not global, rather based on the Message Tag at the point of origin. There are two ways to enable message snoozing for an event:</p>
+<ol>
+<li>Set the Snooze Alert? and Snooze Time (s) property when the message is enqueued.</li>
+<li>Use MODAQ:RD's "Snooze Check Map (SubVI).vi" utility at the point of origin to either (okay) disable the monitoring loop for the snooze duration or (better option) prevent writing to the message queue during the snooze duration.</li>
+</ol>
 <h3 id="rules-based-alerts">Rules Based Alerts</h3>
-<p>The discussions thus far in this section should make it obvious, but MODAQ has great flexibility for monitoring states, events, and measurement parameters in real time and provides multiple options on how to respond to those instances. While it was not included in this Reference Design distribution, the messaging subsystem serves at the heart of Control and Automation in MODAQ. </p>
+<p>The discussions thus far in this section should make it obvious, but MODAQ:Field has great flexibility for monitoring states, events, and measurement parameters in real time and provides multiple options on how to respond to those instances. While it was not included in this Reference Design distribution, the messaging subsystem serves at the heart of Control and Automation in MODAQ:Field. </p>
 <p>Using a rules-based approach, systems developers can have if-then, or condition-response type logic that monitors a particular process or parameter for a condition violation and trigger some response to that event. Possible use cases:</p>
 <ol>
 <li>Event logging and alerting (as discussed above)</li>
@@ -505,21 +507,24 @@ While it may seem desirable to issue an email for every event and alert, our exp
 <li>Automation state machines, PID logic, or complex supervisory logic</li>
 </ol>
 <h3 id="watch-circle">Watch Circle</h3>
-<p>Since MODAQ was originally designed around DAQ for MRE devices, location monitoring is an intrinsic function. Users can define 'Watch Circles' to geo-fence a device in the field. While the use case was for moored surface devices, the Watch Circle monitor can be used for any mobile platform. </p>
-<p>Users can define up to 3 radii from a setpoint (deployment coordinates) in the configurator and MODAQ will log and/or issue emails if the device moves outside of those radii. </p>
-<p>Radii definitions:
-1. Yellow Alert - Smallest of the three allowed radii and should be just beyond the movement expected considering the mooring scope. A Yellow Alert could mean the device is experiencing extreme metocean conditions or the mooring is "walking". 
-2. Red Alert - Next largest radii which should indicate a clear issue with station keeping. This might be due to an anchor drag or parted mooring line.
-3. AWOL Alert - If the device exceeds the AWOL radius, it has clearly separated from its mooring and is adrift. </p>
-<p>MODAQ determines the distance from the setpoint and the current real-time GPS derived coordinates using the <a href="https://en.wikipedia.org/wiki/Haversine_formula" target="_blank">Haversine Formula</a>. </p>
+<p>Since MODAQ:Field was originally designed around DAQ for MRE devices, location monitoring is an intrinsic function. Users can define 'Watch Circles' to geo-fence a device in the field. While the use case was for moored surface devices, the Watch Circle monitor can be used for any mobile platform. </p>
+<p>Users can define up to 3 radii from a setpoint (deployment coordinates) in the configurator and MODAQ:Field will log and/or issue emails if the device moves outside of those radii. </p>
+<p>Radii definitions:</p>
+<ol>
+<li>Yellow Alert - Smallest of the three allowed radii and should be just beyond the movement expected considering the mooring scope. A Yellow Alert could mean the device is experiencing extreme metocean conditions or the mooring is "walking". </li>
+<li>Red Alert - Next largest radii which should indicate a clear issue with station keeping. This might be due to an anchor drag or parted mooring line.</li>
+<li>AWOL Alert - If the device exceeds the AWOL radius, it has clearly separated from its mooring and is adrift. </li>
+</ol>
+<p>MODAQ:Field determines the distance from the setpoint and the current real-time GPS derived coordinates using the <a href="https://en.wikipedia.org/wiki/Haversine_formula" target="_blank">Haversine Formula</a>. </p>
 <blockquote>
 <p><font color = blue><b>Tech Note: </b>
-The Haversine Formula calculates the distance between two points on a sphere. While earth is (an oblate) spheroid, it's not a perfect sphere and therefore there will be some error in the Haversine distance estimate and we make no geoid corrections in MODAQ. The error introduced over these small distances is likely insignificant and much less than the uncertainty of the GPS position estimate. 
+The Haversine Formula calculates the distance between two points on a sphere. While earth is (an oblate) spheroid, it's not a perfect sphere and therefore there will be some error in the Haversine distance estimate and we make no geoid corrections in MODAQ:Field. The error introduced over these small distances is likely insignificant and much less than the uncertainty of the GPS position estimate. 
 <font color = #404040></p>
 </blockquote>
-<h2 id="misc">Misc</h2>
 <h3 id="remote-access">Remote Access</h3>
 <h4 id="ssh">SSH</h4>
+<h3 id="watchdog-timer">Watchdog Timer</h3>
+<p>MODAQ:RD uses the <a href="https://www.ni.com/en/support/documentation/supplemental/19/labview-real-time-watchdog-timer-overview.html" target="_blank">RT Watchdog Timer</a> feature built into the cRIO hardware. The watchdog is a service that needs to be pinged (or pet or fed) before a user configurable time interval expires. If the watchdog is not pet before the timer expires, then the assumption is that the real time application has locked up or has become unresponsive and the watchdog hardware will force a system reboot. </p>
               
             </div>
           </div>

@@ -135,20 +135,20 @@
               
                 <h1 id="modaq-hardware-architecture">MODAQ Hardware Architecture</h1>
 <h2 id="the-controller">The Controller</h2>
-<p>The core hardware platform that MODAQ is built upon is the CompactRIO (cRIO) from National Instruments and the software code base is developed in National Instruments LabVIEW. </p>
+<p>The core hardware platform that MODAQ:Field is built upon is the CompactRIO (cRIO) from National Instruments and the software code base is developed in National Instruments LabVIEW. </p>
 <p>The cRIO is a compact and ruggedized industrial embedded controller that serves as the 'brains' of MODAQ. It contains the central processing unit and the usual components that one would expect with a computer, such as RAM, network interfaces, USB ports, and internal storage. In addition, the cRIO contains an expansion backplane for up to 8 I/O modules in a single chassis that is running a real-time Linux kernel and has an FPGA for high-performance and specialized applications.</p>
 <p><img alt="cRIO-9049" src="../img/cRIO-9049.jpg" /></p>
-<p>While MODAQ is scalable and can run on any Linux-based cRIO - including models long discontinued by NI, the reference design presented in this documentation is built on the highest performance cRIO available at the time of writing, the <a href="https://www.ni.com/en-us/support/model.crio-9049.html" target="_blank">cRIO-9049</a>. There may be some features implemented in MODAQ that are unavailable to older, lower-powered cRIO controllers, such as DAQmx and TSN. It's important to consider that the power and capabilities of the cRIO hardware is consistent with the application requirements and performance expectations. </p>
+<p>While MODAQ:Field is scalable and can run on any Linux-based cRIO - including models long discontinued by NI, the reference design presented in this documentation is built on the highest performance cRIO available at the time of writing, the <a href="https://www.ni.com/en-us/support/model.crio-9049.html" target="_blank">cRIO-9049</a>. There may be some features implemented in MODAQ:RD that are unavailable to older, lower-powered cRIO controllers, such as DAQmx and TSN. It's important to consider that the power and capabilities of the cRIO hardware is consistent with the application requirements and performance expectations. </p>
 <h2 id="modular-io">Modular I/O</h2>
-<p>In order to interface with sensors and instruments, the cRIO provides up to 8 slots for special-function I/O modules. Without any modules installed, most cRIOs can connect to instruments that communicate over USB, ethernet, and/or RS-232/485. Unfortunately, most applications will require additional modules. MODAQ is not limited to 8 modules, since it leverages the expansion and distributed options available within the NI ecosystem. </p>
-<p>The size of a MODAQ build will be governed by the type and number of inputs and/or outputs that the application requires. Most modules contain multiple I/O channels. For instance, in the diagram below, the NI-9249 (±10V voltage input module) can connect up to four voltage sources on a single module. </p>
+<p>In order to interface with sensors and instruments, the cRIO provides up to 8 slots for special-function I/O modules. Without any modules installed, most cRIOs can connect to instruments that communicate over USB, ethernet, and/or RS-232/485. Realistically, most applications will require additional modules. MODAQ:Field is not limited to 8 modules, since it leverages the expansion and distributed options available within the NI ecosystem. </p>
+<p>The size of a MODAQ:Field build will be governed by the type and number of inputs and/or outputs that the application requires. Most modules contain multiple I/O channels. For instance, in the diagram below, the NI-9239 (±10V voltage input module) can connect up to four voltage sources on a single module. </p>
 <blockquote>
-<p><font color = blue><b>Tech Note:</b>For clarity on the distinction between a sensor and instrument, a sensor is a device that varies its output in some proportion to a quantity it's designed to measure. For instance a temperature sensor (such as an RTD) varies its resistance in a calibrated response to temperature. While an instrument can contain one or more sensors and usually has some onboard processing that outputs a signal of some sort (such serial, MODBUS), though some instruments can output an analog signal. An example of an instrument would be an IMU (Inertial Measurement Unit) which contains an accelerometer and rate gyro and can output a raw stream of the sensor data or highly processed attitude data over an RS-232 serial connection. 
+<p><font color = blue><b>Tech Note: </b>For clarity on the distinction between a sensor and instrument: a sensor is a device that varies its output in some proportion to a quantity it's designed to measure. For instance a temperature sensor (such as an RTD) varies its resistance in a calibrated response to temperature. While an instrument can contain one or more sensors and usually has some onboard processing that outputs a signal of some sort (such as raw serial or MODBUS), though some instruments can output an analog signal. An example of an instrument would be an IMU (Inertial Measurement Unit) which contains an accelerometer and rate gyro and can output a raw stream of the sensor data or highly processed attitude data over an RS-232 serial connection. 
 <font color = #404040>
 <br></p>
 </blockquote>
 <h2 id="general-io-support">General I/O Support</h2>
-<p>MODAQ currently supports a wide variety of sensors and instruments that cover the vast majority of measurement requirements for MRE systems. This list is not exhaustive.</p>
+<p>MODAQ:Field currently supports a wide variety of sensors and instruments that cover the vast majority of measurement requirements for MRE systems. This list is not exhaustive.</p>
 <p><img align="right" src="../img/MODAQ Reference Design v1.png"></p>
 <ul>
 <li>Voltages<ul>
@@ -168,13 +168,13 @@
 </ul>
 </li>
 <li>Strain<ul>
-<li>1/4 - full bridge</li>
+<li>Quarter, half and full wheatstone bridges</li>
 <li>Load cells</li>
 </ul>
 </li>
 <li>Position<ul>
-<li>Rotary and/or linear Encoder</li>
-<li>Resolver</li>
+<li>Rotary and/or linear encoders</li>
+<li>Resolvers</li>
 </ul>
 </li>
 <li>GPS<ul>
@@ -187,13 +187,13 @@
 </ul>
 </li>
 </ul>
-<p>An example diagram of a baseline MODAQ configured cRIO with I/O modules is shown to the right.</p>
+<p>An example diagram of a cRIO with I/O modules for MODAQ:RD is shown to the right.</p>
 <h2 id="io-modifications">I/O Modifications</h2>
-<p>While MODAQ has the flexibility to interface with many kinds of sensors and instruments, some development effort should be expected to create drivers (code) to support new hardware and/or hardware of different specification from those previously used. In addition, modification of existing code may be required to meet specific project requirements that cannot be accomplished through the MODAQ Configurator Utility. The purpose of this reference design is to present a example of MODAQ basic hardware and software architecture. Hypothetical examples that might require software modifications:</p>
+<p>While MODAQ:Field has the flexibility to interface with many kinds of sensors and instruments, some development effort should be expected to create drivers (code) to support new hardware and/or hardware of different specification from those previously used. In addition, modification of existing code may be required to meet specific project requirements that cannot be accomplished through the MODAQ Configurator Utility. The purpose of this reference design is to present a example of MODAQ:Field basic hardware and software architecture. Hypothetical examples that might require software modifications:</p>
 <ul>
 <li>Ingestors/decoders for additional or different instrument parameters. Example: Project requires the NED instead of ECEF coordinate reference frame from the IMU. </li>
-<li>Changes to hardware signal type. Example: MODAQ currently supports a variant of hardware with an analog ±10 VDC signal, however project sources a version that uses a serial output. </li>
-<li>Significant departure from baseline sampling support. Example: A MODAQ ingestor as written can support a maximum sample rate of 5 kHz for a particular device, however project requires 50 kHz sampling.</li>
+<li>Changes to hardware signal type. Example: MODAQ:RD currently supports a variant of hardware with an analog ±10 VDC signal, however project sources a version that uses a serial output. </li>
+<li>Significant departure from baseline sampling support. Example: A MODAQ:Field ingestor as written can support a maximum sample rate of 5 kHz for a particular device, however project requires 50 kHz sampling.</li>
 </ul>
 <p>Since projects are rarely identical, some modification should be expected to accommodate such differences. </p>
               
