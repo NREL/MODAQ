@@ -1,62 +1,69 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://nrel.github.io/MODAQ/s_architecture/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Software Overview - MODAQ Docs</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Software Overview";
-        var mkdocs_page_input_path = "s_architecture.md";
-        var mkdocs_page_url = "/MODAQ/s_architecture/";
-      </script>
-    
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPY2SENW4Q"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://nrel.github.io/MODAQ/s_architecture/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Software Overview - MODAQ Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-        gtag('config', "G-GPY2SENW4Q");
-      </script>
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Software Overview";
+    var mkdocs_page_input_path = "s_architecture.md";
+    var mkdocs_page_url = "/MODAQ/s_architecture/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPY2SENW4Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GPY2SENW4Q');
+  </script>
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
+
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> MODAQ Docs
-        </a><div role="search">
+        <a href=".." class="icon icon-home"> MODAQ Docs</a>
+        <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../h_architecture/">Hardware Overview</a>
-                </li>
-              </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Software Overview</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../h_architecture/">Hardware Overview</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Software Overview</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#modularity">Modularity</a>
     </li>
@@ -83,58 +90,68 @@
     <li class="toctree-l2"><a class="reference internal" href="#remote-supervision">Remote Supervision</a>
     </li>
     </ul>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../ref_design/">Reference Design Manual</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../dev_modules/">Optional Modules</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../tech_ref/">Technical Reference</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../sensor_inst_db/">Sensor and Instrument Database</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../FAQ/">FAQ</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../links/">Useful Links</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
-                </li>
-              </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ref_design/">Reference Design Manual</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../dev_modules/">Optional Modules</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tech_ref/">Technical Reference</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sensor_inst_db/">Sensor and Instrument Database</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../FAQ/">FAQ</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../links/">Useful Links</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">MODAQ Docs</a>
-        
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">MODAQ Docs</a>
       </nav>
+
+      
       <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Software Overview</li>
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Software Overview</li>
     <li class="wy-breadcrumbs-aside">
+      
     </li>
   </ul>
+  
   <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
+
+          <div role="main">
+            <div class="section">
               
                 <h1 id="modaq-software-architecture">MODAQ Software Architecture</h1>
 <p><img align="right" src="../img/LV_Icon.png"></p>
@@ -145,7 +162,7 @@
 <p>Depending on the design specification, some MODAQ:Field features may be implemented in the onboard FPGA chip, however MODAQ:Field's core functionality is run on the cRIO's Real-Time Linux target. Two versions of the MODAQ:RD software are included in this repository: FPGA and DAQmx. While both have similar functionality, hardware support, and general programming logic, these are the primary differences:</p>
 <ul>
 <li><b>FPGA</b> - This version implements some functions in the FPGA, in particular the RS232, GPS timekeeper, and voltage input modules. Using this version requires a licensed copy of the <a href="https://www.ni.com/en-us/shop/product/labview-fpga-module.html" target="_blank">FPGA Module addon</a>. </li>
-<li><b>DAQmx</b> - This version contains no FPGA code and does not require the FPGA Module addon license, however it will only work on <a href="https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019PUNSA2&l=en-US" target="_blank">newer cRIO hardware</a> (those that have model numbers NI-904x and NI-905x). Further, the GPS timekeeper can only be implemented in FPGA, so that has been deleted from this version. However, there is a much better solution for precision time keeping and synchronization as discussed <a href="../tech_ref/#ptp">here</a>. </li>
+<li><b>DAQmx</b> - This version contains no FPGA code and does not require the FPGA Module addon license, however it will only work on <a href="https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019PUNSA2&l=en-US" target="_blank">newer cRIO hardware</a> (those that have model numbers NI-904x and NI-905x). Further, the GPS timekeeper can only be implemented in FPGA, so that has been deleted from this version. However, there is a much better solution for precision time keeping and synchronization as discussed <a href="tech_ref.md/#ptp">here</a>. </li>
 </ul>
 <h2 id="modularity">Modularity</h2>
 <p>The modularity of MODAQ:Field is realized in the software architecture where functionality can added/removed from MODAQ:Field to provide the required features. Modules, called subVIs<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> in LabVIEW, are used in MODAQ:Field to encapsulate functions such as reading a sensor or writing data to a binary file. </p>
@@ -196,21 +213,29 @@
 </div>
               
             </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../h_architecture/" class="btn btn-neutral float-left" title="Hardware Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
         <a href="../ref_design/" class="btn btn-neutral float-right" title="Reference Design Manual">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../h_architecture/" class="btn btn-neutral" title="Hardware Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
+    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-          
+      
         </div>
       </div>
 
@@ -218,7 +243,7 @@
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="Versions">
+  <div class="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
@@ -229,15 +254,14 @@
     
   </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
-        jQuery(function () {
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
-        });
+        };
     </script>
 
 </body>
