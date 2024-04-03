@@ -8,4 +8,6 @@ We encourage users to provide feedback through the Issues or Discussions tab in 
 
 There are also mechanisms for us to assist or partner in your projects. Read more about <a href="https://www.nrel.gov/water/work-with-us.html" target="_blank">working with NREL</a> and see <a href="https://www.nrel.gov/workingwithus/assets/pdfs/agreement-matrix-2018-04-23.pdf" target="_blank">this table</a> for the types of agreements available. 
 
+NREL Software Record number: SWR-24-58 “MODAQ (Modular Offshore Data Acquisition System)
+
 >MODAQ documentation is available here: https://nrel.github.io/MODAQ/
