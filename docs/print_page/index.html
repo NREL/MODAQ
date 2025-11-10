@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://nrel.github.io/MODAQ/print_page/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Print Site - MODAQ Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/print-site-enum-headings1.css" rel="stylesheet" />
+        <link href="../css/print-site-enum-headings2.css" rel="stylesheet" />
+        <link href="../css/print-site-enum-headings3.css" rel="stylesheet" />
+        <link href="../css/print-site-enum-headings4.css" rel="stylesheet" />
+        <link href="../css/print-site-enum-headings5.css" rel="stylesheet" />
+        <link href="../css/print-site-enum-headings6.css" rel="stylesheet" />
+        <link href="../css/print-site.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Print Site";
+        var mkdocs_page_input_path = "print_page.md";
+        var mkdocs_page_url = "/MODAQ/print_page/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPY2SENW4Q"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-GPY2SENW4Q");
+      </script>
+
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MODAQ Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="/MODAQ//search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../h_architecture/">Hardware Overview</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../s_architecture/">Software Overview</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ref_design/">Reference Design Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dev_modules/">Optional Modules</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tech_ref/">Technical Reference</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sensor_inst_db/">Sensor and Instrument Database</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../FAQ/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../links/">Useful Links</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MODAQ Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Print Site</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index"><h1 id="index-modaq-documentation">MODAQ Documentation <img align="right" src="../img/MODAQ_NREL_Logo.png"></h1>
+<blockquote>
+<p><b>The MODAQ Reference Design source code repository is located at:
+ <a href="https://github.com/NREL/MODAQ" target="_blank">https://github.com/NREL/MODAQ</a>
+</b></p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MODAQ 2 has been released! Are you looking for the <a href="https://nrel.github.io/MODAQ2/" target="_blank">MODAQ 2 Docs</a>?</p>
+</div>
+<h2 id="index-general-overview">General Overview</h2>
+<p>The National Renewable Energy Laboratory (NREL) has developed a data acquisition system to support laboratory (component) and in-water validation and testing of Marine Renewable Energy (MRE) technologies. The Modular Open-source Data AcQuisition System (MODAQ)<sup id="fnref:1"><a class="footnote-ref" href="#index-fn:1">1</a></sup> is a robust system built on industrial grade hardware that can acquire high-quality and summary data from many sensor and instrument types. MODAQ includes modules to perform real-time QC screening, system health monitoring, and send alerts. MODAQ is also part of a larger data management, processing, visualization, and archiving system. As such, MODAQ consists of three primary components that are designed to provide a flexible hardware and software framework: </p>
+<ol>
+<li>MODAQ:Field - is the sensor/instrumentation suite with data acquisition hardware. It's designed to be highly configurable to meet the measurement requirements of a specific project. While MODAQ:Field can store its data locally, the power of the MODAQ system is realized when it has internet connectivity.</li>
+<li>MODAQ:Cloud - is hosted on <a href="https://mhkdr.openei.org/" target="_blank">AWS</a> and provides an ingestion point for the field data, as well as quality control, processing and analyses layers, data archives, derived products, and collaboration space. The standardized processing of data is accomplished through leveraging the <a href="https://mhkit-software.github.io/MHKiT/" target="_blank">MHKiT</a> Data Pipeline. AWS provides the capability to work on very large datasets efficiently and collaboratively. The open-source MRE data processing software, MHKiT provides the analysis functions for MODAQ.</li>
+<li>
+<p>MODAQ:Web - is a web-based dashboard for near real time monitoring of key measurement and health parameters. For bandwidth sensitive deployments, Web uses summary data generated by MODAQ:Field that is transferred to its own AWS bucket and stored in a SQL database.</p>
+<p><img alt="MODAQ:Suite Diagram" src="../img/MODAQ_Suite_Diagram.png" /></p>
+</li>
+</ol>
+<p>Data are acquired using MODAQ:Field, then sent to MODAQ:Cloud for temporary storage, client access, quality control (QC), and processing. Summary data are sent to MODAQ:Web for real-time visualization. MODAQ also includes a user controlled pipeline to the MHKDR to streamline the submission process.</p>
+<p>MODAQ is able to support a wide range of missions in the various MRE environments (wave, tidal, river, open ocean), archetypes, and scales with three fundamental missions:</p>
+<ol>
+<li>Field Deployment, Testing/Validation, and Operation: Provide the field measurement capabilities needed for operations and testing/validation of wave and current MRE technologies at established testing sites (e.g. WETS and PacWave) and at or other sites with limited infrastructure. These R&amp;D activities include many different in-water tests, such as power performance, power quality, mechanical loads, and system health monitoring.</li>
+<li>Component Testing: Provide measurement capabilities and infrastructure needed for component validation/testing such as power performance measurement of a PTO on a dynamometer test stand.</li>
+<li>Environmental Monitoring: MODAQ can acquire data from sensors and instruments to monitor meteorological or oceanographic parameters concurrently with measurement objectives. For instance, data from a weather station, current meter, and telemetry from a wave buoy could be acquired along with hydrophones measuring underwater sound can provide a more complete picture to the device's power and load measurements. </li>
+</ol>
+<h2 id="index-modaqfield">MODAQ:Field</h2>
+<p>MODAQ:Field is the primary focus of this document and it provides the core data acquisition duties including: sensor reading/polling, scaling/conversion, data processing, local storage, and data transmission. This specific configuration of a MODAQ:Field system will be referred to as MODAQ:RD (MODAQ Reference Design). It is a standalone system that is based on the National Instruments CompactRIO embedded control and acquisition system, as well as additional components as required, such as a WiFi/Cellular/satellite modem or a network-based power management system. This system provides a high-quality and robust platform that meets the rigorous requirements of IEC certification level testing. MODAQ:Field’s modular hardware design allows modules to be swapped out so that it can be rapidly reconfigured to meet custom application requirements. Additional chassis can be connected to the primary chassis to increase the number of measurement modules beyond the 8 slots in the primary chassis. Multiple MODAQ:Field systems can be deployed and tightly synchronized via GPS-based timing.  The software is also modular, providing a similar reconfiguration capability at the programming level. </p>
+<p>The National Instruments CompactRIO was chosen as the data acquisition controller since it’s an embedded system that provides a powerful stand-alone acquisition platform with both high-performance FPGA and real-time deterministic processors. The cRIO chassis has up to 8 slots for input/output (I/O) modules and many I/O modules are available to create a customized acquisition system.  These have a range of capabilities to read various analog inputs, serial data streams, and digital I/O. The MODAQ software is written in National Instruments LabVIEW, which is a rapid development programming environment commonly used in industrial testing centers.</p>
+<p>MODAQ:Field capabilities include:</p>
+<ul>
+<li>Data acquisition: bi-directional analog (current and voltage), and digital (RS-232/RS-422/RS-485, DIO, USB, IP, etc) channels including temperature, loads/strains, rotations/positions, and pressures.</li>
+<li>High-speed analog sampling where necessary. </li>
+<li>Remote management: reconfigure MODAQ and data processing algorithms, and monitor/control power to individual components</li>
+<li>Data QC: a range of low-level QC checks to verify sensor, instrument, and DAQ operation.</li>
+<li>Data conversion: data are converted from their raw form (i.e. binary, ratiometric, etc) to scaled values/engineering units. </li>
+<li>Local data storage</li>
+<li>Internet and/or local area network file transfers.</li>
+<li>Configuration utility.</li>
+<li>System Monitoring and Alerts: real-time monitoring of specified parameters, such as position, temperature, power, etc. with tiered email alerts</li>
+<li>IEC compliant software modules for power performance, power quality, and mechanical loads. Other modules include motion, availability, and control.</li>
+<li>Control and automation. </li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="index-fn:1">
+<p>MODAQ formerly stood for Modular Ocean Data Acquisition but was changed in November 2025 to Modular Open-source Data Acquisition because the scope of the project has widened to cover more technical areas outside of the ocean.&#160;<a class="footnote-backref" href="#index-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></section><section class="print-page" id="h_architecture"><h1 id="h_architecture-modaq-hardware-architecture">MODAQ Hardware Architecture</h1>
+<h2 id="h_architecture-the-controller">The Controller</h2>
+<p>The core hardware platform that MODAQ:Field is built upon is the CompactRIO (cRIO) from National Instruments and the software code base is developed in National Instruments LabVIEW. </p>
+<p>The cRIO is a compact and ruggedized industrial embedded controller that serves as the 'brains' of MODAQ. It contains the central processing unit and the usual components that one would expect with a computer, such as RAM, network interfaces, USB ports, and internal storage. In addition, the cRIO contains an expansion backplane for up to 8 I/O modules in a single chassis that is running a real-time Linux kernel and has an FPGA for high-performance and specialized applications.</p>
+<p><img alt="cRIO-9049" src="../img/cRIO-9049.jpg" /></p>
+<p>While MODAQ:Field is scalable and can run on any Linux-based cRIO - including models long discontinued by NI, the reference design presented in this documentation is built on the highest performance cRIO available at the time of writing, the <a href="https://www.ni.com/en-us/support/model.crio-9049.html" target="_blank">cRIO-9049</a>. There may be some features implemented in MODAQ:RD that are unavailable to older, lower-powered cRIO controllers, such as DAQmx and TSN. It's important to consider that the power and capabilities of the cRIO hardware is consistent with the application requirements and performance expectations. </p>
+<h2 id="h_architecture-modular-io">Modular I/O</h2>
+<p>In order to interface with sensors and instruments, the cRIO provides up to 8 slots for special-function I/O modules. Without any modules installed, most cRIOs can connect to instruments that communicate over USB, ethernet, and/or RS-232/485. Realistically, most applications will require additional modules. MODAQ:Field is not limited to 8 modules, since it leverages the expansion and distributed options available within the NI ecosystem. </p>
+<p>The size of a MODAQ:Field build will be governed by the type and number of inputs and/or outputs that the application requires. Most modules contain multiple I/O channels. For instance, in the diagram below, the NI-9249 (±10V voltage input module) can connect up to four voltage sources on a single module. </p>
+<blockquote>
+<p><font color = blue><b>Tech Note:</b>For clarity on the distinction between a sensor and instrument, a sensor is a device that varies its output in some proportion to a quantity it's designed to measure. For instance a temperature sensor (such as an RTD) varies its resistance in a calibrated response to temperature. While an instrument can contain one or more sensors and usually has some onboard processing that outputs a signal of some sort (such as raw serial or MODBUS), though some instruments can output an analog signal. An example of an instrument would be an IMU (Inertial Measurement Unit) which contains an accelerometer and rate gyro and can output a raw stream of the sensor data or highly processed attitude data over an RS-232 serial connection. 
+<font color = #404040>
+<br></p>
+</blockquote>
+<h2 id="h_architecture-general-io-support">General I/O Support</h2>
+<p>MODAQ:Field currently supports a wide variety of sensors and instruments that cover the vast majority of measurement requirements for MRE systems. This list is not exhaustive.</p>
+<p><img align="right" src="../img/MODAQ Reference Design v1.png"></p>
+<ul>
+<li>Voltages<ul>
+<li>0 - 300 V rms</li>
+<li>±10 V</li>
+<li>PTs/CTs</li>
+</ul>
+</li>
+<li>Current<ul>
+<li>0 - 50 A rms</li>
+<li>±20 mA</li>
+</ul>
+</li>
+<li>Temperatures<ul>
+<li>RTD</li>
+<li>Thermocouples</li>
+</ul>
+</li>
+<li>Strain<ul>
+<li>Quarter, half and full wheatstone bridges</li>
+<li>Load cells</li>
+</ul>
+</li>
+<li>Position<ul>
+<li>Rotary and/or linear encoders</li>
+<li>Resolvers</li>
+</ul>
+</li>
+<li>GPS<ul>
+<li>Position</li>
+<li>Heading</li>
+</ul>
+</li>
+<li>Motions<ul>
+<li>IMU/INS/AHRS</li>
+</ul>
+</li>
+</ul>
+<p>An example diagram of a cRIO with I/O modules for MODAQ:RD is shown to the right.</p>
+<h2 id="h_architecture-io-modifications">I/O Modifications</h2>
+<p>While MODAQ:Field has the flexibility to interface with many kinds of sensors and instruments, some development effort should be expected to create drivers (code) to support new hardware and/or hardware of different specification from those previously used. In addition, modification of existing code may be required to meet specific project requirements that cannot be accomplished through the MODAQ Configurator Utility. The purpose of this reference design is to present a example of MODAQ:Field basic hardware and software architecture. Hypothetical examples that might require software modifications:</p>
+<ul>
+<li>Ingestors/decoders for additional or different instrument parameters. Example: Project requires the NED instead of ECEF coordinate reference frame from the IMU. </li>
+<li>Changes to hardware signal type. Example: MODAQ:RD currently supports a variant of hardware with an analog ±10 VDC signal, however project sources a version that uses a serial output. </li>
+<li>Significant departure from baseline sampling support. Example: A MODAQ:Field ingestor as written can support a maximum sample rate of 5 kHz for a particular device, however project requires 50 kHz sampling.</li>
+</ul>
+<p>Since projects are rarely identical, some modification should be expected to accommodate such differences. </p></section><section class="print-page" id="s_architecture"><h1 id="s_architecture-modaq-software-architecture">MODAQ Software Architecture</h1>
+<p><img align="right" src="../img/LV_Icon.png"></p>
+<blockquote>
+<p>Many of the following topics are discussed in detail in the <a href="#tech_ref">Technical Reference section</a> of this document. </p>
+</blockquote>
+<p>The primary controller software for MODAQ:Field is written in National Instruments LabVIEW. With its long history in the industrial testing sector, LabVIEW is known for stability, performance, and ease of rapid software development. MODAQ:Field leverages the power of LabVIEW to enable advanced software features that would be considerably more difficult to implement in other programming environments.</p>
+<p>Depending on the design specification, some MODAQ:Field features may be implemented in the onboard FPGA chip, however MODAQ:Field's core functionality is run on the cRIO's Real-Time Linux target. Two versions of the MODAQ:RD software are included in this repository: FPGA and DAQmx. While both have similar functionality, hardware support, and general programming logic, these are the primary differences:</p>
+<ul>
+<li><b>FPGA</b> - This version implements some functions in the FPGA, in particular the RS232, GPS timekeeper, and voltage input modules. Using this version requires a licensed copy of the <a href="https://www.ni.com/en-us/shop/product/labview-fpga-module.html" target="_blank">FPGA Module addon</a>. </li>
+<li><b>DAQmx</b> - This version contains no FPGA code and does not require the FPGA Module addon license, however it will only work on <a href="https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019PUNSA2&l=en-US" target="_blank">newer cRIO hardware</a> (those that have model numbers NI-904x and NI-905x). Further, the GPS timekeeper can only be implemented in FPGA, so that has been deleted from this version. However, there is a much better solution for precision time keeping and synchronization as discussed <a href="#tech_ref-ptp">here</a>. </li>
+</ul>
+<h2 id="s_architecture-modularity">Modularity</h2>
+<p>The modularity of MODAQ:Field is realized in the software architecture where functionality can added/removed from MODAQ:Field to provide the required features. Modules, called subVIs<sup id="fnref:1"><a class="footnote-ref" href="#s_architecture-fn:1">1</a></sup> in LabVIEW, are used in MODAQ:Field to encapsulate functions such as reading a sensor or writing data to a binary file. </p>
+<p><br></p>
+<p><img alt="MODAQ Software Diagram" src="../img/software_block.png" /></p>
+<h2 id="s_architecture-multitasking">Multitasking</h2>
+<p>MODAQ:Field makes extensive use of LabVIEW's multitasking capability, with most processes running in its own concurrent task. Each of these processes can have independent timing (loop or sample rates) or be synchronized to a common source. In addition, prioritization can be enforced to assure determinism for critical tasks.</p>
+<h2 id="s_architecture-timing-and-synchronization">Timing and Synchronization</h2>
+<p>MODAQ:Field is highly performant- even with complex designs. Much care goes into assuring data are timestamped to a reliable reference and samples are tightly synchronized. For very demanding applications, specialized hardware and programming considerations may be necessary to achieve expected performance. See <a href="#tech_ref-timing-and-synchronization">Timing and Synchronization</a> section in the Technical Reference section for more detail.</p>
+<h2 id="s_architecture-interprocess-communications">Interprocess Communications</h2>
+<p>While tasks are run as individual parallel processes, MODAQ provides several mechanisms to allow for interprocess communications. These mechanisms fall into the following categories:</p>
+<ol>
+<li>Blocking - process waits for message/data. This is usually the case for a "consumer" loop, which acts on an output from another "producer" task. </li>
+<li>Broadcast - A signal or flag that may be actioned by one or more tasks. </li>
+<li>Messaging - A common buss for passing formatted messages, such as log events and email alerts.</li>
+</ol>
+<h2 id="s_architecture-control-and-automation">Control and Automation</h2>
+<p>MODAQ:Field can include hardware output modules and perform control actions. These can be simple if-then type rules, PID, or very complex state machines. Since controlling external things is highly dependent on individual project requirements, control features are not included in the MODAQ:RD distribution. </p>
+<p>While MODAQ:Field can perform complex control operations similar to a SCADA, MODAQ:Field systems furnished by NREL are not intended to be the MRE device's primary control system. This is partly due to liability concerns, but mostly because the control system is responsible for the performance and character of the device and usually involves proprietary or uniquely specialized algorithms. Users who choose to leverage the MODAQ reference design independently are free to extend the code as they feel fit. Examples of MODAQ control logic are available upon request or see <a href="https://www.nrel.gov/docs/fy22osti/83803.pdf" target="_blank">this</a> document regarding MODAQ SCADA for Columbia Power.</p>
+<h2 id="s_architecture-qc-and-threshold-monitoring">QC and Threshold Monitoring</h2>
+<p>Any data channel within MODAQ:Field can be piped through basic quality control screening, with violations flagged for later action. Unless there's a compelling reason to do QC screening onboard, it is recommended to screen the data once uploaded to MODAQ:Cloud, since onboard screening increases the file sizes and can impact performance. Instead (or in addition to), MODAQ:Field can be configured to monitor thresholds and/or apply simple rules to acquired data and write violations to a log file and/or send an email alert. </p>
+<h2 id="s_architecture-execution">Execution</h2>
+<p>MODAQ:Field runs "headless"<sup id="fnref:2"><a class="footnote-ref" href="#s_architecture-fn:2">2</a></sup> on the real-time Linux target on the cRIO hardware as a compiled executable, however it can also be run in an interactive mode<sup id="fnref:3"><a class="footnote-ref" href="#s_architecture-fn:3">3</a></sup> which is useful for debugging and laboratory/bench testing. Since interactive mode can be processor and bandwidth intensive, it's not recommended for production/field applications. If interactivity or near real time monitoring is desired, consider the available HMI or MODAQ:Web options. </p>
+<h2 id="s_architecture-configuration">Configuration</h2>
+<p>MODAQ:RD includes an offline configuration utility for setting values, such as thresholds, scaling factors, and channel names and to set operational preferences. The Configurator generates an XML document of the settings that is loaded when MODAQ:RD starts. Since it's a plain text XML file, quick changes to contents can be done outside of the Configurator in any text editing app.</p>
+<h2 id="s_architecture-data-destinations">Data Destinations</h2>
+<p>While MODAQ:Field <em>could</em> save data in most common formats, TDMS is the format supported by MODAQ for most data save operations. TDMS is a binary format that was developed by National Instruments and there are plugins or libraries available to read TDMS in MS Excel, Matlab, and Python. TDMS is also supported by MODAQ:Cloud and MHKiT. </p>
+<p>In addition to TDMS, MODAQ:Field can also create summary files, which are CSV text files that contain select downsampled measurement data and system status. Summary files are ideal for sending data to monitor a deployment over a bandwidth-constrained internet connection. They can also be ingested in MODAQ:Web for an operational monitoring dashboard. </p>
+<h2 id="s_architecture-communications">Communications</h2>
+<p>MODAQ:Field can be configured for a variety of communications pathways, including cellular, WIFI, ethernet, and fiber optic. Users can configure which files to upload based on available bandwidth and data charges. </p>
+<h2 id="s_architecture-hmi">HMI</h2>
+<p>While there are a few ways to implement an HMI in LabVIEW, MODAQ:RD leverages the <a href="https://www.ni.com/en-us/shop/electronic-test-instrumentation/programming-environments-for-electronic-test-and-instrumentation/what-is-g-web-development-software.html" target="_blank">G Web Development Software</a> (formerly LabVIEW NXG Web Module) and web server support on the cRIO to build HMIs that can be displayed in a standard web browser. To access the HMI, clients need to be on the same network as MODAQ:Field. A simple implementation of the MODAQ:Field HMI is included with the MODAQ:RD source code. Minor changes of the HMI could be accomplished by modifying the HTML or JavaScript files, however a G Web Development license will be necessary for more extensive changes.  </p>
+<h2 id="s_architecture-remote-supervision">Remote Supervision</h2>
+<p>MODAQ:Field can be equipped with a network gateway that includes an OpenVPN server. Assuming sufficient bandwidth,  operators can connect to MODAQ to perform remote maintenance, upload new code, change configuration settings, view the HMI, and download data files. </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="s_architecture-fn:1">
+<p>In LabVIEW, a "program" is called a VI or Virtual Instrument. If a VI is contained within a VI, it's known as a subVI. This is similar to a function in other languages. The use of subVIs is a way to simplify the appearance of the application's block diagram (which itself is the source code view of the app) and encapsulating functional elements for modularity and reuse.&#160;<a class="footnote-backref" href="#s_architecture-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="s_architecture-fn:2">
+<p>Headless Mode: Also known as embedded mode- there is no directly connected display or keyboard/mouse. MODAQ:Field is run as an executable, with all Graphical User Interface (GUI) elements excluded at compile time. This mode provides the best performance.&#160;<a class="footnote-backref" href="#s_architecture-fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="s_architecture-fn:3">
+<p>Interactive Mode: LabVIEW makes it very easy to create a GUI, complete with plots, live updating indicators, and interactive controls. However, these can result in a performance hit, particularly if a lot of data are streamed to the GUI elements. There are ways to minimize these impacts, but deployments should done in Headless Mode.&#160;<a class="footnote-backref" href="#s_architecture-fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></section><section class="print-page" id="ref_design"><h1 id="ref_design-modaq-reference-design-manual">MODAQ Reference Design Manual</h1>
+<p><img align="right" src="../img/MODAQ_RD_Logo.png"></p>
+<p>Since each project tends to be unique and measurement objectives can vary considerably, there is no typical configuration that will satisfy all situations. Instead, most MODAQ:Field builds start from a common base configuration that encompasses features commonly used in MRE DAQ projects. While that <em>still</em> might not be suitable for all applications, it provides a good starting point and model for discussion. This reference design (MODAQ:RD) represents the core MODAQ:Field configuration as a starting point for most builds. If an end user were to buy the same hardware, configure it the same way, and use the linked MODAQ:RD code, the user should be able to set up a functional MODAQ:Field system. </p>
+<p>Some topics discussed below are covered in greater detail in the Technical Reference section of this document. </p>
+<h2 id="ref_design-modaq-hardware-reference-design">MODAQ Hardware Reference Design</h2>
+<figure>
+<img src="../img/cRIO_Populated.jpeg">
+<figcaption>
+Figure 1. National Instruments hardware configured to the MODAQ:RD specification. Modules should be populated as shown, with an NI-9870 in slot 1 and two NI-9239 modules in slot 2 and 3.
+</figcaption>
+</figure>
+
+<p><font color = #404040><p>
+This repository contains a version of the MODAQ:RD based on the DAQmx API, though an FPGA based version can be made available upon request. Users with older cRIO chassis will need to use the FPGA version, while users with newer cRIOs (cRIO-904x and cRIO-905x series), can use either version, but are encouraged to use the DAQmx version. </p>
+<blockquote>
+<p><font color = blue><b>Tech Note:</b>The FPGA version will require a license to the <a href="https://www.ni.com/en-us/shop/product/labview-fpga-module.html" target="_blank">LabVIEW FPGA module</a> in order to build the FPGA bitfile or make changes to the FPGA source code. In addition, if precision time keeping is important, the FPGA version will require the NI-9467 module.
+<font color = #404040><p>
+<font color = blue><b>Tech Note:</b> National Instruments introduced <a href="https://www.ni.com/en-us/support/documentation/supplemental/06/answers-to-frequently-asked-questions-about-ni-daqmx-and-traditi.html"  target="_blank">DAQmx</a> and Time Sensitive Networking (TSN) support to cRIOs beginning with the 904x and 905x series. To meet more demanding requirements, particularly for large designs with lots of I/O, MODAQ:Field now uses DAQmx in the core design. These larger designs require TSN to assure precision timing and synchronization between multiple chassis. 
+<font color = #404040><p></p>
+</blockquote>
+<p>This reference design has been built and tested on the <a href="https://www.ni.com/en-us/support/model.crio-9049.html" target="_blank">cRIO-9049</a> embedded controller, however this code will likely run on most recent cRIO variants with Intel processors and the Linux real time kernel with little to no modification. </p>
+<p>The core MODAQ:RD configuration, before consideration of device-specific measurement objectives, includes code for a GPS/Inertial Navigation System (GNSS) module for position, heading, and attitude. This device can connect to the built-in RS-232 port on the cRIO, however since it's common to have separate GPS and IMU devices, and thus requiring more than one RS-232 port, we include the NI-9870 4-port RS-232 module in this design. If only one RS-232 port is needed (such as the case with a GNSS or if there is no need for either the GPS or IMU), then the NI-9870 can be omitted and the single built-in RS-232 port can be used instead. See <a href="#tech_ref-serial-port-configuration">this</a> in the Technical Reference section for more information on configuring the serial ports. </p>
+<blockquote>
+<p><font color = blue><b>Tech Note:</b> One of MODAQ:Field's basic design requirements includes precision timestamping of measurement samples and events. To achieve this, earlier builds of MODAQ:Field designed on older cRIO hardware used an <a href="https://www.ni.com/en-us/support/model.ni-9467.html" target="_blank">Ni-9467</a> GPS time synchronization Module and the <a href="https://forums.ni.com/t5/Sync-Labs/NI-TimeSync-FPGA-Timekeeper-Getting-Started/td-p/3543895?profile.language=en" target="_blank">Timekeeper API</a> implemented in FPGA. This was great at the time and continues to be a viable and effective solution for accurate timestamping. However, as mentioned in the previous Tech Note, newer cRIOs support standards-based TSN or PTP (Precision Time Protocol)- which has distinct advantages over the former method with the NI-9467 module. Please see the <a href="#tech_ref-ptp">Technical Reference</a> for more details. The FPGA version of MODAQ:RD uses the NI-9467 method, while the DAQmx version uses PTP. Not to over-complicate this matter, but PTP can absolutely be used instead of the NI-9467 with the FPGA version, but only if the cRIO supports PTP (cRIO-904x and cRIO-905x series).</p>
+</blockquote>
+<p><font color = #404040><p>
+As a basic system, the MODAQ:RD is designed to acquire 3-phase voltage and current from a generator or PTO (power take off) at sample rates up to 50 kHz at 24 bit resolution for power performance and quality assessment. Essentially, this is a core configuration with added voltage input cards. Here is a list of the required National Instruments hardware:</p>
+<ol>
+<li><a href="https://www.ni.com/en-us/support/model.crio-9049.html" target="_blank">cRIO-9049</a> controller</li>
+<li><a href="https://www.ni.com/en-us/support/model.ni-9467.html" target="_blank">NI-9467</a> time synchronization module (FPGA version only, and optional)</li>
+<li><a href="https://www.ni.com/en-us/support/model.ni-9870.html" target="_blank">NI-9870</a> 4 port RS232 serial module (optional)</li>
+<li><a href="https://www.ni.com/en-us/support/model.ni-9239.html" target="_blank">NI-9239</a> ±10v voltage input module (quantity: 2)</li>
+</ol>
+<blockquote>
+<p><font color = blue><b>Tech Note:</b> This design assumes the use of PTs and CTs (potential and current transducers) that output a voltage proportional to the signal under measure in the range of ±10 V<sub>DC</sub> (example Verivolt IsoBlock V). MODAQ:Field can also be configured to measure PT/CTs that have outputs up to 300 V<sub>rms</sub> (PT) and 5 A<sub>rms</sub> (CT), but for safety considerations NREL recommends using PT/CTs with low voltage outputs where possible. The higher voltage and amperage output option is implemented in FPGA for high speed acquisition and this code is not provided by default with the reference software. Please contact NREL for more information. 
+<font color = #404040></p>
+</blockquote>
+<p>The following GPS/INS/IMU devices currently have MODAQ:Field support but only the XSens INS noted below has been enabled in the MODAQ:RD code. SubVIs for the Spatial Dual and V104 are included in the code, but disabled by default. </p>
+<ol>
+<li>INS <ul>
+<li>Advanced Navigation - Spatial Dual<sup id="fnref:1"><a class="footnote-ref" href="#ref_design-fn:1">1</a></sup> </li>
+<li>XSens - MTi-G-710<sup id="fnref:2"><a class="footnote-ref" href="#ref_design-fn:2">2</a></sup></li>
+<li>LORD Microstrain - 3DM-GX4-45</li>
+</ul>
+</li>
+<li>IMU<ul>
+<li>Teledyne TSS - DMS-05</li>
+<li>Yost 3-Space</li>
+</ul>
+</li>
+<li>GPS, Heading, and Heave <ul>
+<li>Hemisphere - V104</li>
+</ul>
+</li>
+</ol>
+<p>It should be noted at this point that NREL typically incorporates higher-end true INS devices (both GPS and IMU in one device) in its system specification. Most of the units listed here sell for several thousands of dollars. Depending on measurement objectives and quality expectations, cheaper instruments may be used, however MODAQ:Field drivers or decoder/parsers for devices not appearing on this list will need to be written. Also, the V104 (which as been succeeded by the V123 or V200) is a dual GPS self-contained in the antenna unit. It provides heading and heave in addition to position. Again, a project may elect to substitute a cheaper, less capable device. Since MODAQ:RD can parse standard NMEA-0183 GPS sentences, MODAQ:RD code modifications should be minor.    </p>
+<h3 id="ref_design-setup">Setup</h3>
+<p>A detailed hook up guide will not be provided here, however MODAQ:RD will expect the I/O modules to be in the slots as indicated in  Figure 1 above and the sensors/instruments attached to the I/O modules in the following order:</p>
+<ul>
+<li>XSens or any GPS with $GPGGA sentence enabled (Slot 1, port 0 or cRIO RS232 connector)</li>
+<li>Stand alone IMU (Slot 1, port 1, optional)</li>
+<li>V<sub>a</sub> (Slot 2, Channel 0)</li>
+<li>V<sub>b</sub> (Slot 2, Channel 1)</li>
+<li>V<sub>c</sub> (Slot 2, Channel 2)</li>
+<li>I<sub>a</sub> (Slot 3, Channel 0)</li>
+<li>I<sub>b</sub> (Slot 3, Channel 1)</li>
+<li>I<sub>c</sub> (Slot 3, Channel 2)</li>
+</ul>
+<blockquote>
+<p><font color = blue><b>WARNING:</b> Only connect PT/CTs with ±10 VDC outputs to MODAQ:RD's NI-9239 modules. Do not connect MODAQ:RD directly to a generator's 3 phase AC lines. If unsure, please consult with the appropriate electrical expertise prior to attaching MODAQ to an energized system. Always have electrical work completed by trained professionals with the necessary certifications to conduct such work.</p>
+</blockquote>
+<p><font color = #404040></p>
+<h2 id="ref_design-modaq-software-reference-design">MODAQ Software Reference Design</h2>
+<p>NREL provides the MODAQ:RD LabVIEW source code in this repository and users are free to use and modify this code under the Revised BSD License applicable open source licensing terms. </p>
+<h3 id="ref_design-labview">LabVIEW</h3>
+<p>To view, modify, and/or deploy MODAQ:RD from the source code, the following LabVIEW development environment is required:</p>
+<ol>
+<li>LabVIEW 2019 (32-bit)<sup id="fnref:3"><a class="footnote-ref" href="#ref_design-fn:3">3</a></sup> <a href="https://www.ni.com/en-us/shop/labview/select-edition.html" target="_blank">Full or Professional</a> Development Editions</li>
+<li>LabVIEW <a href="https://www.ni.com/en-us/shop/software/products/labview-real-time-module.html" target="_blank">Real-Time Module</a> add on</li>
+<li>[OPTIONAL] LabVIEW <a href="https://www.ni.com/en-us/shop/software/products/labview-fpga-module.html" target="_blank">FPGA Module</a> add on</li>
+</ol>
+<p>MODAQ:RD has not been tested on versions of LabVIEW newer than 2019SP1. Chances are that later versions of LabVIEW will run MODAQ:RD fine, but LabVIEW will recompile (upgrade) the MODAQ code to the later version- which will not be backward compatible. Keep this in mind if you intend to contribute back to this project or post issues to the repository. </p>
+<p>National Instruments now only offers LabVIEW as a software subscription and the current cost for the required packages is $3,159.00 to $5,762.00 per annum as of 2023 (there is no discount for buying multiyear). NI offers a <a href="https://www.ni.com/en-us/shop/software/products/labview.html?skuId=25555" target="_blank">"Debug and Deployment"</a> version of LabVIEW as a perpetual license that is intended to be used for modifying existing code and deploying it on targets. It is recommended to review the license terms for the Debug and Deployment edition to understand what uses are allowed and whether it's a suitable alternative to the pricier development editions. </p>
+<p>Either way, LabVIEW is a very sophisticated and capable programming language that can take years to master. A programmer skilled in other languages, such as C/C++ or Python, may be able to gain sufficient LabVIEW competence in short time to modify/customize and deploy the MODAQ:RD code. NI offers both free and paid <a href="https://learn.ni.com/learn/article/labview-tutorial" target="_blank">tutorials</a> and <a href="https://www.ni.com/en-us/shop/services/courses-category.html#" target="_blank">courses</a> for learning LabVIEW and a tiered <a href="https://www.ni.com/en-us/shop/services/education-services/certification-program.html" target="_blank">Certification Program</a>. </p>
+<p>Aside from going the route of getting a LabVIEW license and in-house LabVIEW expertise, there are a couple of additional options. </p>
+<ol>
+<li>Hire a LabVIEW <a href="https://www.ni.com/en-us/partners/work-with-partners.html" target="_blank">consultant</a>.</li>
+<li>Download the pre-compiled MODAQ:RD executable from this repository and deploy it manually following <a href="https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000YHpnCAG&l=en-US" target="_blank">these</a> instructions. The caveats here are:<ul>
+<li>The cRIO must be set up with the same modules in same slots as shown in the reference design.</li>
+<li>No additional I/O modules can be added. </li>
+<li>Some programmatic features can be configured in the included Configurator app. Please see the section describing the Configurator for more detail. </li>
+</ul>
+</li>
+</ol>
+<h3 id="ref_design-configurator">Configurator</h3>
+<p>A stand-alone configurator utility is provided to customize various settings within MODAQ:RD. This was developed to avoid 'hard-coding' values within the software and allow more flexibility without having to edit the source code and recompile the executable. Since this MODAQ:RD is a relatively simple implementation of MODAQ:Field, the included Configurator is similarly simple. </p>
+<p>Settings made in the Configurator are saved to an XML file that is loaded by MODAQ:Field on startup. Therefore, any changes made in the Configurator while MODAQ:Field is running will be ignored until the system is restarted. In a pinch, it is possible to manually edit the XML file in a text editor, however this is not recommended since it could render the file unreadable to MODAQ:Field.  </p>
+<p>The Configurator runs on the user's local computer and the resulting XML file must be moved to the cRIO manually. MODAQ:RD will expect to find the file (MODAQ RD Configuration File.xml) in the root folder of the storage drive located at /media/sdb1/. Ironically, the location and name of the configuration file are hard-coded in MODAQ and cannot be changed in the Configurator. </p>
+<p>When MODAQ starts up, it auto-archives a copy of the loaded configuration to the /media/sdb1/Logs/ folder. This provides a reference of what configurations were applied for any given run. </p>
+<h3 id="ref_design-local-storage">Local Storage</h3>
+<p>The NI-9049 cRIO controller has 16GB of onboard storage and also contains an SD card slot. Paths to the preferred data storage location can be set in the Configurator. Since the onboard storage is relatively small and shared with the Real-Time Linux operating system it's not recommended to use this storage for measurement data. An SD card is a viable option, but these can be slow and have reliability issues. National Instruments specifies industrial UHS-I SD cards for the cRIO controller with capacities up to 32 GB. The preferred option is to use an SSD drive connected to one of the USB 3.1 Type-C ports (the USB-A port is limited to USB 2.0 specification) on the controller. This way, speed and capacity are no longer an issue. </p>
+<h3 id="ref_design-tdms">TDMS</h3>
+<p>All high-resolution measurement data generated in MODAQ:Field is saved to the binary TDMS format. As mentioned in the Software Architecture section, TDMS can be read in Excel (with <a href="https://www.ni.com/en-us/support/downloads/tools-network/download.tdm-excel-add-in-for-microsoft-excel.html#378046" target="_blank">this plug in</a>), <a href="https://www.mathworks.com/help/daq/tdmsread.html" target="_blank">MATLAB</a>, and <a href="https://nptdms.readthedocs.io/en/stable/" target="_blank">python</a>, or TDMS data can be viewed, manipulated, and exported with 3rd party tools such as <a href="https://www.ni.com/en-us/support/downloads/tools-network/download.scout-tdms-editor.html#374449" target="_blank">Scout</a>.  </p>
+<p>See the technical reference section for more detail on how <a href="#tech_ref-tdms">TDMS</a> is used in MODAQ:field. </p>
+<h3 id="ref_design-summary-files">Summary Files</h3>
+<p>In addition to the binary TDMS files, most MODAQ:Field modules also create a comma separated value (CSV) text file called a summery file. These are "summary" files in the sense that in most cases they contain sub-sampled, resampled, statistical, or summarized versions of the raw measurement data that are easier to upload over low bandwidth connections. Summary file upload interval can be set in the Configurator. </p>
+<h3 id="ref_design-aws-s3">AWS S3</h3>
+<p>MODAQ:Field uses AWS S3 for programmatic data transfers. Users can independently enable S3 uploads of the TDMS and summary files in the Configurator. They can also set their AWS access and secret keys, as well as the desired S3 bucket. </p>
+<p>Since TDMS files can become large, users should evaluate available network bandwidth and data transfer costs before enabling the TDMS upload option. Slow TDMS file transfers could impact measurement determinism and in some cases, data may be generated at a rate faster than the available transfer speed. </p>
+<h3 id="ref_design-email">Email</h3>
+<p>Various events within MODAQ:Field can be set to issue an email alert to a distribution list. This is useful for monitoring for exception conditions and users are encouraged to set email alerts judiciously in order to avoid email fatigue. </p>
+<p>Settings for the email server address, account credentials, and distribution list email addresses are done in the Configurator. An email service provider is required to use this feature, such as gmail, web email hosting service, or a properly enabled enterprise email server. </p>
+<h3 id="ref_design-watch-circle">Watch Circle</h3>
+<p>MODAQ:RD includes a watch circle feature. Since most field deployments are quasi-stationary, like in the case of a surface buoy, the watch circle can alert users by email if the device moves beyond a preset distance from its mooring location. Watch circle preferences and alert radii are set in the Configurator. </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="ref_design-fn:1">
+<p>The Spatial Dual also includes a dual GPS receiver, which can not only give highly precise positioning data but also determine heading. It also covers both the positioning and attitude tasks and has internal sensor fusion to control IMU drift.&#160;<a class="footnote-backref" href="#ref_design-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="ref_design-fn:2">
+<p>The SubVI included in the reference design for the XSens INS will likely work with other XSens MTi-series devices assuming they use, or are configured to use, the MTData2 binary format. We have only tested the code with the model indicated.&#160;<a class="footnote-backref" href="#ref_design-fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="ref_design-fn:3">
+<p>32 bit LabVIEW is required, since the 64 bit does not support the Real-Time Module.&#160;<a class="footnote-backref" href="#ref_design-fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></section><section class="print-page" id="dev_modules"><h1 id="dev_modules-optional-and-development-modules">Optional and Development Modules</h1>
+<p>During the MODAQ:Field development process, many functions and logic are initially created as standalone applications or testers. These may use sample data or interface to the actual I/O hardware where applicable. This gives us an opportunity to fine tune or debug the code and develop necessary exception handling. It's also a good way of troubleshooting when something is not working as expected, such as files not uploading to AWS, since the testers may have more feedback available than is normally exposed in the full MODAQ:Field application. </p></section><section class="print-page" id="tech_ref"><h1 id="tech_ref-modaq-technical-reference">MODAQ Technical Reference</h1>
+<p>This section will discuss specific MODAQ:Field technologies in greater detail and is provided for the curious end user to better understand how MODAQ:Field works and why certain design decisions were made. Over the course of MODAQ:Field development many options and challenges had presented and there was often often more than one way to achieve similar results. As always, options have trade-offs and a different design team may have made different decisions. </p>
+<p>In some cases, options, shortcomings, and/or suggestions will be presented and since MODAQ:RD is offered in the public domain as "open source", experienced LabVIEW developers are encouraged to modify or improve this code base and perhaps implement features in a more efficient and performant manner. It would be appreciated if such improvements are made, that the developers contribute back to this project.</p>
+<h2 id="tech_ref-hardware">Hardware</h2>
+<p>The MODAQ:RD utilizes DAQmx which allows for a more user friendly experience when setting up. Running DAQmx on a cRIO requires that a certain subprocessor is installed. Currently only the 904X and 905X series cRIOs include this subprocessor. In order to run this MODAQ:RD, you must have a cRIO from one of these <a href="https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019PUNSA2&l=en-US" target="_blank" > series </a>.</p>
+<p>If you already have an older model cRIO, you will have to leverage the FPGA in order to make the measurements this DAQmx based reference design is making. If this is essential for you please reach out to learn more about the FPGA based reference design.</p>
+<h3 id="tech_ref-rad-configuration-utility">RAD Configuration Utility</h3>
+<p>The Replication and Deployment (RAD) Utility allows for users to directly image a cRIO with all the necessary software (drivers and MODAQ:Field executables) to run the system. However, this utility is unable to be flexible to any departure from the current release of the MODAQ:RD. We would only recommend users looking to directly deploy the MODAQ:RD on a cRIO to use this tool. Additonally, it may benefit users who want to skip the following steps in target configuration as it does also include all the drivers necessary to run a modified MODAQ:RD. A image titled similarly to "MODAQ_RD_9049_Image1_0_0.lvappimg" is included in the repo. This may be deployed to a cRIO using instructions described <a href="https://github.com/ni/rad" target="_blank" >  here</a>.</p>
+<h3 id="tech_ref-target-configuration">Target Configuration</h3>
+<p>cRIO's are typically configured using the utility from NI called Measurement and Automation Explorer or MAX. To program a cRIO to use the MODAQ:RD, you must configure the network settings properly and install the necessary software. A brand new cRIO will have no software on it besides the base NI-Linux operating system. 
+The steps to setting up the cRIO to program are as follows:
+1. Connect the cRIO to your host machine's ethernet port
+2. Configure your host machine to use DHCP and not a static IP in order to see the cRIO
+3. Open NI MAX and expand the "Remote Systems" tree. You should see your cRIO in the list that appears
+4. Select the cRIO in the tree and select the "Network Settings" tab
+5. If you are using an older version of NI MAX, you may need install Microsoft Silverlight to be able to view the Network Settings
+6. We recommend setting the cRIO to a static IPv4 address such as 192.168.0.10 with a subnet mask of 255.255.255.0 and a blank gateway. Once you save this setting you will no longer be able to connect to the cRIO until you change your host PC's IP address to something in the same subnet such as 192.168.0.9 with a subnet mask of 255.255.255.0.</p>
+<p><img alt="ip-settings" src="../img/ipsettings.png" /></p>
+<ol>
+<li>With your cRIO and Host PC on the same subnet, you can install the necessary software by right clicking "Software"</li>
+</ol>
+<p><img alt="add-software" src="../img/addsoftware.png" /></p>
+<ol>
+<li>Add the software stack described below to the cRIO</li>
+<li>You may also wish to change the hostname of the cRIO to something more useful and add a password by clicking "Set Permissions." This is highly recommended if you are going to enable SSH.</li>
+</ol>
+<h4 id="tech_ref-software-stack">Software Stack</h4>
+<p>MODAQ:RD cRIO software stack:</p>
+<p><img alt="NI-MAX cRIO Software" src="../img/MaxcRIOSoftware.png" /></p>
+<p>All of these packages are needed or a dependency of a package needed by the the MODAQ:RD. You may wish to add more packages if you plan on adding more functionality to the reference design.</p>
+<blockquote>
+<p><font color = blue><b>Tech Note: </b>
+The procedure described above for installing software packages and dependencies should not be confused with addons and dependencies for LabVIEW on the Host computer (for instance, your Windows development laptop). These are necessary to enable the needed functionality on the cRIO target. In the interest of keeping the target as lean as possible and not bloat the system with unused services, users should install only the necessary packages. If a needed package is not installed on the cRIO, there may be runtime errors reported or unexpected behavior. 
+<font color = #404040></p>
+</blockquote>
+<h3 id="tech_ref-network-layout">Network Layout</h3>
+<p>The MODAQ:RD does not include any network connected instruments but there may be a need to include a Cradlepoint Router to enable 4G connectivity to the cRIO and other components of MODAQ:Field during field deployments. If a Cradlepoint is used, the network must be configured properly so the cRIO is on the Cradlepoint's LAN and uses the Cradlepoints IP address as the default gateway.</p>
+<h2 id="tech_ref-software-architecture">Software Architecture</h2>
+<p>The MODAQ:Field software was developed using National Instruments' LabVIEW 2019 32 bit. We recommend starting with the 2019 Release of <a href="https://www.ni.com/en-us/shop/product/embedded-control-and-monitoring-software-suite.html" target="_blank"> Embedded Control and Monitoring Suite</a> which includes all the necessary packages (minus the Electric Power Toolkit) plus several that are unnecessary. </p>
+<h3 id="tech_ref-labview-addons">LabVIEW Addons</h3>
+<h4 id="tech_ref-jki">JKI</h4>
+<p>JKI's VI Package Manager (VIPM) is a utility installed automatically with LabVIEW for downloading and installing free packages developed by NI and Third-parties that can be used within LabVIEW. The MODAQ:RD includes the following packages which are free to download:</p>
+<ol>
+<li>OpenG Toolkit</li>
+<li>LabVIEW Interface for Amazon S3</li>
+</ol>
+<h4 id="tech_ref-electrical-power-toolkit">Electrical Power Toolkit</h4>
+<p>The<a href="https://www.ni.com/en/support/downloads/software-products/download.labview-electrical-power-toolkit.html#318820" target="_blank"> Electric Power Toolkit </a> is a software add-on for LabVIEW developed by NI for completing analysis on power measurements. This toolkit is useful for taking measured voltage and current data and determining useful parameters of power such as RMS Voltage/Current, Active Power, Apparent Power, Reactive Power, Harmonics and Flicker. Currently, this software add-on is  listed at $687.00 as of 2023. This package is necessary if you would like to do on-board real-time power measurements and it can be removed from the code if not necessary and to avoid the license cost.</p>
+<p>NREL has also developed <a href="https://github.com/MHKiT-Software" target="_blank"> MHKiT </a> which includes similar functions for completing power quality assessments but not in real-time. Usually this would be done on the cloud after the raw data has been uploaded.</p>
+<h3 id="tech_ref-initialization">Initialization</h3>
+<p>When MODAQ:RD is started, it performs the following initialization steps:
+1. Sets some important flags
+2. Starts the System Messenger queue
+3. Checks for a PTP time server on the subnet
+4. Loads the configuration file and sets configuration globals
+5. Checks for previous clean shutdown
+6. Checks and repairs data folder structure
+7. Starts watchdog timer</p>
+<p>Assuming no critical errors occurred up to this point, the rest of the system is allowed to start up. </p>
+<h2 id="tech_ref-io">I/O</h2>
+<h3 id="tech_ref-voltage-input-reads">Voltage Input Reads</h3>
+<p>MODAQ:RD uses the NI-9239 analog input card for high-performance analog to digital conversion. This card exceeds most requirements for ADC quality but has historically been very reliable and accurate therefore justifying its cost. The card specifications are as follows <a href="https://www.ni.com/docs/en-US/bundle/ni-9239-specs/page/specs.html" target="_blank"> [Source]</a>:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td># of Inputs</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Bitness</td>
+<td>24 Bit</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>+/- 10V</td>
+</tr>
+<tr>
+<td>Max Sample Rate</td>
+<td>50 kS/s</td>
+</tr>
+<tr>
+<td>Type of ADC</td>
+<td>Delta Sigma (with analog prefiltering)</td>
+</tr>
+<tr>
+<td>Sampling Mode</td>
+<td>Simultaneous</td>
+</tr>
+<tr>
+<td>Isolation</td>
+<td>Ch - Ch and Ch - Earth</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tech_ref-filtering-source">Filtering <a href="https://www.ni.com/docs/en-US/bundle/ni-9239-specs/page/specs.html" target="_blank"> [Source]</a>:</h4>
+<p>The NI-9239 uses a combination of analog and digital filtering to provide an accurate representation of in-band signals and reject out-of-band signals. The filters discriminate between signals based on the frequency range, or bandwidth, of the signal. The three important bandwidths to consider are the passband, the stopband, and the anti-imaging bandwidth.</p>
+<p>The NI-9239 represents signals within the passband, as quantified primarily by passband ripple and phase nonlinearity. All signals that appear in the alias-free bandwidth are either unaliased signals or signals that have been filtered by at least the amount of the stopband rejection.</p>
+<h5 id="tech_ref-passband">Passband</h5>
+<p>The signals within the passband have frequency-dependent gain or attenuation. The small amount of variation in gain with respect to frequency is called the passband flatness. The digital filters of the NI-9239 adjust the frequency range of the passband to match the data rate. Therefore, the amount of gain or attenuation at a given frequency depends on the data rate.</p>
+<h5 id="tech_ref-stopband">Stopband</h5>
+<p>The filter significantly attenuates all signals above the stopband frequency. The primary goal of the filter is to prevent aliasing. Therefore, the stopband frequency scales precisely with the data rate. The stopband rejection is the minimum amount of attenuation applied by the filter to all signals with frequencies within the stopband.</p>
+<h5 id="tech_ref-alias-free-bandwidth">Alias-Free Bandwidth</h5>
+<p>Any signals that appear in the alias-free bandwidth are not aliased artifacts of signals at a higher frequency. The alias-free bandwidth is defined by the ability of the filter to reject frequencies above the stopband frequency. The alias-free bandwidth is equal to the data rate minus the stopband frequency.
+Data Rates</p>
+<p>The frequency of a master timebase (fM) controls the data rate (fs) of the NI-9239. The NI-9239 includes an internal master timebase with a frequency of 12.8 MHz, but the module also can accept an external master timebase or export its own master timebase. To synchronize the data rate of an NI-9239 with other modules that use master timebases to control sampling, all of the modules must share a single master timebase source.</p>
+<p>However, the data rate must remain within the appropriate data rate range. When using the internal master timebase of 12.8 MHz, the result is data rates of 50 kS/s, 25 kS/s, 16.667 kS/s, and so on down to 1.613 kS/s, depending on the value of n. When using an external timebase with a frequency other than 12.8 MHz, the NI-9239 has a different set of data rates.e
+</code></pre></p>
+<h3 id="tech_ref-serial-port-configuration">Serial Port Configuration</h3>
+<p><img align="right" src="../img/serial_config.png"></p>
+<p>Serial devices are connected to the cRIO through the RJ50 (10p10c) ports on the main controller or through an optional 9870 card. In LabVIEW, the different serial ports are available through the NI-VISA driver and can be configured using that driver's library. The serial port is selected through the constant and specified as an ASRL#. </p>
+<p>ASRL1 is the rs232 port and ASRL2 is the rs485 port on the cRIO. ASRL 3-6 are the additional ports on the NI-9870 card. There is also the possibility to add USB-to-Serial converters to the cRIO which will also appear as ASRL references. You must specify the serial port parameters for the serial devices that are connected. If using the unmodified MODAQ:RD, there is no need to change the serial port parameters.</p>
+<h3 id="tech_ref-gpsinsimu">GPS/INS/IMU</h3>
+<p>As mentioned in the <a href="#ref_design-modaq-hardware-reference-design">Reference Design Section</a>, NREL tends to use higher-end positioning and inertial instruments. While these can get pricey, the benefits are better stability, error correction, and accuracy. They also tend to have better filtering and data fusion algorithms.</p>
+<ul>
+<li>IMU - An instrument with typically a three-axis accelerometer and three-axis gyroscope in a package often referred to as 6-DOF (for 6 Degrees Of Freedom). These may also include a three-axis magnetometer, making it a 9-DOF device. There is often little to no filtering or data fusion with these devices and rarely has any correction for drift.</li>
+<li>GPS - Global Positioning System that relies on telemetry from an orbiting constellation of purpose-built satellites to calculate its position on earth. GPS is sort of a generic term, however technically it refers to only the North American "GPS" constellation. </li>
+<li>GNSS - GNSS can receive GPS data, as well as data from constellations maintained by other countries, such as China (Baidu), Russia (GLONASS), EU (GALILEO), among others. </li>
+<li>AHRS - Attitude and Heading Reference System is a step up from a basic IMU and offers some onboard processing to estimate roll, pitch, heading (yaw), and heave.</li>
+<li>INS - An Inertial Navigation System combines an AHRS with a GPS/GNSS and depending on the model, quality, and/or price, can also include higher-performance sensors and algorithms to produce attitude/orientation estimates and useful transforms (such as quaternions). </li>
+</ul>
+<blockquote>
+<p><font color = blue><b>Tech Note: </b>
+Six degrees of freedom (6-DOF) are surge, sway, and heave for accelerations and roll, pitch, and yaw for rotations. It's important to note that an IMU does not output the actual roll, pitch, and yaw angles, but the rate of change of those angles. The interested reader might check out <a href="https://www.advancednavigation.com/tech-articles/inertial-measurement-unit-imu-an-introduction/" target="_blank">this</a> brief introduction to IMUs, key specifications, and the different sensing technologies at use. 
+<font color = #404040></p>
+</blockquote>
+<h4 id="tech_ref-xsens-mti">Xsens MTI</h4>
+<p>The Xsens used in the MODAQ:RD is an MTi-G-710 which can be configured using the MT Manager software available from Xsens. We also provide a working example configuration called "MODAQ_Xsens_Config.xsa" which contains the setting seen below and is compatible with the curent version of MODAQ:RD. You can upload that configuration to the device by selecting the "Load Settings" button in MT Manager. If you need other outputs from the Xsens, some modification of the code may be necessary. The MODAQ:RD configuration of the Xsens is shown in the following images:</p>
+<p><img alt="xsens_config_1" src="../img/mtmanager_settings.png" />
+<img alt="xsens_config_1" src="../img/mtmanager_settings_2.png" />
+<img alt="xsens_config_1" src="../img/mtmanager_settings_3.png" /></p>
+<h4 id="tech_ref-hemisphere-v104">Hemisphere V104</h4>
+<p>The V104 is a marine grade GPS system that outputs NMEA messages through a serial connection to the cRIO. It is a dual GPS device with a pair of antennas in a single enclosure and because of the dual design, it can estimate heading.</p>
+<p><em>CONFIGURATION SETTINGS COMING SOON</em></p>
+<h2 id="tech_ref-timing-and-synchronization">Timing and Synchronization</h2>
+<h3 id="tech_ref-ptp">PTP</h3>
+<p>The DAQmx version of the MODAQ:RD supports <a href="https://en.wikipedia.org/wiki/Precision_Time_Protocol" target="_blank">PTP</a>, or more precisely<a href="https://www.ieee802.org/1/files/public/docs2008/as-garner-1588v2-summary-0908.pdf" target="_blank"> IEEE 1588-2008 v2</a>. PTP works off a client-server architecture where a master clock serves as the time reference for all capable clients on a network subnet. While there's numerous networking topologies that can be considered, different ways to propagate the time reference, and alternative (non-compatible) implementations such as IEEE 802.1AS, it can get complicated real fast. This discussion will be high-level and basic- please google for a deep-dive. </p>
+<p>The promise of PTP is that all connected PTP-aware devices will be synchronized and reference-time accurate to 100's, if not 10's of nanoseconds- without drift. By comparison, <a href="https://en.wikipedia.org/wiki/Network_Time_Protocol" target="_blank">Network Time Protocol</a> (NTP), which is what most consumer computers and laptops use as a time reference, can at best achieve 10's of milliseconds accuracy. While NTP accuracy might be perfectly acceptable to some and often better than a real time clock (which can drift <a href="https://www.best-microcontroller-projects.com/ppm.html" target="-blank">several seconds a day</a>), it's a ~6 order of magnitude difference in accuracy as compared to PTP. If a quality time reference is not available, samples taken from input modules on the same DAQ controller will be disciplined by the same clock (<a href="https://www.ni.com/docs/en-US/bundle/ni-daqmx/page/mxcncpts/syncmethods.html" target="_blank">usually</a>) and will likely be <i>precisely</i> timestamped relative each other, but may not be <i>accurate</i> to actual time (i.e. UTC) . </p>
+<p>Where the real power of PTP is realized is in synchronizing samples taken by disparate systems. These can be DAQs on the same subnet, sharing the same master clock or systems completely disconnected from each other and separated miles apart. As long as each system is disciplined to a healthy PTP reference clock, the samples will be synchronized to the aforementioned nanosecond time precision. This is a boon for distributed architectures and system design flexibility, allowing multi-controller synchronization without physical interconnections. </p>
+<p>In our experience, PTP implementation either works magically or is a real bear. It does help to have some knowledge of networking and configuring managed switches. However, a simple, one controller implementation can be achieved by connecting the time server directly to the cRIO's secondary network port. </p>
+<h4 id="tech_ref-configuration">Configuration</h4>
+<p><img align="right" src="../img/tm2000b_config.png" width="500"></p>
+<p>This MODAQ:RD code has been tested on a cRIO-9049 with a <a href="https://timemachinescorp.com/product/gps-ntpptp-network-time-server-tm2000/" target="_blank">Time Machines TM2000B</a> time server on a common subnet. To get the best performance out of PTP, any switches or routers that sit between the PTP server and the clients should explicitly support PTP (at least IEEE-1588v2) and will probably require configuration by someone with more than casual networking experience. Because of this, and the fact that switches from different manufacturers (even among different models from the same manufacturer) can have different procedures for PTP configuration, this topic will not be covered in this documentation. </p>
+<p>However, assuming a properly configured network, we will provide some guidance to configuring the TM2000B and getting the cRIO disciplined to the time server. The image to the right is a screencap of how we have configured the PTP parameters in the Time Machine. This is obviously not the only way the device can be configured and it might not even be the optimal configuration, but it works with the cRIO-9049 and other Linux devices on the subnet with PTP support. </p>
+<blockquote>
+<p><font color = blue><b>Tech Note:</b>
+The IPv4 UDP setting on the TM2000B under Packet Output is IEEE-1588v2, while the 802.1AS (gPTP) option is obviously IEEE 802.1AS. Also, for the Post-Holdover Behavior, we selected Clock Class=52 instead of FAULTY state. This is because Clock Class 52 advertises to the subnet that it is still the primary reference clock, but it is currently degraded. This would happen in situations where the GPS signal was lost. Since the TM2000B has an OCXO (Oven Controlled Crystal Oscillator) with 20 ppb drift, even with loss of GPS, it's still probably still the best clock in the system, by several orders of magnitude. 
+<font color = #404040></p>
+</blockquote>
+<p>LabVIEW includes some example code for inspecting and configuring the PTP/TSN setting on the cRIO and cDAQ chassis on the subnet. Search for TimeSync in the NI Example Finder (from LabVIEW: Help&gt;Find Examples...). Launch the project: "Verify IEEE 1588-2008 Synchronization.lvproj" Please assure that NI-Sync has been installed on the cRIO target, otherwise, the example code will probably fail. For convenience, we've included these helpful utilities in the MODAQ:RD project in the Testers folder. </p>
+<p><img alt="PTP Enable" src="../tech_ref/img/ptp2.png" /></p>
+<p>We've renamed the files to begin with 1, 2, or 3, which makes them easier to reference in this discussion. They perform the following functions:</p>
+<ol>
+<li>Detailed information on status of IEEE 802.1AS-2011 or IEEE 1588-2008 on the selected system and allows the user to change the client/server and priority settings. Of special note here: if the Clock ID and GM Clock ID are the same, then the selected resource is acting as the master clock. Or in other words, it's not detecting a better PTP time reference on the subnet. The GM Clock ID should display the MAC address of the time server. </li>
+<li>This utility (shown in the image above), allows the user to select which PTP protocol is active on each of the built-in NICs (ethernet ports) on the cRIO. Only one protocol can be active on a single port at any given time. The screen capture above shows that both ethernet ports are set to IEEE 1588v2 and enabled. </li>
+<li>Quickly shows the PTP status of the ethernet ports, much like #2 does, however it also indicates if a time reference has been selected. </li>
+</ol>
+<p>We typically start with #2 to setup the ports, then switch to #3 to see if correct reference clock has been selected. If the MAC address of the reference clock is not correct, then it could mean that:
+- The network is not properly configured for PTP
+- The reference clock in not on the same subnet as the cRIO 
+- The reference clock scored lower in the automated <a href="https://arista.my.site.com/AristaCommunity/s/article/ptp-best-master-clock-algorithm-bmca" target="_blank">BMCA</a> (Best Master Clock Algorithm) than the selected clock. This can usually be remedied by changing the priority levels of the clocks. </p>
+<h4 id="tech_ref-cdaqs-and-other-ptp-aware-gear">cDAQs and Other PTP-Aware Gear</h4>
+<p>When building systems that outgrow the 8 slots available on a cRIO, the system can be extended by using one or more cDAQ chassis. NI offers 8 (<a href="https://www.ni.com/en-us/shop/model/cdaq-9189.html" target="_blank">NI-9189</a>) and 4 slot (<a href="https://www.ni.com/en-us/shop/model/cdaq-9185.html" target="_blank">NI-9185</a>) cDAQ options that support PTP/TSN.  However, this is not your only option: you could choose to use additional cRIOs or a 3rd party solution.  </p>
+<blockquote>
+<p><font color = blue><b>Tech Note: </b>
+The primary difference between a cRIO and cDAQ other than cost is that a cRIO is complete controller that runs the DAQ code locally on its own resources, while a cDAQ must be tethered to a controller or PC which is running the DAQ code- and a cRIO can run entirely headless or embedded. There are also some <a href="https://www.ni.com/en/support/documentation/supplemental/08/c-series-module-and-compactdaq-compactrio-hardware-compatibility.html" target="_blank">NI I/O modules</a> that cannot be used on a cDAQ.
+<font color = #404040></p>
+</blockquote>
+<h3 id="tech_ref-global-variables">Global Variables</h3>
+<p>MODAQ:Field makes extensive use of LabVIEW's implementation of global variables. In general, there is much hate for globals, since their misuse can result in race conditions, unexpected behavior, and poor understanding of data flow control. These are indeed sound reasons, but not enough to outright ban globals as a programming tool.</p>
+<p>In MODAQ:Field, globals are generally used for propagating configuration items, status flags/signaling, constants, and snapshot data. We avoid using globals to transport measurement data and instead use queues, FIFOs, channel wires, and direct wiring. We also centralize our globals into special subVIs (one for configuration and one for runtime globals), which allows for easy management of those globals. </p>
+<h2 id="tech_ref-data-destinations">Data Destinations</h2>
+<p>Data Destinations is a catchall term for where data are shuffled off to once acquired. For instance, will the data be stored locally and in what format? Does data need to be sent to a remote location in near-real-time? MODAQ:Field provides several options that can be used alone or together.  </p>
+<h3 id="tech_ref-tdms">TDMS</h3>
+<p>While there are lots of binary data storage formats, including NetCDF and HDF5, MODAQ:Field uses TDMS (Technical Data Management Streaming) for the simple reason that it is baked into LabVIEW and relatively easy to use. Even though it is not as widely adopted as those other formats, it does have readers for <a href="https://www.ni.com/en/support/downloads/tools-network/download.tdm-excel-add-in-for-microsoft-excel.html#378046" target="_blank">Excel</a>, <a href="https://www.mathworks.com/help/daq/tdmsread.html" target="_blank">MatLab</a>, and <a href="https://nptdms.readthedocs.io/en/stable/" target="_blank">python</a>. </p>
+<p>Due to the modular nature of MODAQ:Field, each process saves to its own TDMS file. While this might seem inefficient, since TDMS can be organized into tables for separate datatypes, channel groups, or sampling rates, we prefer to parallelize the process and encapsulate the TDMS saving function within a particular I/O code module.  </p>
+<h4 id="tech_ref-tdms-metadata">TDMS Metadata</h4>
+<p>Metadata can be written to the TDMS file so that it never gets separated from the measurement data. In MODAQ:RD, the metadata includes the channel group name, channel names, channel units, and data types. These are written whenever a new TDMS file is created. </p>
+<p>In MODAQ:RD, the TDMS save subVIs can accept three string arrays for the channel names, units, and data types. The order of each must reflect the physical channel order.</p>
+<h4 id="tech_ref-tdms-file-management">TDMS File Management</h4>
+<p>While TDMS files can be allowed to grow quite large, we provide the option to close files and start new ones at user-selectable intervals. This was done for two reasons:</p>
+<ol>
+<li>To reduce data loss in the event of a file corruption (rare)</li>
+<li>To reduce file sizes for uploading or network transfers</li>
+</ol>
+<p>After MODAQ:Field closes a TDMS file, it renames the file extension to .done. We do this so that uploading scripts do not attempt to grab actively written files. </p>
+<p>MODAQ:RD TDMS file naming convention is as follows:</p>
+<pre><code>YYYY_MM_DD_hh_mm_[group name].tdms
+</code></pre>
+<p>Each TDMS group is written to its own folder on the storage drive.</p>
+<h3 id="tech_ref-summary-files">Summary Files</h3>
+<p>Summary files is a term we use to describe files that contain sub-sampled, statistical, or otherwise summarized data. These data serve as proxies for the original raw data and are concise enough to transmit over limited bandwidth communications paths, while providing sufficient information to be operationally useful. Summary files may also contain diagnostic, health, or snapshot data to keep tabs on things like system memory, available storage space, CPU utilization, and system states. </p>
+<p>Currently, the summary files are plain text in a comma separated value format. These files have a static filename, such as pow_now.txt and since the contents are derived from data stored elsewhere, no effort is made to serialize the filenames or archive the contents. If summary file creation is enabled in the configurator, AWS S3 or FTP uploads should also be enabled. We usually set the summary files to be locally deleted after they have been successfully uploaded. The processes that write to summary files will start a new file if the previous one has been deleted. </p>
+<h3 id="tech_ref-awss3">AWS/S3</h3>
+<p>MODAQ:RD includes functionality to upload both the summary and TDMS files to an S3 bucket. Users can configure whether to upload the summary or TDMS or both in the Configurator. This requires an <a href="https://aws.amazon.com/s3/" target="_blank">AWS account</a> and a set of Access and Secret keys created for the desired upload bucket. These keys are to be copied to the MODAQ Configurator and automatically loaded when MODAQ:Field starts.  </p>
+<blockquote>
+<p><font color = blue><b>Tech Note: </b>
+Currently, both the summary and TDMS S3 upload processes delete the local files after successful upload. While this is an intentional decision for summary files, it's not  necessarily the right choice for TDMS files. Since TDMS files can be large, depending on sample rate and number of channels, they require fast internet or network access to transfer them faster than they are made. Since we rarely upload TDMS files in real time ourselves, this code has not been revised to preserve the TDMS files after upload. We plan to issue an update to disable the auto-delete. At this time, we advise to modify the code yourself or refrain from using the TDMS S3 uploader. 
+<font color = #404040></p>
+</blockquote>
+<h4 id="tech_ref-s3-key-updater">S3 Key Updater</h4>
+<p>Some organizations with managed AWS services, such as here at NREL, rules are enforced that expire S3 Access and Secret keys after so many weeks or months. Since MODAQ:Field loads the keys from the configuration file on startup and since we don't necessarily want to interrupt a deployment with a maintenance restart, we developed a method to 'hot update' the AWS keys. </p>
+<p>The AWS key updater runs continuously in the background during MODAQ:Field operation and watches the /AWS/incoming/ folder. If a file appears, the updater state machine will fail the file if it is not named 'aws.txt' and move it to the /AWS/error/ folder. Otherwise, the parser state expects the file contents formatted:</p>
+<pre><code>Access_Key:youraccesskeyhere
+Secret_Key:yoursecretkeyhere
+Bucket:yourbucketnamehere
+</code></pre>
+<p>There currently is no validation for the file contents, so if the fields are out of order or incomplete it will not successfully update the keys. Since updating the keys using this method only persists until a MODAQ:Field restart, it is recommended to change the keys in the configuration file on MODAQ:Field as well. Also, hot changes for S3 Bucket names have not been enabled in this version of MODAQ:RD.</p>
+<h3 id="tech_ref-sftpftp">SFTP/FTP</h3>
+<p>MODAQ:RD does not support SFTP at this time due to limitations in LabVIEW 2019. However, the underlying RT Linux operating system does. Users familiar with SFTP and the Linux command line could develop solutions for automated file transfers. For manual transfers, client software such as WinSCP, Bitvise, FileZilla could be used. </p>
+<p>Due to the inherent lack of security, FTP in not included by default in MODAQ:RD. NREL, like most other organizations with managed IT departments, prohibits the use of FTP. Users willing to accept the risk, can request the MODAQ:Field FTP module- or write their own. </p>
+<h2 id="tech_ref-logs-and-alerts">Logs and Alerts</h2>
+<p><img align="right" src="../img/message_q.png" width="500"></p>
+<p>MODAQ:Field provides a system-wide service that can write specific events to a log file and/or send alerts to an email list. The System Message Destinations service runs upon MODAQ:Field startup and is the sole reader for a message queue FIFO. At various points within the MODAQ:Field code, messages can be generated that are intercepted by this service. </p>
+<p>To write a message to the system messenger, enqueue the properly formatted cluster containing:</p>
+<ol>
+<li>The sending process name (e.g. Bearing Temperature)</li>
+<li>Details about the message (e.g. Over threshold, currently 135°C)</li>
+<li>T/F whether to write this to the system log (NOTE: default is TRUE, so this is only necessary to set if it's not desired to write to the log)</li>
+<li>Whether to send an email alert or not (NOTE: Default is 0 (no mail), so this only needs to be set if it is desirable to issue an email for this alert)</li>
+</ol>
+<h3 id="tech_ref-system-log">System Log</h3>
+<p>The system log is a comma-separated-value text file that contains all messages generated by MODAQ:Field processes. Example:</p>
+<pre><code>2023-10-26 19:21:57.504 UTC,PTP Time Acquired,IEEE 1588-2008_1
+2023-10-26 19:21:57.511 UTC,PTP offset (ns),29
+2023-10-26 19:21:57.514 UTC,System Time Update,System Clock Synced to PTP Reference
+2023-10-26 19:21:57.516 UTC,Configuration,Loaded
+2023-10-26 19:21:57.518 UTC,STARTUP,Clean Shutdown Passed
+2023-10-26 19:21:57.521 UTC,Watchdog,Enabled
+2023-10-26 19:21:57.523 UTC,SysStats,Uptime:   0d  0h  0m
+2023-10-26 19:21:57.540 UTC,SysStats Summary,1992.4,99.6,88.2,1.2,13807.8
+2023-10-26 19:22:58.008 UTC,SysStats,Uptime:   0d  0h  1m
+2023-10-26 19:23:58.008 UTC,SysStats Summary,1992.3,99.6,88.1,2.9,13807.8
+</code></pre>
+<p>The log files are written to the /Logs/ off the configuration file path set in the Configurator. The naming convention is as follows: </p>
+<pre><code>SystemLog_2023_10_26_19_21.txt
+</code></pre>
+<p>Once the file reaches 100Mb in size, it will be closed and a new file created. A new file is always created on system start. </p>
+<h3 id="tech_ref-email-notifications">Email Notifications</h3>
+<p>The MODAQ:Field System Messenger can issue emails for events or alerts placed on the message queue as discussed above. This Reference design allows for two distribution lists that are set in the Configurator. The Send Email flag (illustration above) that is set at the point of event/alert generation has four possible settings:</p>
+<ol>
+<li>No email</li>
+<li>Send to distro 1</li>
+<li>Send to distro 2</li>
+<li>Send to both distros</li>
+</ol>
+<p>It may be desirable to have specific messages routed to different groups. For instance, operationally relevant alerts might go to distro 1, while debugging or health related alerts go to distro 2. In this case, distro 1 is the client team, while distro 2 is the MODAQ development team. </p>
+<blockquote>
+<p><font color = blue><b>Tech Note: </b>
+While it may seem desirable to issue an email for every event and alert, our experience is that people grow 'email-fatigued' and either ignore the message or create an email rule that shuffles the alerts off to a folder. It is recommended to use emails judiciously and reserve them for critical or time-sensitive events. Alternatively, the distribution lists can be used to route those critical messages to the right people, while developers get the firehose option.
+<font color = #404040></p>
+</blockquote>
+<h3 id="tech_ref-snoozer">Snoozer</h3>
+<p>Often, when a condition triggers an alert, such as if a temperature exceeds a defined threshold, the trigger condition will often persist for some period of time. This presents an issue for logging and email alerts, since it may not be desirable to repeatably log or issue emails at the process loop rate. With most processes looping many times a second, the system log and user's inboxes can get flooded quickly. </p>
+<p><img align="right" src="../img/snoozer.png"></p>
+<p>To address this, MODAQ:RD includes the ability to 'snooze' alerts for a configurable amount of time. If the snoozer is enabled, any repeating alerts from the same Message Tag will get ignored until the Snooze Time has elapsed. If the condition is still occurring, or reoccurs after the snooze time has reset, the message will be actioned as configured (meaning, it will get logged and/or issue an email). </p>
+<p>Message snoozing is not global, rather based on the Message Tag at the point of origin. There are two ways to enable message snoozing for an event:</p>
+<ol>
+<li>Set the Snooze Alert? and Snooze Time (s) property when the message is enqueued.</li>
+<li>Use MODAQ:RD's "Snooze Check Map (SubVI).vi" utility at the point of origin to either (okay) disable the monitoring loop for the snooze duration or (better option) prevent writing to the message queue during the snooze duration.</li>
+</ol>
+<h3 id="tech_ref-rules-based-alerts">Rules Based Alerts</h3>
+<p>The discussions thus far in this section should make it obvious, but MODAQ:Field has great flexibility for monitoring states, events, and measurement parameters in real time and provides multiple options on how to respond to those instances. While it was not included in this Reference Design distribution, the messaging subsystem serves at the heart of Control and Automation in MODAQ:Field. </p>
+<p>Using a rules-based approach, systems developers can have if-then, or condition-response type logic that monitors a particular process or parameter for a condition violation and trigger some response to that event. Possible use cases:</p>
+<ol>
+<li>Event logging and alerting (as discussed above)</li>
+<li>Quality Control (QC) filters</li>
+<li>Control actions</li>
+<li>Automation state machines, PID logic, or complex supervisory logic</li>
+</ol>
+<h3 id="tech_ref-watch-circle">Watch Circle</h3>
+<p>Since MODAQ:Field was originally designed around DAQ for MRE devices, location monitoring is an intrinsic function. Users can define 'Watch Circles' to geo-fence a device in the field. While the use case was for moored surface devices, the Watch Circle monitor can be used for any mobile platform. </p>
+<p>Users can define up to 3 radii from a setpoint (deployment coordinates) in the configurator and MODAQ:Field will log and/or issue emails if the device moves outside of those radii. </p>
+<p>Radii definitions:</p>
+<ol>
+<li>Yellow Alert - Smallest of the three allowed radii and should be just beyond the movement expected considering the mooring scope. A Yellow Alert could mean the device is experiencing extreme metocean conditions or the mooring is "walking". </li>
+<li>Red Alert - Next largest radii which should indicate a clear issue with station keeping. This might be due to an anchor drag or parted mooring line.</li>
+<li>AWOL Alert - If the device exceeds the AWOL radius, it has clearly separated from its mooring and is adrift. </li>
+</ol>
+<p>MODAQ:Field determines the distance from the setpoint and the current real-time GPS derived coordinates using the <a href="https://en.wikipedia.org/wiki/Haversine_formula" target="_blank">Haversine Formula</a>. </p>
+<blockquote>
+<p><font color = blue><b>Tech Note: </b>
+The Haversine Formula calculates the distance between two points on a sphere. While earth is (an oblate) spheroid, it's not a perfect sphere and therefore there will be some error in the Haversine distance estimate and we make no geoid corrections in MODAQ:Field. The error introduced over these small distances is likely insignificant and much less than the uncertainty of the GPS position estimate. 
+<font color = #404040></p>
+</blockquote>
+<h3 id="tech_ref-remote-access">Remote Access</h3>
+<h4 id="tech_ref-ssh">SSH</h4>
+<h3 id="tech_ref-watchdog-timer">Watchdog Timer</h3>
+<p>MODAQ:RD uses the <a href="https://www.ni.com/en/support/documentation/supplemental/19/labview-real-time-watchdog-timer-overview.html" target="_blank">RT Watchdog Timer</a> feature built into the cRIO hardware. The watchdog is a service that needs to be pinged (or pet or fed) before a user configurable time interval expires. If the watchdog is not pet before the timer expires, then the assumption is that the real time application has locked up or has become unresponsive and the watchdog hardware will force a system reboot. </p></section><section class="print-page" id="sensor_inst_db"><h1 id="sensor_inst_db-sensor-and-instrument-database">Sensor and Instrument Database</h1>
+<p>This database provides a list of all the sensors and instruments that have been used with existing MODAD:Field systems. Not all modules are provided with the MODAQ:RD repository so please reach out if you would like to receive the module in LabVIEW.</p>
+<p>Another resource is the <a href="https://openei.org/wiki/MHK_ISDB/Search" target="_blank" >  Telesto database </a> on MRE Instruments. Note some of these instruments may not have a MODAQ:Field module.</p>
+<h2 id="sensor_inst_db-database">Database</h2>
+<p><font size="2"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Measured Value(s)</th>
+<th>Notes</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Water Velocity</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nortek Vector ADV</td>
+<td>water velocity</td>
+<td>RS232 connection</td>
+<td>https://www.nortekgroup.com/products/vector-300-m</td>
+</tr>
+<tr>
+<td>Nortek Signature 1000 ADCP</td>
+<td>water velocity</td>
+<td>Ethernet connection</td>
+<td>https://www.nortekgroup.com/products/signature-1000</td>
+</tr>
+<tr>
+<td>Blancett flow meter</td>
+<td>flowrate</td>
+<td>Requires frequency to voltage converter</td>
+<td>https://www.instrumart.com/products/18337/blancett-1100-turbine-flow-meter</td>
+</tr>
+<tr>
+<td>IFM Magnetic-inductive flow meter</td>
+<td>flowrate</td>
+<td>Analog output</td>
+<td>https://www.digikey.com/en/products/detail/ifm-efector-inc/SM8601/17866646</td>
+</tr>
+<tr>
+<td>Flow Technology flow meter</td>
+<td>flowrate</td>
+<td>Requires frequency to voltage converter</td>
+<td>https://ftimeters.com/products/turbine-meters/</td>
+</tr>
+<tr>
+<td><strong>Wave/Water Height</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Liquid level sensor</td>
+<td>water height</td>
+<td>Analog output</td>
+<td>https://www.digikey.com/en/products/detail/maxbotix-inc/MB7850-B31/16909597</td>
+</tr>
+<tr>
+<td>Akamina Wave Gauge</td>
+<td>wave height</td>
+<td>Analog output</td>
+<td>http://www.akamina.com/AWP-24-3.html</td>
+</tr>
+<tr>
+<td>Wavestaff</td>
+<td>wave height</td>
+<td>RS232 connection</td>
+<td>https://www.oceansensorsystems.com/products.htm#WaveStaff:</td>
+</tr>
+<tr>
+<td><strong>Pressure</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Omega general purpose pressure transducer</td>
+<td>pressure</td>
+<td>Analog output</td>
+<td>https://www.omega.com/en-us/pressure-measurement/pressure-transducers/px309/p/PX309-150G10V</td>
+</tr>
+<tr>
+<td>Applied Measurements DMP pressure sensor</td>
+<td>pressure</td>
+<td>Analog output</td>
+<td>https://appmeas.co.uk/products/pressure-sensors/high-accuracy-industrial-pressure-sensor-dmp331/</td>
+</tr>
+<tr>
+<td><strong>Load/Torque/Strain</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Futek Loadcell</td>
+<td>force</td>
+<td>mV/V output - requires NI-9237 module</td>
+<td>https://www.futek.com/store/load-cells</td>
+</tr>
+<tr>
+<td>Applied Measurements Submersible Load Cell</td>
+<td>force</td>
+<td>Analog output option</td>
+<td>https://appmeas.co.uk/products/load-cells-force-sensors/in-line-submersible-load-cell-dden/</td>
+</tr>
+<tr>
+<td><strong>IMU/INS/GPS</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Yost 3-Space IMU</td>
+<td>IMU</td>
+<td>RS232 connection</td>
+<td>https://yostlabs.com/product/3-space-watertight-usbrs232/</td>
+</tr>
+<tr>
+<td>Xsens MTI 710 INS</td>
+<td>IMU/INS/GPS</td>
+<td>RS232 connection</td>
+<td>https://www.movella.com/products/sensor-modules/xsens-mti-g-710-gnss-ins</td>
+</tr>
+<tr>
+<td>Spatial Dual</td>
+<td>IMU/INS/GPS</td>
+<td>RS232 connection</td>
+<td>https://www.advancednavigation.com/wp-content/uploads/2021/11/spatial-dual-datasheet.pdf</td>
+</tr>
+<tr>
+<td>LORD AHRS</td>
+<td>AHRS</td>
+<td>RS232 connection - no LabVIEW module yet</td>
+<td>https://www.microstrain.com/inertial-sensors/3dm-gx5-25</td>
+</tr>
+<tr>
+<td>Hemisphere V104</td>
+<td>GPS</td>
+<td>RS232 connection - NMEA</td>
+<td>https://www.navtechgps.com/hemisphere-vector-v104n-gps-compass/</td>
+</tr>
+<tr>
+<td><strong>Encoders</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dynapar Analog Encoder - Submersible</td>
+<td>shaft position</td>
+<td>Analog output</td>
+<td>https://ecatalog.dynapar.com/ecatalog/absolute-encoders/en/AR62_AR63</td>
+</tr>
+<tr>
+<td>IncOder</td>
+<td>shaft position</td>
+<td>BISS-C - requires NI-9521 module</td>
+<td>https://www.celeramotion.com/zettlex/products/incoder-inductive-encoders/</td>
+</tr>
+<tr>
+<td>Generic Resolver</td>
+<td>shaft position</td>
+<td>Requires SET-RDK-9316 module</td>
+<td>https://www.smart-e-tech.de/wp-content/uploads/2022/06/SET-RDK-9316-Technical-Description.pdf</td>
+</tr>
+<tr>
+<td>Generic TTL Encoder</td>
+<td>shaft position</td>
+<td>Requires NI-9403 TTL card</td>
+<td>https://www.ni.com/en-lb/shop/model/ni-9403.html</td>
+</tr>
+<tr>
+<td><strong>Voltage/Current</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Verivolt Isoblock V-1c</td>
+<td>voltage</td>
+<td>Analog output</td>
+<td>https://www.verivolt.com/shop/isoblock-v-1c-310</td>
+</tr>
+<tr>
+<td>Verivolt Isoblock I-ST-1c</td>
+<td>current</td>
+<td>Analog output</td>
+<td>https://www.verivolt.com/shop/isoblock-i-st-1c-436</td>
+</tr>
+<tr>
+<td><strong>Temperature/Humidity</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Generic PT100</td>
+<td>temperature</td>
+<td>resistance output - require NI-9216 module</td>
+<td>https://www.ni.com/en-us/shop/model/ni-9216.html</td>
+</tr>
+<tr>
+<td>Generic PT1000</td>
+<td>temperature</td>
+<td>resistance output - require NI-9226 module</td>
+<td>https://www.ni.com/en-us/shop/model/ni-9226.html</td>
+</tr>
+<tr>
+<td>Vaisala Temp and Humidity</td>
+<td>temperature/humidity</td>
+<td>Analog output</td>
+<td>https://www.vaisala.com/en/products/instruments-sensors-and-other-measurement-devices/instruments-industrial-measurements/hmp60</td>
+</tr>
+<tr>
+<td><strong>Water Quality</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Conductivity sensor</td>
+<td>conductivity</td>
+<td>Analog output - 4-20 mA</td>
+<td>https://www.streamlinefiltration.com/product/signet-integral-conductivity-sensor-4-20-ma-output-signal-1-0-cell-constant/</td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="faq"><h1 id="faq-faq">FAQ</h1>
+<h2 id="faq-why-national-instrumentslabview">Why National Instruments/LabVIEW?</h2>
+<p>The quick answer is ease of use and speed of system development. </p>
+<p>The longer answer is that NI/LabVIEW has a long history in the testing community and a lot of trust and confidence has been established over the years. This is important in testing, since the integrity of the test results must withstand scrutiny and be trustworthy. National Instruments takes the necessary effort to qualify its hardware and produce specifications that are reliable. They design to standards' compliance and note the applicable standards in the product documentation. Since most of the NI hardware used in MODAQ have been in production for many years, any issues have been long resolved. It's just one less thing to worry about.</p>
+<p>NI hardware can be used with many common programming languages, such as C and python, however LabVIEW excels at integration with NI hardware and rapid software development. LabVIEW differs from most other common programming languages in that instead of lines of text, it uses a graphical approach that emphasizes dataflow. The graphical simplicity betrays its inherent power. LabVIEW greatly simplifies tasks such as multitasking, I/O operations, GUIs or HMIs, and binary file saves, to name a few. Programming in LabVIEW can actually be fun. </p>
+<p>All that said, becoming skilled at LabVIEW can take years of dedicated study and practice. Many advanced concepts, like many of those used in MODAQ, require (or at very least, benefit from) competence in several disciplines including data acquisition, mathematics, control theory, sensors and instrumentation, electrical and computer engineering, and electrical circuits/components.  </p>
+<h2 id="faq-why-not-just-use-generic-daq-controllers">Why not just use generic DAQ controllers?</h2>
+<p>There are a lot of options out there, but it does not take long to realize that:</p>
+<ol>
+<li>You're just trading one ecosystem for another.</li>
+<li>Specification to price ratio might be (much) worse.</li>
+<li>Documentation and libraries may be lacking.</li>
+<li>Device compatibility may become a bit of an issue.</li>
+<li>Your preferred programming language or operating system might not be supported.</li>
+<li>Software still needs to be developed (or in some cases configured) to achieve expected results. </li>
+<li>It could end up being a lot of work!</li>
+</ol>
+<p>Of course it depends on individual needs and expectations, but whether going with National Instruments or an alternative, there's no getting away from the tasks of programming the system and assuring it will perform to expectations and deliver quality results. </p>
+<p>Some vendors sell controllers and I/O modules and offer software packages that require some configuration to achieve basic and limited data acquisition that can be considered on the easy end of the spectrum. However, doing anything beyond simple acquisitions often requires accessing a vendor supplied API and writing code in a traditional language like C/C++ or python - or worse - writing code in a vendor developed scripting language. </p>
+<p>There's a class of controllers that include an array of built-in I/O that are nice, well thought out, easy to configure, and performant, however under closer inspection, they lack some key features that make them unsuitable in an embedded application deployed in the field. For example, these options generally have limited data logging capability, supporting only small (usually 64 GB or less) and slow microSD cards. There's also limitations when it comes to more technical matters, such as sampling speed,  multiplexing (or scanning) vs simultaneous sampling, data synchronization, bit depth, multitasking, determinism, and noise. They also lack flexibility of local filtering or signal processing of data, local QC, and communications/remote supervision. Of course, use case and measurement objectives matter, so these can be perfectly fine for some applications. </p>
+<h2 id="faq-why-is-my-sensorinstrument-not-supported">Why is my sensor/instrument not supported?</h2>
+<p>There are a lot of sensors and instruments available at various price-points with different interfacing requirements. With the exception of devices with simple, voltage or current varying outputs, devices tend to have a protocol, API, or unique data stream that requires custom code (drivers) to acquire the measurement data. Even different models of a similar device from the same manufacturer could have significant differences in the way the device 'talks'. Writing a new driver can range from trivial to complex, dependent on how the data are acquired from the device and/or the data formatting employed by the manufacturer. </p>
+<p>NREL will share drivers for hardware previously written for MODAQ.  For NREL to develop custom MODAQ drivers, please see the FAQ question below about <a href="#faq-can-nrel-help-configure-or-customize-modaq">working with NREL</a>. </p>
+<h2 id="faq-why-not-use-something-like-a-raspberrypi-or-arduino">Why not use something like a RaspberryPi or Arduino?</h2>
+<p>While RaspberryPis, Arduinos, and other similar devices are best known in the hobbyist realm, they have become quite prevalent in research and commercial applications. In fact, these devices are finding their way into PLCs and other industrial equipment and have demonstrated reliability. However, there's always considerations and trade-offs to be made. For instance:</p>
+<ol>
+<li>Mass produced, general purpose boards designed to meet hobbyist price-points might not be built to exacting standards and there could be considerable differences in component quality and design tolerances. This could include boards that use generic, knock-off, counterfeit, binned, or grey-market variants of key components. They might use cheap alternatives that compromise performance in demanding applications- such as poor-quality oscillators or low-efficiency regulators. Circuit boards may have cold solder joints or sloppy solder bridges. </li>
+<li>They may be unable to cope with or survive over-voltage, polarity reversals, and/or electrostatic discharge like purpose-built hardware.</li>
+<li>Insufficient attention may be paid to proper grounding and/or isolation to crosstalk and external interference. </li>
+<li>The board may not be survivable in punishing applications where it might be subject to temperature extremes, humidity, vibrations, and/or high shock. </li>
+<li>There is probably very little or questionable validation of published specifications. </li>
+<li>They might not be designed for 24/7 uptime and applications that push them to their limits and could suffer from overheating and/or intermittency. </li>
+<li>Many devices, particularly the microcontrollers, have limited storage options, with most only supporting microSD cards with small capacity and slow read/write speeds. </li>
+</ol>
+<p>And, code still needs to be written so that the hardware can acquire data and perform related tasks. The developer assumes the risk of assuring the code is performant, stable, and can provide some level of determinism. It should not be unexpected for the software development costs to vastly eclipse the cost of the hardware. Therefore, it might be economically more advantageous to go with a trusted, packaged solution rather than DIY it.  </p>
+<p>That said, NREL has developed DAQ solutions based on the Espressif ESP32 platform for less demanding use-cases that require a small, light weight form-factor and/or operable on battery power. Details of this system are expected to be published to the <a href="https://github.com/nrel/MODAQ/" target="_blank">NREL Github</a> in 2023.</p>
+<h2 id="faq-can-nrel-help-configure-or-customize-modaq">Can NREL help configure or customize MODAQ?</h2>
+<p><a href="https://www.nrel.gov/news/video/discovering-the-ocean-through-data-modaq-text.html" target = "_blank">MODAQ</a> is funded by the Department of Energy's <a href="https://www.energy.gov/eere/water/water-power-technologies-office" target="_blank">Water Power Technology Office</a> for the purpose of advancing the development and testing of Marine Renewable Energy devices.  There are <a href="https://www.nrel.gov/water/work-with-us.html" target="_blank">mechanisms in place</a> for large and small organizations to engage NREL.  </p></section><section class="print-page" id="links"><h1 id="links-useful-links">Useful Links</h1>
+<p><a href="https://www.ni.com/en-us/shop/compactrio/compactrio-developers-guide.html#" target="_blank">CompactRIO Developer's Guide</a></p>
+<p><a href="https://www.nrel.gov/water/open-water-testing.html" target="_blank">NREL Water Power: Open-Water Testing Support</a></p>
+<p><a href="https://teamer-us.org/product/national-renewable-energy-laboratory-system-and-component-testing/" target="_blank">TEAMER Support from NREL</a></p></section></div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "/MODAQ/";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../js/print-site.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
