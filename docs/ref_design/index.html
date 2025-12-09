@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-        <link href="../css/print-site-enum-headings1.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings2.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings3.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings4.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings5.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings6.css" rel="stylesheet" />
         <link href="../css/print-site.css" rel="stylesheet" />
+        <link href="../css/print-site-readthedocs.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -67,7 +62,7 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Reference Design Manual</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Reference Design Manual</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#modaq-hardware-reference-design">MODAQ Hardware Reference Design</a>
         <ul>
@@ -179,7 +174,7 @@ As a basic system, the MODAQ:RD is designed to acquire 3-phase voltage and curre
 <li><a href="https://www.ni.com/en-us/support/model.ni-9239.html" target="_blank">NI-9239</a> ±10v voltage input module (quantity: 2)</li>
 </ol>
 <blockquote>
-<p><font color = blue><b>Tech Note:</b> This design assumes the use of PTs and CTs (potential and current transducers) that output a voltage proportional to the signal under measure in the range of ±10 V<sub>DC</sub> (example Verivolt IsoBlock V). MODAQ:Field can also be configured to measure PT/CTs that have outputs up to 300 V<sub>rms</sub> (PT) and 5 A<sub>rms</sub> (CT), but for safety considerations NREL recommends using PT/CTs with low voltage outputs where possible. The higher voltage and amperage output option is implemented in FPGA for high speed acquisition and this code is not provided by default with the reference software. Please contact NREL for more information. 
+<p><font color = blue><b>Tech Note:</b> This design assumes the use of PTs and CTs (potential and current transducers) that output a voltage proportional to the signal under measure in the range of ±10 V<sub>DC</sub> (example Verivolt IsoBlock V). MODAQ:Field can also be configured to measure PT/CTs that have outputs up to 300 V<sub>rms</sub> (PT) and 5 A<sub>rms</sub> (CT), but for safety considerations NLR recommends using PT/CTs with low voltage outputs where possible. The higher voltage and amperage output option is implemented in FPGA for high speed acquisition and this code is not provided by default with the reference software. Please contact NLR for more information. 
 <font color = #404040></p>
 </blockquote>
 <p>The following GPS/INS/IMU devices currently have MODAQ:Field support but only the XSens INS noted below has been enabled in the MODAQ:RD code. SubVIs for the Spatial Dual and V104 are included in the code, but disabled by default. </p>
@@ -200,7 +195,7 @@ As a basic system, the MODAQ:RD is designed to acquire 3-phase voltage and curre
 </ul>
 </li>
 </ol>
-<p>It should be noted at this point that NREL typically incorporates higher-end true INS devices (both GPS and IMU in one device) in its system specification. Most of the units listed here sell for several thousands of dollars. Depending on measurement objectives and quality expectations, cheaper instruments may be used, however MODAQ:Field drivers or decoder/parsers for devices not appearing on this list will need to be written. Also, the V104 (which as been succeeded by the V123 or V200) is a dual GPS self-contained in the antenna unit. It provides heading and heave in addition to position. Again, a project may elect to substitute a cheaper, less capable device. Since MODAQ:RD can parse standard NMEA-0183 GPS sentences, MODAQ:RD code modifications should be minor.    </p>
+<p>It should be noted at this point that NLR typically incorporates higher-end true INS devices (both GPS and IMU in one device) in its system specification. Most of the units listed here sell for several thousands of dollars. Depending on measurement objectives and quality expectations, cheaper instruments may be used, however MODAQ:Field drivers or decoder/parsers for devices not appearing on this list will need to be written. Also, the V104 (which as been succeeded by the V123 or V200) is a dual GPS self-contained in the antenna unit. It provides heading and heave in addition to position. Again, a project may elect to substitute a cheaper, less capable device. Since MODAQ:RD can parse standard NMEA-0183 GPS sentences, MODAQ:RD code modifications should be minor.    </p>
 <h3 id="setup">Setup</h3>
 <p>A detailed hook up guide will not be provided here, however MODAQ:RD will expect the I/O modules to be in the slots as indicated in  Figure 1 above and the sensors/instruments attached to the I/O modules in the following order:</p>
 <ul>
@@ -218,7 +213,7 @@ As a basic system, the MODAQ:RD is designed to acquire 3-phase voltage and curre
 </blockquote>
 <p><font color = #404040></p>
 <h2 id="modaq-software-reference-design">MODAQ Software Reference Design</h2>
-<p>NREL provides the MODAQ:RD LabVIEW source code in this repository and users are free to use and modify this code under the Revised BSD License applicable open source licensing terms. </p>
+<p>NLR provides the MODAQ:RD LabVIEW source code in this repository and users are free to use and modify this code under the Revised BSD License applicable open source licensing terms. </p>
 <h3 id="labview">LabVIEW</h3>
 <p>To view, modify, and/or deploy MODAQ:RD from the source code, the following LabVIEW development environment is required:</p>
 <ol>

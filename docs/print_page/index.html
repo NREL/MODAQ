@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-        <link href="../css/print-site-enum-headings1.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings2.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings3.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings4.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings5.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings6.css" rel="stylesheet" />
         <link href="../css/print-site.css" rel="stylesheet" />
+        <link href="../css/print-site-readthedocs.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -131,7 +126,7 @@
                 </nav>
             </div>
         </section>
-        <section class="print-page" id="index"><h1 id="index-modaq-documentation">MODAQ Documentation <img align="right" src="../img/MODAQ_NREL_Logo.png"></h1>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-modaq-documentation">MODAQ Documentation <img align="right" src="../img/MODAQ_Logo.png"></h1>
 <blockquote>
 <p><b>The MODAQ Reference Design source code repository is located at:
  <a href="https://github.com/NREL/MODAQ" target="_blank">https://github.com/NREL/MODAQ</a>
@@ -142,7 +137,7 @@
 <p>MODAQ 2 has been released! Are you looking for the <a href="https://nrel.github.io/MODAQ2/" target="_blank">MODAQ 2 Docs</a>?</p>
 </div>
 <h2 id="index-general-overview">General Overview</h2>
-<p>The National Renewable Energy Laboratory (NREL) has developed a data acquisition system to support laboratory (component) and in-water validation and testing of Marine Renewable Energy (MRE) technologies. The Modular Open-source Data AcQuisition System (MODAQ)<sup id="fnref:1"><a class="footnote-ref" href="#index-fn:1">1</a></sup> is a robust system built on industrial grade hardware that can acquire high-quality and summary data from many sensor and instrument types. MODAQ includes modules to perform real-time QC screening, system health monitoring, and send alerts. MODAQ is also part of a larger data management, processing, visualization, and archiving system. As such, MODAQ consists of three primary components that are designed to provide a flexible hardware and software framework: </p>
+<p>The National Laboratory of the Rockies (NLR) has developed a data acquisition system to support laboratory (component) and in-water validation and testing of Marine  Energy (ME) technologies. The Modular Open-source Data AcQuisition System (MODAQ)<sup id="fnref:1"><a class="footnote-ref" href="#index-fn:1">1</a></sup> is a robust system built on industrial grade hardware that can acquire high-quality and summary data from many sensor and instrument types. MODAQ includes modules to perform real-time QC screening, system health monitoring, and send alerts. MODAQ is also part of a larger data management, processing, visualization, and archiving system. As such, MODAQ consists of three primary components that are designed to provide a flexible hardware and software framework: </p>
 <ol>
 <li>MODAQ:Field - is the sensor/instrumentation suite with data acquisition hardware. It's designed to be highly configurable to meet the measurement requirements of a specific project. While MODAQ:Field can store its data locally, the power of the MODAQ system is realized when it has internet connectivity.</li>
 <li>MODAQ:Cloud - is hosted on <a href="https://mhkdr.openei.org/" target="_blank">AWS</a> and provides an ingestion point for the field data, as well as quality control, processing and analyses layers, data archives, derived products, and collaboration space. The standardized processing of data is accomplished through leveraging the <a href="https://mhkit-software.github.io/MHKiT/" target="_blank">MHKiT</a> Data Pipeline. AWS provides the capability to work on very large datasets efficiently and collaboratively. The open-source MRE data processing software, MHKiT provides the analysis functions for MODAQ.</li>
@@ -182,7 +177,7 @@
 <p>MODAQ formerly stood for Modular Ocean Data Acquisition but was changed in November 2025 to Modular Open-source Data Acquisition because the scope of the project has widened to cover more technical areas outside of the ocean.&#160;<a class="footnote-backref" href="#index-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
-</div></section><section class="print-page" id="h_architecture"><h1 id="h_architecture-modaq-hardware-architecture">MODAQ Hardware Architecture</h1>
+</div></section><section class="print-page" id="h_architecture" heading-number="2"><h1 id="h_architecture-modaq-hardware-architecture">MODAQ Hardware Architecture</h1>
 <h2 id="h_architecture-the-controller">The Controller</h2>
 <p>The core hardware platform that MODAQ:Field is built upon is the CompactRIO (cRIO) from National Instruments and the software code base is developed in National Instruments LabVIEW. </p>
 <p>The cRIO is a compact and ruggedized industrial embedded controller that serves as the 'brains' of MODAQ. It contains the central processing unit and the usual components that one would expect with a computer, such as RAM, network interfaces, USB ports, and internal storage. In addition, the cRIO contains an expansion backplane for up to 8 I/O modules in a single chassis that is running a real-time Linux kernel and has an FPGA for high-performance and specialized applications.</p>
@@ -244,7 +239,7 @@
 <li>Changes to hardware signal type. Example: MODAQ:RD currently supports a variant of hardware with an analog ±10 VDC signal, however project sources a version that uses a serial output. </li>
 <li>Significant departure from baseline sampling support. Example: A MODAQ:Field ingestor as written can support a maximum sample rate of 5 kHz for a particular device, however project requires 50 kHz sampling.</li>
 </ul>
-<p>Since projects are rarely identical, some modification should be expected to accommodate such differences. </p></section><section class="print-page" id="s_architecture"><h1 id="s_architecture-modaq-software-architecture">MODAQ Software Architecture</h1>
+<p>Since projects are rarely identical, some modification should be expected to accommodate such differences. </p></section><section class="print-page" id="s_architecture" heading-number="3"><h1 id="s_architecture-modaq-software-architecture">MODAQ Software Architecture</h1>
 <p><img align="right" src="../img/LV_Icon.png"></p>
 <blockquote>
 <p>Many of the following topics are discussed in detail in the <a href="#tech_ref">Technical Reference section</a> of this document. </p>
@@ -272,7 +267,7 @@
 </ol>
 <h2 id="s_architecture-control-and-automation">Control and Automation</h2>
 <p>MODAQ:Field can include hardware output modules and perform control actions. These can be simple if-then type rules, PID, or very complex state machines. Since controlling external things is highly dependent on individual project requirements, control features are not included in the MODAQ:RD distribution. </p>
-<p>While MODAQ:Field can perform complex control operations similar to a SCADA, MODAQ:Field systems furnished by NREL are not intended to be the MRE device's primary control system. This is partly due to liability concerns, but mostly because the control system is responsible for the performance and character of the device and usually involves proprietary or uniquely specialized algorithms. Users who choose to leverage the MODAQ reference design independently are free to extend the code as they feel fit. Examples of MODAQ control logic are available upon request or see <a href="https://www.nrel.gov/docs/fy22osti/83803.pdf" target="_blank">this</a> document regarding MODAQ SCADA for Columbia Power.</p>
+<p>While MODAQ:Field can perform complex control operations similar to a SCADA, MODAQ:Field systems furnished by NLR are not intended to be the MRE device's primary control system. This is partly due to liability concerns, but mostly because the control system is responsible for the performance and character of the device and usually involves proprietary or uniquely specialized algorithms. Users who choose to leverage the MODAQ reference design independently are free to extend the code as they feel fit. Examples of MODAQ control logic are available upon request or see <a href="https://www.nrel.gov/docs/fy22osti/83803.pdf" target="_blank">this</a> document regarding MODAQ SCADA for Columbia Power.</p>
 <h2 id="s_architecture-qc-and-threshold-monitoring">QC and Threshold Monitoring</h2>
 <p>Any data channel within MODAQ:Field can be piped through basic quality control screening, with violations flagged for later action. Unless there's a compelling reason to do QC screening onboard, it is recommended to screen the data once uploaded to MODAQ:Cloud, since onboard screening increases the file sizes and can impact performance. Instead (or in addition to), MODAQ:Field can be configured to monitor thresholds and/or apply simple rules to acquired data and write violations to a log file and/or send an email alert. </p>
 <h2 id="s_architecture-execution">Execution</h2>
@@ -301,7 +296,7 @@
 <p>Interactive Mode: LabVIEW makes it very easy to create a GUI, complete with plots, live updating indicators, and interactive controls. However, these can result in a performance hit, particularly if a lot of data are streamed to the GUI elements. There are ways to minimize these impacts, but deployments should done in Headless Mode.&#160;<a class="footnote-backref" href="#s_architecture-fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
-</div></section><section class="print-page" id="ref_design"><h1 id="ref_design-modaq-reference-design-manual">MODAQ Reference Design Manual</h1>
+</div></section><section class="print-page" id="ref_design" heading-number="4"><h1 id="ref_design-modaq-reference-design-manual">MODAQ Reference Design Manual</h1>
 <p><img align="right" src="../img/MODAQ_RD_Logo.png"></p>
 <p>Since each project tends to be unique and measurement objectives can vary considerably, there is no typical configuration that will satisfy all situations. Instead, most MODAQ:Field builds start from a common base configuration that encompasses features commonly used in MRE DAQ projects. While that <em>still</em> might not be suitable for all applications, it provides a good starting point and model for discussion. This reference design (MODAQ:RD) represents the core MODAQ:Field configuration as a starting point for most builds. If an end user were to buy the same hardware, configure it the same way, and use the linked MODAQ:RD code, the user should be able to set up a functional MODAQ:Field system. </p>
 <p>Some topics discussed below are covered in greater detail in the Technical Reference section of this document. </p>
@@ -335,7 +330,7 @@ As a basic system, the MODAQ:RD is designed to acquire 3-phase voltage and curre
 <li><a href="https://www.ni.com/en-us/support/model.ni-9239.html" target="_blank">NI-9239</a> ±10v voltage input module (quantity: 2)</li>
 </ol>
 <blockquote>
-<p><font color = blue><b>Tech Note:</b> This design assumes the use of PTs and CTs (potential and current transducers) that output a voltage proportional to the signal under measure in the range of ±10 V<sub>DC</sub> (example Verivolt IsoBlock V). MODAQ:Field can also be configured to measure PT/CTs that have outputs up to 300 V<sub>rms</sub> (PT) and 5 A<sub>rms</sub> (CT), but for safety considerations NREL recommends using PT/CTs with low voltage outputs where possible. The higher voltage and amperage output option is implemented in FPGA for high speed acquisition and this code is not provided by default with the reference software. Please contact NREL for more information. 
+<p><font color = blue><b>Tech Note:</b> This design assumes the use of PTs and CTs (potential and current transducers) that output a voltage proportional to the signal under measure in the range of ±10 V<sub>DC</sub> (example Verivolt IsoBlock V). MODAQ:Field can also be configured to measure PT/CTs that have outputs up to 300 V<sub>rms</sub> (PT) and 5 A<sub>rms</sub> (CT), but for safety considerations NLR recommends using PT/CTs with low voltage outputs where possible. The higher voltage and amperage output option is implemented in FPGA for high speed acquisition and this code is not provided by default with the reference software. Please contact NLR for more information. 
 <font color = #404040></p>
 </blockquote>
 <p>The following GPS/INS/IMU devices currently have MODAQ:Field support but only the XSens INS noted below has been enabled in the MODAQ:RD code. SubVIs for the Spatial Dual and V104 are included in the code, but disabled by default. </p>
@@ -356,7 +351,7 @@ As a basic system, the MODAQ:RD is designed to acquire 3-phase voltage and curre
 </ul>
 </li>
 </ol>
-<p>It should be noted at this point that NREL typically incorporates higher-end true INS devices (both GPS and IMU in one device) in its system specification. Most of the units listed here sell for several thousands of dollars. Depending on measurement objectives and quality expectations, cheaper instruments may be used, however MODAQ:Field drivers or decoder/parsers for devices not appearing on this list will need to be written. Also, the V104 (which as been succeeded by the V123 or V200) is a dual GPS self-contained in the antenna unit. It provides heading and heave in addition to position. Again, a project may elect to substitute a cheaper, less capable device. Since MODAQ:RD can parse standard NMEA-0183 GPS sentences, MODAQ:RD code modifications should be minor.    </p>
+<p>It should be noted at this point that NLR typically incorporates higher-end true INS devices (both GPS and IMU in one device) in its system specification. Most of the units listed here sell for several thousands of dollars. Depending on measurement objectives and quality expectations, cheaper instruments may be used, however MODAQ:Field drivers or decoder/parsers for devices not appearing on this list will need to be written. Also, the V104 (which as been succeeded by the V123 or V200) is a dual GPS self-contained in the antenna unit. It provides heading and heave in addition to position. Again, a project may elect to substitute a cheaper, less capable device. Since MODAQ:RD can parse standard NMEA-0183 GPS sentences, MODAQ:RD code modifications should be minor.    </p>
 <h3 id="ref_design-setup">Setup</h3>
 <p>A detailed hook up guide will not be provided here, however MODAQ:RD will expect the I/O modules to be in the slots as indicated in  Figure 1 above and the sensors/instruments attached to the I/O modules in the following order:</p>
 <ul>
@@ -374,7 +369,7 @@ As a basic system, the MODAQ:RD is designed to acquire 3-phase voltage and curre
 </blockquote>
 <p><font color = #404040></p>
 <h2 id="ref_design-modaq-software-reference-design">MODAQ Software Reference Design</h2>
-<p>NREL provides the MODAQ:RD LabVIEW source code in this repository and users are free to use and modify this code under the Revised BSD License applicable open source licensing terms. </p>
+<p>NLR provides the MODAQ:RD LabVIEW source code in this repository and users are free to use and modify this code under the Revised BSD License applicable open source licensing terms. </p>
 <h3 id="ref_design-labview">LabVIEW</h3>
 <p>To view, modify, and/or deploy MODAQ:RD from the source code, the following LabVIEW development environment is required:</p>
 <ol>
@@ -428,8 +423,8 @@ As a basic system, the MODAQ:RD is designed to acquire 3-phase voltage and curre
 <p>32 bit LabVIEW is required, since the 64 bit does not support the Real-Time Module.&#160;<a class="footnote-backref" href="#ref_design-fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
-</div></section><section class="print-page" id="dev_modules"><h1 id="dev_modules-optional-and-development-modules">Optional and Development Modules</h1>
-<p>During the MODAQ:Field development process, many functions and logic are initially created as standalone applications or testers. These may use sample data or interface to the actual I/O hardware where applicable. This gives us an opportunity to fine tune or debug the code and develop necessary exception handling. It's also a good way of troubleshooting when something is not working as expected, such as files not uploading to AWS, since the testers may have more feedback available than is normally exposed in the full MODAQ:Field application. </p></section><section class="print-page" id="tech_ref"><h1 id="tech_ref-modaq-technical-reference">MODAQ Technical Reference</h1>
+</div></section><section class="print-page" id="dev_modules" heading-number="5"><h1 id="dev_modules-optional-and-development-modules">Optional and Development Modules</h1>
+<p>During the MODAQ:Field development process, many functions and logic are initially created as standalone applications or testers. These may use sample data or interface to the actual I/O hardware where applicable. This gives us an opportunity to fine tune or debug the code and develop necessary exception handling. It's also a good way of troubleshooting when something is not working as expected, such as files not uploading to AWS, since the testers may have more feedback available than is normally exposed in the full MODAQ:Field application. </p></section><section class="print-page" id="tech_ref" heading-number="6"><h1 id="tech_ref-modaq-technical-reference">MODAQ Technical Reference</h1>
 <p>This section will discuss specific MODAQ:Field technologies in greater detail and is provided for the curious end user to better understand how MODAQ:Field works and why certain design decisions were made. Over the course of MODAQ:Field development many options and challenges had presented and there was often often more than one way to achieve similar results. As always, options have trade-offs and a different design team may have made different decisions. </p>
 <p>In some cases, options, shortcomings, and/or suggestions will be presented and since MODAQ:RD is offered in the public domain as "open source", experienced LabVIEW developers are encouraged to modify or improve this code base and perhaps implement features in a more efficient and performant manner. It would be appreciated if such improvements are made, that the developers contribute back to this project.</p>
 <h2 id="tech_ref-hardware">Hardware</h2>
@@ -477,7 +472,7 @@ The procedure described above for installing software packages and dependencies 
 </ol>
 <h4 id="tech_ref-electrical-power-toolkit">Electrical Power Toolkit</h4>
 <p>The<a href="https://www.ni.com/en/support/downloads/software-products/download.labview-electrical-power-toolkit.html#318820" target="_blank"> Electric Power Toolkit </a> is a software add-on for LabVIEW developed by NI for completing analysis on power measurements. This toolkit is useful for taking measured voltage and current data and determining useful parameters of power such as RMS Voltage/Current, Active Power, Apparent Power, Reactive Power, Harmonics and Flicker. Currently, this software add-on is  listed at $687.00 as of 2023. This package is necessary if you would like to do on-board real-time power measurements and it can be removed from the code if not necessary and to avoid the license cost.</p>
-<p>NREL has also developed <a href="https://github.com/MHKiT-Software" target="_blank"> MHKiT </a> which includes similar functions for completing power quality assessments but not in real-time. Usually this would be done on the cloud after the raw data has been uploaded.</p>
+<p>NLR has also developed <a href="https://github.com/MHKiT-Software" target="_blank"> MHKiT </a> which includes similar functions for completing power quality assessments but not in real-time. Usually this would be done on the cloud after the raw data has been uploaded.</p>
 <h3 id="tech_ref-initialization">Initialization</h3>
 <p>When MODAQ:RD is started, it performs the following initialization steps:
 1. Sets some important flags
@@ -547,7 +542,7 @@ Data Rates</p>
 <p>Serial devices are connected to the cRIO through the RJ50 (10p10c) ports on the main controller or through an optional 9870 card. In LabVIEW, the different serial ports are available through the NI-VISA driver and can be configured using that driver's library. The serial port is selected through the constant and specified as an ASRL#. </p>
 <p>ASRL1 is the rs232 port and ASRL2 is the rs485 port on the cRIO. ASRL 3-6 are the additional ports on the NI-9870 card. There is also the possibility to add USB-to-Serial converters to the cRIO which will also appear as ASRL references. You must specify the serial port parameters for the serial devices that are connected. If using the unmodified MODAQ:RD, there is no need to change the serial port parameters.</p>
 <h3 id="tech_ref-gpsinsimu">GPS/INS/IMU</h3>
-<p>As mentioned in the <a href="#ref_design-modaq-hardware-reference-design">Reference Design Section</a>, NREL tends to use higher-end positioning and inertial instruments. While these can get pricey, the benefits are better stability, error correction, and accuracy. They also tend to have better filtering and data fusion algorithms.</p>
+<p>As mentioned in the <a href="#ref_design-modaq-hardware-reference-design">Reference Design Section</a>, NLR tends to use higher-end positioning and inertial instruments. While these can get pricey, the benefits are better stability, error correction, and accuracy. They also tend to have better filtering and data fusion algorithms.</p>
 <ul>
 <li>IMU - An instrument with typically a three-axis accelerometer and three-axis gyroscope in a package often referred to as 6-DOF (for 6 Degrees Of Freedom). These may also include a three-axis magnetometer, making it a 9-DOF device. There is often little to no filtering or data fusion with these devices and rarely has any correction for drift.</li>
 <li>GPS - Global Positioning System that relies on telemetry from an orbiting constellation of purpose-built satellites to calculate its position on earth. GPS is sort of a generic term, however technically it refers to only the North American "GPS" constellation. </li>
@@ -584,7 +579,7 @@ The IPv4 UDP setting on the TM2000B under Packet Output is IEEE-1588v2, while th
 <font color = #404040></p>
 </blockquote>
 <p>LabVIEW includes some example code for inspecting and configuring the PTP/TSN setting on the cRIO and cDAQ chassis on the subnet. Search for TimeSync in the NI Example Finder (from LabVIEW: Help&gt;Find Examples...). Launch the project: "Verify IEEE 1588-2008 Synchronization.lvproj" Please assure that NI-Sync has been installed on the cRIO target, otherwise, the example code will probably fail. For convenience, we've included these helpful utilities in the MODAQ:RD project in the Testers folder. </p>
-<p><img alt="PTP Enable" src="../tech_ref/img/ptp2.png" /></p>
+<p><img alt="PTP Enable" src="../img/ptp2.png" /></p>
 <p>We've renamed the files to begin with 1, 2, or 3, which makes them easier to reference in this discussion. They perform the following functions:</p>
 <ol>
 <li>Detailed information on status of IEEE 802.1AS-2011 or IEEE 1588-2008 on the selected system and allows the user to change the client/server and priority settings. Of special note here: if the Clock ID and GM Clock ID are the same, then the selected resource is acting as the master clock. Or in other words, it's not detecting a better PTP time reference on the subnet. The GM Clock ID should display the MAC address of the time server. </li>
@@ -635,7 +630,7 @@ Currently, both the summary and TDMS S3 upload processes delete the local files 
 <font color = #404040></p>
 </blockquote>
 <h4 id="tech_ref-s3-key-updater">S3 Key Updater</h4>
-<p>Some organizations with managed AWS services, such as here at NREL, rules are enforced that expire S3 Access and Secret keys after so many weeks or months. Since MODAQ:Field loads the keys from the configuration file on startup and since we don't necessarily want to interrupt a deployment with a maintenance restart, we developed a method to 'hot update' the AWS keys. </p>
+<p>Some organizations with managed AWS services, such as here at NLR, rules are enforced that expire S3 Access and Secret keys after so many weeks or months. Since MODAQ:Field loads the keys from the configuration file on startup and since we don't necessarily want to interrupt a deployment with a maintenance restart, we developed a method to 'hot update' the AWS keys. </p>
 <p>The AWS key updater runs continuously in the background during MODAQ:Field operation and watches the /AWS/incoming/ folder. If a file appears, the updater state machine will fail the file if it is not named 'aws.txt' and move it to the /AWS/error/ folder. Otherwise, the parser state expects the file contents formatted:</p>
 <pre><code>Access_Key:youraccesskeyhere
 Secret_Key:yoursecretkeyhere
@@ -644,7 +639,7 @@ Bucket:yourbucketnamehere
 <p>There currently is no validation for the file contents, so if the fields are out of order or incomplete it will not successfully update the keys. Since updating the keys using this method only persists until a MODAQ:Field restart, it is recommended to change the keys in the configuration file on MODAQ:Field as well. Also, hot changes for S3 Bucket names have not been enabled in this version of MODAQ:RD.</p>
 <h3 id="tech_ref-sftpftp">SFTP/FTP</h3>
 <p>MODAQ:RD does not support SFTP at this time due to limitations in LabVIEW 2019. However, the underlying RT Linux operating system does. Users familiar with SFTP and the Linux command line could develop solutions for automated file transfers. For manual transfers, client software such as WinSCP, Bitvise, FileZilla could be used. </p>
-<p>Due to the inherent lack of security, FTP in not included by default in MODAQ:RD. NREL, like most other organizations with managed IT departments, prohibits the use of FTP. Users willing to accept the risk, can request the MODAQ:Field FTP module- or write their own. </p>
+<p>Due to the inherent lack of security, FTP in not included by default in MODAQ:RD. NLR, like most other organizations with managed IT departments, prohibits the use of FTP. Users willing to accept the risk, can request the MODAQ:Field FTP module- or write their own. </p>
 <h2 id="tech_ref-logs-and-alerts">Logs and Alerts</h2>
 <p><img align="right" src="../img/message_q.png" width="500"></p>
 <p>MODAQ:Field provides a system-wide service that can write specific events to a log file and/or send alerts to an email list. The System Message Destinations service runs upon MODAQ:Field startup and is the sole reader for a message queue FIFO. At various points within the MODAQ:Field code, messages can be generated that are intercepted by this service. </p>
@@ -722,7 +717,7 @@ The Haversine Formula calculates the distance between two points on a sphere. Wh
 <h3 id="tech_ref-remote-access">Remote Access</h3>
 <h4 id="tech_ref-ssh">SSH</h4>
 <h3 id="tech_ref-watchdog-timer">Watchdog Timer</h3>
-<p>MODAQ:RD uses the <a href="https://www.ni.com/en/support/documentation/supplemental/19/labview-real-time-watchdog-timer-overview.html" target="_blank">RT Watchdog Timer</a> feature built into the cRIO hardware. The watchdog is a service that needs to be pinged (or pet or fed) before a user configurable time interval expires. If the watchdog is not pet before the timer expires, then the assumption is that the real time application has locked up or has become unresponsive and the watchdog hardware will force a system reboot. </p></section><section class="print-page" id="sensor_inst_db"><h1 id="sensor_inst_db-sensor-and-instrument-database">Sensor and Instrument Database</h1>
+<p>MODAQ:RD uses the <a href="https://www.ni.com/en/support/documentation/supplemental/19/labview-real-time-watchdog-timer-overview.html" target="_blank">RT Watchdog Timer</a> feature built into the cRIO hardware. The watchdog is a service that needs to be pinged (or pet or fed) before a user configurable time interval expires. If the watchdog is not pet before the timer expires, then the assumption is that the real time application has locked up or has become unresponsive and the watchdog hardware will force a system reboot. </p></section><section class="print-page" id="sensor_inst_db" heading-number="7"><h1 id="sensor_inst_db-sensor-and-instrument-database">Sensor and Instrument Database</h1>
 <p>This database provides a list of all the sensors and instruments that have been used with existing MODAD:Field systems. Not all modules are provided with the MODAQ:RD repository so please reach out if you would like to receive the module in LabVIEW.</p>
 <p>Another resource is the <a href="https://openei.org/wiki/MHK_ISDB/Search" target="_blank" >  Telesto database </a> on MRE Instruments. Note some of these instruments may not have a MODAQ:Field module.</p>
 <h2 id="sensor_inst_db-database">Database</h2>
@@ -954,7 +949,7 @@ The Haversine Formula calculates the distance between two points on a sphere. Wh
 <td>https://www.streamlinefiltration.com/product/signet-integral-conductivity-sensor-4-20-ma-output-signal-1-0-cell-constant/</td>
 </tr>
 </tbody>
-</table></section><section class="print-page" id="faq"><h1 id="faq-faq">FAQ</h1>
+</table></section><section class="print-page" id="faq" heading-number="8"><h1 id="faq-faq">FAQ</h1>
 <h2 id="faq-why-national-instrumentslabview">Why National Instruments/LabVIEW?</h2>
 <p>The quick answer is ease of use and speed of system development. </p>
 <p>The longer answer is that NI/LabVIEW has a long history in the testing community and a lot of trust and confidence has been established over the years. This is important in testing, since the integrity of the test results must withstand scrutiny and be trustworthy. National Instruments takes the necessary effort to qualify its hardware and produce specifications that are reliable. They design to standards' compliance and note the applicable standards in the product documentation. Since most of the NI hardware used in MODAQ have been in production for many years, any issues have been long resolved. It's just one less thing to worry about.</p>
@@ -976,7 +971,7 @@ The Haversine Formula calculates the distance between two points on a sphere. Wh
 <p>There's a class of controllers that include an array of built-in I/O that are nice, well thought out, easy to configure, and performant, however under closer inspection, they lack some key features that make them unsuitable in an embedded application deployed in the field. For example, these options generally have limited data logging capability, supporting only small (usually 64 GB or less) and slow microSD cards. There's also limitations when it comes to more technical matters, such as sampling speed,  multiplexing (or scanning) vs simultaneous sampling, data synchronization, bit depth, multitasking, determinism, and noise. They also lack flexibility of local filtering or signal processing of data, local QC, and communications/remote supervision. Of course, use case and measurement objectives matter, so these can be perfectly fine for some applications. </p>
 <h2 id="faq-why-is-my-sensorinstrument-not-supported">Why is my sensor/instrument not supported?</h2>
 <p>There are a lot of sensors and instruments available at various price-points with different interfacing requirements. With the exception of devices with simple, voltage or current varying outputs, devices tend to have a protocol, API, or unique data stream that requires custom code (drivers) to acquire the measurement data. Even different models of a similar device from the same manufacturer could have significant differences in the way the device 'talks'. Writing a new driver can range from trivial to complex, dependent on how the data are acquired from the device and/or the data formatting employed by the manufacturer. </p>
-<p>NREL will share drivers for hardware previously written for MODAQ.  For NREL to develop custom MODAQ drivers, please see the FAQ question below about <a href="#faq-can-nrel-help-configure-or-customize-modaq">working with NREL</a>. </p>
+<p>NLR will share drivers for hardware previously written for MODAQ.  For NLR to develop custom MODAQ drivers, please see the FAQ question below about <a href="#faq-can-nlr-help-configure-or-customize-modaq">working with NLR</a>. </p>
 <h2 id="faq-why-not-use-something-like-a-raspberrypi-or-arduino">Why not use something like a RaspberryPi or Arduino?</h2>
 <p>While RaspberryPis, Arduinos, and other similar devices are best known in the hobbyist realm, they have become quite prevalent in research and commercial applications. In fact, these devices are finding their way into PLCs and other industrial equipment and have demonstrated reliability. However, there's always considerations and trade-offs to be made. For instance:</p>
 <ol>
@@ -989,12 +984,84 @@ The Haversine Formula calculates the distance between two points on a sphere. Wh
 <li>Many devices, particularly the microcontrollers, have limited storage options, with most only supporting microSD cards with small capacity and slow read/write speeds. </li>
 </ol>
 <p>And, code still needs to be written so that the hardware can acquire data and perform related tasks. The developer assumes the risk of assuring the code is performant, stable, and can provide some level of determinism. It should not be unexpected for the software development costs to vastly eclipse the cost of the hardware. Therefore, it might be economically more advantageous to go with a trusted, packaged solution rather than DIY it.  </p>
-<p>That said, NREL has developed DAQ solutions based on the Espressif ESP32 platform for less demanding use-cases that require a small, light weight form-factor and/or operable on battery power. Details of this system are expected to be published to the <a href="https://github.com/nrel/MODAQ/" target="_blank">NREL Github</a> in 2023.</p>
-<h2 id="faq-can-nrel-help-configure-or-customize-modaq">Can NREL help configure or customize MODAQ?</h2>
-<p><a href="https://www.nrel.gov/news/video/discovering-the-ocean-through-data-modaq-text.html" target = "_blank">MODAQ</a> is funded by the Department of Energy's <a href="https://www.energy.gov/eere/water/water-power-technologies-office" target="_blank">Water Power Technology Office</a> for the purpose of advancing the development and testing of Marine Renewable Energy devices.  There are <a href="https://www.nrel.gov/water/work-with-us.html" target="_blank">mechanisms in place</a> for large and small organizations to engage NREL.  </p></section><section class="print-page" id="links"><h1 id="links-useful-links">Useful Links</h1>
+<p>That said, NLR has developed DAQ solutions based on the Espressif ESP32 platform for less demanding use-cases that require a small, light weight form-factor and/or operable on battery power. Details of this system are expected to be published to the <a href="https://github.com/nrel/MODAQ/" target="_blank">NLR Github</a> in 2023.</p>
+<h2 id="faq-can-nlr-help-configure-or-customize-modaq">Can NLR help configure or customize MODAQ?</h2>
+<p><a href="https://www.nrel.gov/news/video/discovering-the-ocean-through-data-modaq-text.html" target = "_blank">MODAQ</a> is funded by the Department of Energy's <a href="https://www.energy.gov/eere/water/water-power-technologies-office" target="_blank">Water Power Technology Office</a> for the purpose of advancing the development and testing of Marine Energy devices.  There are <a href="https://www.nrel.gov/water/work-with-us.html" target="_blank">mechanisms in place</a> for large and small organizations to engage NLR.  </p></section><section class="print-page" id="links" heading-number="9"><h1 id="links-useful-links">Useful Links</h1>
 <p><a href="https://www.ni.com/en-us/shop/compactrio/compactrio-developers-guide.html#" target="_blank">CompactRIO Developer's Guide</a></p>
-<p><a href="https://www.nrel.gov/water/open-water-testing.html" target="_blank">NREL Water Power: Open-Water Testing Support</a></p>
-<p><a href="https://teamer-us.org/product/national-renewable-energy-laboratory-system-and-component-testing/" target="_blank">TEAMER Support from NREL</a></p></section></div>
+<p><a href="https://www.nrel.gov/water/open-water-testing.html" target="_blank">NLR Water Power: Open-Water Testing Support</a></p>
+<p><a href="https://teamer-us.org/product/national-renewable-energy-laboratory-system-and-component-testing/" target="_blank">TEAMER Support from NLR</a></p></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
+            
+                .print-site-enumerate-headings #index h3:before { content: '1.' counter(counter-index-2) '.' counter(counter-index-3) ' ' }
+                .print-site-enumerate-headings #index h3 {  counter-increment: counter-index-3 }
+            
+.print-site-enumerate-headings #h_architecture > h1:before { content: '2 ' }
+
+                .print-site-enumerate-headings #h_architecture h2:before { content: '2.' counter(counter-h_architecture-2) ' ' }
+                .print-site-enumerate-headings #h_architecture h2 {  counter-reset: counter-h_architecture-3 ;  counter-increment: counter-h_architecture-2 }
+            
+                .print-site-enumerate-headings #h_architecture h3:before { content: '2.' counter(counter-h_architecture-2) '.' counter(counter-h_architecture-3) ' ' }
+                .print-site-enumerate-headings #h_architecture h3 {  counter-increment: counter-h_architecture-3 }
+            
+.print-site-enumerate-headings #s_architecture > h1:before { content: '3 ' }
+
+                .print-site-enumerate-headings #s_architecture h2:before { content: '3.' counter(counter-s_architecture-2) ' ' }
+                .print-site-enumerate-headings #s_architecture h2 {  counter-reset: counter-s_architecture-3 ;  counter-increment: counter-s_architecture-2 }
+            
+                .print-site-enumerate-headings #s_architecture h3:before { content: '3.' counter(counter-s_architecture-2) '.' counter(counter-s_architecture-3) ' ' }
+                .print-site-enumerate-headings #s_architecture h3 {  counter-increment: counter-s_architecture-3 }
+            
+.print-site-enumerate-headings #ref_design > h1:before { content: '4 ' }
+
+                .print-site-enumerate-headings #ref_design h2:before { content: '4.' counter(counter-ref_design-2) ' ' }
+                .print-site-enumerate-headings #ref_design h2 {  counter-reset: counter-ref_design-3 ;  counter-increment: counter-ref_design-2 }
+            
+                .print-site-enumerate-headings #ref_design h3:before { content: '4.' counter(counter-ref_design-2) '.' counter(counter-ref_design-3) ' ' }
+                .print-site-enumerate-headings #ref_design h3 {  counter-increment: counter-ref_design-3 }
+            
+.print-site-enumerate-headings #dev_modules > h1:before { content: '5 ' }
+
+                .print-site-enumerate-headings #dev_modules h2:before { content: '5.' counter(counter-dev_modules-2) ' ' }
+                .print-site-enumerate-headings #dev_modules h2 {  counter-reset: counter-dev_modules-3 ;  counter-increment: counter-dev_modules-2 }
+            
+                .print-site-enumerate-headings #dev_modules h3:before { content: '5.' counter(counter-dev_modules-2) '.' counter(counter-dev_modules-3) ' ' }
+                .print-site-enumerate-headings #dev_modules h3 {  counter-increment: counter-dev_modules-3 }
+            
+.print-site-enumerate-headings #tech_ref > h1:before { content: '6 ' }
+
+                .print-site-enumerate-headings #tech_ref h2:before { content: '6.' counter(counter-tech_ref-2) ' ' }
+                .print-site-enumerate-headings #tech_ref h2 {  counter-reset: counter-tech_ref-3 ;  counter-increment: counter-tech_ref-2 }
+            
+                .print-site-enumerate-headings #tech_ref h3:before { content: '6.' counter(counter-tech_ref-2) '.' counter(counter-tech_ref-3) ' ' }
+                .print-site-enumerate-headings #tech_ref h3 {  counter-increment: counter-tech_ref-3 }
+            
+.print-site-enumerate-headings #sensor_inst_db > h1:before { content: '7 ' }
+
+                .print-site-enumerate-headings #sensor_inst_db h2:before { content: '7.' counter(counter-sensor_inst_db-2) ' ' }
+                .print-site-enumerate-headings #sensor_inst_db h2 {  counter-reset: counter-sensor_inst_db-3 ;  counter-increment: counter-sensor_inst_db-2 }
+            
+                .print-site-enumerate-headings #sensor_inst_db h3:before { content: '7.' counter(counter-sensor_inst_db-2) '.' counter(counter-sensor_inst_db-3) ' ' }
+                .print-site-enumerate-headings #sensor_inst_db h3 {  counter-increment: counter-sensor_inst_db-3 }
+            
+.print-site-enumerate-headings #faq > h1:before { content: '8 ' }
+
+                .print-site-enumerate-headings #faq h2:before { content: '8.' counter(counter-faq-2) ' ' }
+                .print-site-enumerate-headings #faq h2 {  counter-reset: counter-faq-3 ;  counter-increment: counter-faq-2 }
+            
+                .print-site-enumerate-headings #faq h3:before { content: '8.' counter(counter-faq-2) '.' counter(counter-faq-3) ' ' }
+                .print-site-enumerate-headings #faq h3 {  counter-increment: counter-faq-3 }
+            
+.print-site-enumerate-headings #links > h1:before { content: '9 ' }
+
+                .print-site-enumerate-headings #links h2:before { content: '9.' counter(counter-links-2) ' ' }
+                .print-site-enumerate-headings #links h2 {  counter-reset: counter-links-3 ;  counter-increment: counter-links-2 }
+            
+                .print-site-enumerate-headings #links h3:before { content: '9.' counter(counter-links-2) '.' counter(counter-links-3) ' ' }
+                .print-site-enumerate-headings #links h3 {  counter-increment: counter-links-3 }
+            
+.print-site-enumerate-headings #about > h1:before { content: '10 ' }</style>
               
             </div>
           </div><footer>

@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-        <link href="css/print-site-enum-headings1.css" rel="stylesheet" />
-        <link href="css/print-site-enum-headings2.css" rel="stylesheet" />
-        <link href="css/print-site-enum-headings3.css" rel="stylesheet" />
-        <link href="css/print-site-enum-headings4.css" rel="stylesheet" />
-        <link href="css/print-site-enum-headings5.css" rel="stylesheet" />
-        <link href="css/print-site-enum-headings6.css" rel="stylesheet" />
         <link href="css/print-site.css" rel="stylesheet" />
+        <link href="css/print-site-readthedocs.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -55,7 +50,7 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#general-overview">General Overview</a>
     </li>
@@ -123,7 +118,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="modaq-documentation">MODAQ Documentation <img align="right" src="img/MODAQ_NREL_Logo.png"></h1>
+                <h1 id="modaq-documentation">MODAQ Documentation <img align="right" src="img/MODAQ_Logo.png"></h1>
 <blockquote>
 <p><b>The MODAQ Reference Design source code repository is located at:
  <a href="https://github.com/NREL/MODAQ" target="_blank">https://github.com/NREL/MODAQ</a>
@@ -134,7 +129,7 @@
 <p>MODAQ 2 has been released! Are you looking for the <a href="https://nrel.github.io/MODAQ2/" target="_blank">MODAQ 2 Docs</a>?</p>
 </div>
 <h2 id="general-overview">General Overview</h2>
-<p>The National Renewable Energy Laboratory (NREL) has developed a data acquisition system to support laboratory (component) and in-water validation and testing of Marine Renewable Energy (MRE) technologies. The Modular Open-source Data AcQuisition System (MODAQ)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> is a robust system built on industrial grade hardware that can acquire high-quality and summary data from many sensor and instrument types. MODAQ includes modules to perform real-time QC screening, system health monitoring, and send alerts. MODAQ is also part of a larger data management, processing, visualization, and archiving system. As such, MODAQ consists of three primary components that are designed to provide a flexible hardware and software framework: </p>
+<p>The National Laboratory of the Rockies (NLR) has developed a data acquisition system to support laboratory (component) and in-water validation and testing of Marine  Energy (ME) technologies. The Modular Open-source Data AcQuisition System (MODAQ)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> is a robust system built on industrial grade hardware that can acquire high-quality and summary data from many sensor and instrument types. MODAQ includes modules to perform real-time QC screening, system health monitoring, and send alerts. MODAQ is also part of a larger data management, processing, visualization, and archiving system. As such, MODAQ consists of three primary components that are designed to provide a flexible hardware and software framework: </p>
 <ol>
 <li>MODAQ:Field - is the sensor/instrumentation suite with data acquisition hardware. It's designed to be highly configurable to meet the measurement requirements of a specific project. While MODAQ:Field can store its data locally, the power of the MODAQ system is realized when it has internet connectivity.</li>
 <li>MODAQ:Cloud - is hosted on <a href="https://mhkdr.openei.org/" target="_blank">AWS</a> and provides an ingestion point for the field data, as well as quality control, processing and analyses layers, data archives, derived products, and collaboration space. The standardized processing of data is accomplished through leveraging the <a href="https://mhkit-software.github.io/MHKiT/" target="_blank">MHKiT</a> Data Pipeline. AWS provides the capability to work on very large datasets efficiently and collaboratively. The open-source MRE data processing software, MHKiT provides the analysis functions for MODAQ.</li>
@@ -223,6 +218,6 @@
 </html>
 
 <!--
-MkDocs version : 1.5.3
-Build Date UTC : 2025-11-10 18:14:58.173281+00:00
+MkDocs version : 1.6.1
+Build Date UTC : 2025-12-09 23:08:52.173499+00:00
 -->

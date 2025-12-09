@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-        <link href="../css/print-site-enum-headings1.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings2.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings3.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings4.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings5.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings6.css" rel="stylesheet" />
         <link href="../css/print-site.css" rel="stylesheet" />
+        <link href="../css/print-site-readthedocs.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -63,7 +58,7 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Software Overview</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Software Overview</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#modularity">Modularity</a>
     </li>
@@ -171,7 +166,7 @@
 </ol>
 <h2 id="control-and-automation">Control and Automation</h2>
 <p>MODAQ:Field can include hardware output modules and perform control actions. These can be simple if-then type rules, PID, or very complex state machines. Since controlling external things is highly dependent on individual project requirements, control features are not included in the MODAQ:RD distribution. </p>
-<p>While MODAQ:Field can perform complex control operations similar to a SCADA, MODAQ:Field systems furnished by NREL are not intended to be the MRE device's primary control system. This is partly due to liability concerns, but mostly because the control system is responsible for the performance and character of the device and usually involves proprietary or uniquely specialized algorithms. Users who choose to leverage the MODAQ reference design independently are free to extend the code as they feel fit. Examples of MODAQ control logic are available upon request or see <a href="https://www.nrel.gov/docs/fy22osti/83803.pdf" target="_blank">this</a> document regarding MODAQ SCADA for Columbia Power.</p>
+<p>While MODAQ:Field can perform complex control operations similar to a SCADA, MODAQ:Field systems furnished by NLR are not intended to be the MRE device's primary control system. This is partly due to liability concerns, but mostly because the control system is responsible for the performance and character of the device and usually involves proprietary or uniquely specialized algorithms. Users who choose to leverage the MODAQ reference design independently are free to extend the code as they feel fit. Examples of MODAQ control logic are available upon request or see <a href="https://www.nrel.gov/docs/fy22osti/83803.pdf" target="_blank">this</a> document regarding MODAQ SCADA for Columbia Power.</p>
 <h2 id="qc-and-threshold-monitoring">QC and Threshold Monitoring</h2>
 <p>Any data channel within MODAQ:Field can be piped through basic quality control screening, with violations flagged for later action. Unless there's a compelling reason to do QC screening onboard, it is recommended to screen the data once uploaded to MODAQ:Cloud, since onboard screening increases the file sizes and can impact performance. Instead (or in addition to), MODAQ:Field can be configured to monitor thresholds and/or apply simple rules to acquired data and write violations to a log file and/or send an email alert. </p>
 <h2 id="execution">Execution</h2>

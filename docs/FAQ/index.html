@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-        <link href="../css/print-site-enum-headings1.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings2.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings3.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings4.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings5.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings6.css" rel="stylesheet" />
         <link href="../css/print-site.css" rel="stylesheet" />
+        <link href="../css/print-site-readthedocs.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -83,7 +78,7 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">FAQ</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">FAQ</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#why-national-instrumentslabview">Why National Instruments/LabVIEW?</a>
     </li>
@@ -93,7 +88,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#why-not-use-something-like-a-raspberrypi-or-arduino">Why not use something like a RaspberryPi or Arduino?</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#can-nrel-help-configure-or-customize-modaq">Can NREL help configure or customize MODAQ?</a>
+    <li class="toctree-l2"><a class="reference internal" href="#can-nlr-help-configure-or-customize-modaq">Can NLR help configure or customize MODAQ?</a>
     </li>
     </ul>
                 </li>
@@ -151,7 +146,7 @@
 <p>There's a class of controllers that include an array of built-in I/O that are nice, well thought out, easy to configure, and performant, however under closer inspection, they lack some key features that make them unsuitable in an embedded application deployed in the field. For example, these options generally have limited data logging capability, supporting only small (usually 64 GB or less) and slow microSD cards. There's also limitations when it comes to more technical matters, such as sampling speed,  multiplexing (or scanning) vs simultaneous sampling, data synchronization, bit depth, multitasking, determinism, and noise. They also lack flexibility of local filtering or signal processing of data, local QC, and communications/remote supervision. Of course, use case and measurement objectives matter, so these can be perfectly fine for some applications. </p>
 <h2 id="why-is-my-sensorinstrument-not-supported">Why is my sensor/instrument not supported?</h2>
 <p>There are a lot of sensors and instruments available at various price-points with different interfacing requirements. With the exception of devices with simple, voltage or current varying outputs, devices tend to have a protocol, API, or unique data stream that requires custom code (drivers) to acquire the measurement data. Even different models of a similar device from the same manufacturer could have significant differences in the way the device 'talks'. Writing a new driver can range from trivial to complex, dependent on how the data are acquired from the device and/or the data formatting employed by the manufacturer. </p>
-<p>NREL will share drivers for hardware previously written for MODAQ.  For NREL to develop custom MODAQ drivers, please see the FAQ question below about <a href="#can-nrel-help-configure-or-customize-modaq">working with NREL</a>. </p>
+<p>NLR will share drivers for hardware previously written for MODAQ.  For NLR to develop custom MODAQ drivers, please see the FAQ question below about <a href="#can-nlr-help-configure-or-customize-modaq">working with NLR</a>. </p>
 <h2 id="why-not-use-something-like-a-raspberrypi-or-arduino">Why not use something like a RaspberryPi or Arduino?</h2>
 <p>While RaspberryPis, Arduinos, and other similar devices are best known in the hobbyist realm, they have become quite prevalent in research and commercial applications. In fact, these devices are finding their way into PLCs and other industrial equipment and have demonstrated reliability. However, there's always considerations and trade-offs to be made. For instance:</p>
 <ol>
@@ -164,9 +159,9 @@
 <li>Many devices, particularly the microcontrollers, have limited storage options, with most only supporting microSD cards with small capacity and slow read/write speeds. </li>
 </ol>
 <p>And, code still needs to be written so that the hardware can acquire data and perform related tasks. The developer assumes the risk of assuring the code is performant, stable, and can provide some level of determinism. It should not be unexpected for the software development costs to vastly eclipse the cost of the hardware. Therefore, it might be economically more advantageous to go with a trusted, packaged solution rather than DIY it.  </p>
-<p>That said, NREL has developed DAQ solutions based on the Espressif ESP32 platform for less demanding use-cases that require a small, light weight form-factor and/or operable on battery power. Details of this system are expected to be published to the <a href="https://github.com/nrel/MODAQ/" target="_blank">NREL Github</a> in 2023.</p>
-<h2 id="can-nrel-help-configure-or-customize-modaq">Can NREL help configure or customize MODAQ?</h2>
-<p><a href="https://www.nrel.gov/news/video/discovering-the-ocean-through-data-modaq-text.html" target = "_blank">MODAQ</a> is funded by the Department of Energy's <a href="https://www.energy.gov/eere/water/water-power-technologies-office" target="_blank">Water Power Technology Office</a> for the purpose of advancing the development and testing of Marine Renewable Energy devices.  There are <a href="https://www.nrel.gov/water/work-with-us.html" target="_blank">mechanisms in place</a> for large and small organizations to engage NREL.  </p>
+<p>That said, NLR has developed DAQ solutions based on the Espressif ESP32 platform for less demanding use-cases that require a small, light weight form-factor and/or operable on battery power. Details of this system are expected to be published to the <a href="https://github.com/nrel/MODAQ/" target="_blank">NLR Github</a> in 2023.</p>
+<h2 id="can-nlr-help-configure-or-customize-modaq">Can NLR help configure or customize MODAQ?</h2>
+<p><a href="https://www.nrel.gov/news/video/discovering-the-ocean-through-data-modaq-text.html" target = "_blank">MODAQ</a> is funded by the Department of Energy's <a href="https://www.energy.gov/eere/water/water-power-technologies-office" target="_blank">Water Power Technology Office</a> for the purpose of advancing the development and testing of Marine Energy devices.  There are <a href="https://www.nrel.gov/water/work-with-us.html" target="_blank">mechanisms in place</a> for large and small organizations to engage NLR.  </p>
               
             </div>
           </div><footer>

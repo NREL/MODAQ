@@ -2,52 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nrel.github.io/MODAQ/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://nrel.github.io/MODAQ/FAQ/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://nrel.github.io/MODAQ/about/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://nrel.github.io/MODAQ/dev_modules/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://nrel.github.io/MODAQ/h_architecture/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://nrel.github.io/MODAQ/links/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://nrel.github.io/MODAQ/ref_design/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://nrel.github.io/MODAQ/s_architecture/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://nrel.github.io/MODAQ/sensor_inst_db/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
     <url>
          <loc>https://nrel.github.io/MODAQ/tech_ref/</loc>
-         <lastmod>2025-11-10</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-12-09</lastmod>
     </url>
 </urlset>

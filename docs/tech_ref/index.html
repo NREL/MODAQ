@@ -9,13 +9,8 @@
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-        <link href="../css/print-site-enum-headings1.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings2.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings3.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings4.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings5.css" rel="stylesheet" />
-        <link href="../css/print-site-enum-headings6.css" rel="stylesheet" />
         <link href="../css/print-site.css" rel="stylesheet" />
+        <link href="../css/print-site-readthedocs.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -75,7 +70,7 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Technical Reference</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Technical Reference</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#hardware">Hardware</a>
         <ul>
@@ -109,7 +104,7 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#voltage-input-reads">Voltage Input Reads</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#filtering-source">Filtering  [Source]:</a>
+    <li class="toctree-l4"><a class="reference internal" href="#filtering-source">Filtering [Source]:</a>
     </li>
         </ul>
     </li>
@@ -273,7 +268,7 @@ The procedure described above for installing software packages and dependencies 
 </ol>
 <h4 id="electrical-power-toolkit">Electrical Power Toolkit</h4>
 <p>The<a href="https://www.ni.com/en/support/downloads/software-products/download.labview-electrical-power-toolkit.html#318820" target="_blank"> Electric Power Toolkit </a> is a software add-on for LabVIEW developed by NI for completing analysis on power measurements. This toolkit is useful for taking measured voltage and current data and determining useful parameters of power such as RMS Voltage/Current, Active Power, Apparent Power, Reactive Power, Harmonics and Flicker. Currently, this software add-on is  listed at $687.00 as of 2023. This package is necessary if you would like to do on-board real-time power measurements and it can be removed from the code if not necessary and to avoid the license cost.</p>
-<p>NREL has also developed <a href="https://github.com/MHKiT-Software" target="_blank"> MHKiT </a> which includes similar functions for completing power quality assessments but not in real-time. Usually this would be done on the cloud after the raw data has been uploaded.</p>
+<p>NLR has also developed <a href="https://github.com/MHKiT-Software" target="_blank"> MHKiT </a> which includes similar functions for completing power quality assessments but not in real-time. Usually this would be done on the cloud after the raw data has been uploaded.</p>
 <h3 id="initialization">Initialization</h3>
 <p>When MODAQ:RD is started, it performs the following initialization steps:
 1. Sets some important flags
@@ -343,7 +338,7 @@ Data Rates</p>
 <p>Serial devices are connected to the cRIO through the RJ50 (10p10c) ports on the main controller or through an optional 9870 card. In LabVIEW, the different serial ports are available through the NI-VISA driver and can be configured using that driver's library. The serial port is selected through the constant and specified as an ASRL#. </p>
 <p>ASRL1 is the rs232 port and ASRL2 is the rs485 port on the cRIO. ASRL 3-6 are the additional ports on the NI-9870 card. There is also the possibility to add USB-to-Serial converters to the cRIO which will also appear as ASRL references. You must specify the serial port parameters for the serial devices that are connected. If using the unmodified MODAQ:RD, there is no need to change the serial port parameters.</p>
 <h3 id="gpsinsimu">GPS/INS/IMU</h3>
-<p>As mentioned in the <a href="../ref_design/#modaq-hardware-reference-design">Reference Design Section</a>, NREL tends to use higher-end positioning and inertial instruments. While these can get pricey, the benefits are better stability, error correction, and accuracy. They also tend to have better filtering and data fusion algorithms.</p>
+<p>As mentioned in the <a href="../ref_design/#modaq-hardware-reference-design">Reference Design Section</a>, NLR tends to use higher-end positioning and inertial instruments. While these can get pricey, the benefits are better stability, error correction, and accuracy. They also tend to have better filtering and data fusion algorithms.</p>
 <ul>
 <li>IMU - An instrument with typically a three-axis accelerometer and three-axis gyroscope in a package often referred to as 6-DOF (for 6 Degrees Of Freedom). These may also include a three-axis magnetometer, making it a 9-DOF device. There is often little to no filtering or data fusion with these devices and rarely has any correction for drift.</li>
 <li>GPS - Global Positioning System that relies on telemetry from an orbiting constellation of purpose-built satellites to calculate its position on earth. GPS is sort of a generic term, however technically it refers to only the North American "GPS" constellation. </li>
@@ -380,7 +375,7 @@ The IPv4 UDP setting on the TM2000B under Packet Output is IEEE-1588v2, while th
 <font color = #404040></p>
 </blockquote>
 <p>LabVIEW includes some example code for inspecting and configuring the PTP/TSN setting on the cRIO and cDAQ chassis on the subnet. Search for TimeSync in the NI Example Finder (from LabVIEW: Help&gt;Find Examples...). Launch the project: "Verify IEEE 1588-2008 Synchronization.lvproj" Please assure that NI-Sync has been installed on the cRIO target, otherwise, the example code will probably fail. For convenience, we've included these helpful utilities in the MODAQ:RD project in the Testers folder. </p>
-<p><img alt="PTP Enable" src="./img/ptp2.png" /></p>
+<p><img alt="PTP Enable" src="../img/ptp2.png" /></p>
 <p>We've renamed the files to begin with 1, 2, or 3, which makes them easier to reference in this discussion. They perform the following functions:</p>
 <ol>
 <li>Detailed information on status of IEEE 802.1AS-2011 or IEEE 1588-2008 on the selected system and allows the user to change the client/server and priority settings. Of special note here: if the Clock ID and GM Clock ID are the same, then the selected resource is acting as the master clock. Or in other words, it's not detecting a better PTP time reference on the subnet. The GM Clock ID should display the MAC address of the time server. </li>
@@ -431,7 +426,7 @@ Currently, both the summary and TDMS S3 upload processes delete the local files 
 <font color = #404040></p>
 </blockquote>
 <h4 id="s3-key-updater">S3 Key Updater</h4>
-<p>Some organizations with managed AWS services, such as here at NREL, rules are enforced that expire S3 Access and Secret keys after so many weeks or months. Since MODAQ:Field loads the keys from the configuration file on startup and since we don't necessarily want to interrupt a deployment with a maintenance restart, we developed a method to 'hot update' the AWS keys. </p>
+<p>Some organizations with managed AWS services, such as here at NLR, rules are enforced that expire S3 Access and Secret keys after so many weeks or months. Since MODAQ:Field loads the keys from the configuration file on startup and since we don't necessarily want to interrupt a deployment with a maintenance restart, we developed a method to 'hot update' the AWS keys. </p>
 <p>The AWS key updater runs continuously in the background during MODAQ:Field operation and watches the /AWS/incoming/ folder. If a file appears, the updater state machine will fail the file if it is not named 'aws.txt' and move it to the /AWS/error/ folder. Otherwise, the parser state expects the file contents formatted:</p>
 <pre><code>Access_Key:youraccesskeyhere
 Secret_Key:yoursecretkeyhere
@@ -440,7 +435,7 @@ Bucket:yourbucketnamehere
 <p>There currently is no validation for the file contents, so if the fields are out of order or incomplete it will not successfully update the keys. Since updating the keys using this method only persists until a MODAQ:Field restart, it is recommended to change the keys in the configuration file on MODAQ:Field as well. Also, hot changes for S3 Bucket names have not been enabled in this version of MODAQ:RD.</p>
 <h3 id="sftpftp">SFTP/FTP</h3>
 <p>MODAQ:RD does not support SFTP at this time due to limitations in LabVIEW 2019. However, the underlying RT Linux operating system does. Users familiar with SFTP and the Linux command line could develop solutions for automated file transfers. For manual transfers, client software such as WinSCP, Bitvise, FileZilla could be used. </p>
-<p>Due to the inherent lack of security, FTP in not included by default in MODAQ:RD. NREL, like most other organizations with managed IT departments, prohibits the use of FTP. Users willing to accept the risk, can request the MODAQ:Field FTP module- or write their own. </p>
+<p>Due to the inherent lack of security, FTP in not included by default in MODAQ:RD. NLR, like most other organizations with managed IT departments, prohibits the use of FTP. Users willing to accept the risk, can request the MODAQ:Field FTP module- or write their own. </p>
 <h2 id="logs-and-alerts">Logs and Alerts</h2>
 <p><img align="right" src="../img/message_q.png" width="500"></p>
 <p>MODAQ:Field provides a system-wide service that can write specific events to a log file and/or send alerts to an email list. The System Message Destinations service runs upon MODAQ:Field startup and is the sole reader for a message queue FIFO. At various points within the MODAQ:Field code, messages can be generated that are intercepted by this service. </p>
